@@ -1,5 +1,3 @@
-README - Análise Inteligente de Partidas de Futebol
-
 📊 Sobre o Projeto
 
 Este projeto visa a criação de uma Inteligência Artificial para assistir e analisar partidas de futebol em tempo real e em batch. A IA registra eventos do jogo (passes, finalizações, assistências, faltas, etc.), movimentações táticas e formações, gerando insights valiosos para melhorar a visão técnica e tática de um time.
