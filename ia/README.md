@@ -1,33 +1,22 @@
-🤖 README - Inteligência Artificial (ai/)
+# IA para Análise de Imagens em Partidas de Futebol
 
-📹 Análise de Vídeo em Tempo Real
+Este módulo é responsável por identificar e classificar eventos em partidas de futebol através de visão computacional.
 
-Este diretório contém o código responsável por processar as transmissões de futebol, identificar eventos e estruturar os dados para análise futura.
+## Tecnologias Utilizadas
 
-🔧 Tecnologias Utilizadas
+- **Amazon Rekognition**: Análise de vídeo em tempo real e histórico.
+- **Amazon SageMaker**: Treinamento e implantação de modelos de Deep Learning.
+- **Python**: Frameworks como TensorFlow, PyTorch e OpenCV para processamento de imagens.
 
-Linguagem: Python
+## Pipeline de Treinamento
 
-Frameworks: OpenCV, TensorFlow/PyTorch, Apache Spark
+1. **Coleta de Dados**: Lances de partidas registrados no DynamoDB.
+2. **Treinamento**: Pipeline automatizado com Amazon SageMaker Pipelines.
+3. **Implantação**: O modelo é implantado no Rekognition para inferência em tempo real.
 
-📊 Fluxo de Trabalho
+## Fluxo de Processamento
 
-Recepção do vídeo ao vivo.
-
-Processamento com modelos de visão computacional.
-
-Registro dos eventos e movimentações.
-
-📌 Como Executar
-
-Certifique-se de ter Python 3.10+ instalado.
-
-Crie um ambiente virtual:
-
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-
-Execute a análise em tempo real:
-
-python main.py
+1. O Partida Service registra o link de transmissão.
+2. O Amazon Rekognition processa os vídeos e gera eventos.
+3. Os eventos são publicados no Amazon MSK pelo Encaminhamento Service.
+4. O Recebidor Service processa e encaminha os dados para análise em tempo real ou persistência.

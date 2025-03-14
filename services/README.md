@@ -1,29 +1,39 @@
-📦 README - Serviços (services/)
+# Microserviços da Plataforma de Análise Tática
 
-🛠️ Sobre os Serviços
+Os microserviços desta plataforma são responsáveis por cada etapa do fluxo de processamento de dados de partidas de futebol. A arquitetura é baseada em AWS Lambda, AWS Fargate e Amazon MSK para garantir escalabilidade e resiliência.
 
-Os microserviços são responsáveis por gerenciar o fluxo de dados desde a recepção dos eventos em tempo real até a persistência no Data Lake. A arquitetura é baseada em Spring Cloud para escalar e garantir resiliência.
+## Microserviços
 
-🔧 Tecnologias Utilizadas
+### 1. Portal Service (API Gateway)
+- Responsável por rotear todas as requisições para os microserviços.
+- Implementado com AWS API Gateway.
 
-Linguagens: Java (Spring Boot) e Scala
+### 2. Autenticacao Service
+- Gerencia autenticação e autorização.
+- Utiliza AWS Cognito para gestão de usuários e sessões.
 
-Frameworks: Spring WebFlux, Spring Cloud Gateway, Resilience4j
+### 3. Treino Service (AWS Lambda)
+- Recebe e armazena informações de lances no DynamoDB.
+- Aciona pipelines de re-treinamento automático no Amazon SageMaker.
 
-Mensageria: Apache Kafka (Saga Orquestrada e Ordenada)
+### 4. Partida Service (AWS Lambda)
+- Registra informações de transmissões ao vivo ou partidas históricas.
 
-Armazenamento: MongoDB, Redis, Cassandra
+### 5. Encaminhamento Service (AWS Fargate)
+- Recebe eventos analisados pelo Amazon Rekognition.
+- Cria tópicos no Amazon MSK para processamento assíncrono.
 
-📊 Principais Serviços
+### 6. Recebidor Service (AWS Fargate e AWS Lambda)
+- Consome tópicos do Amazon MSK.
+- Partidas ao vivo: Armazena em cache (Amazon ElastiCache) para análise em tempo real.
+- Partidas históricas: Encaminha para persistência no Amazon Keyspaces.
 
-Register Service: Recebe os eventos do jogo e armazena temporariamente.
+### 7. Persistencia Service (AWS Fargate e AWS Lambda)
+- Consome tópicos de eventos.
+- Persiste os dados analisados no Amazon Keyspaces.
 
-Persistence Service: Persiste os dados estruturados no Data Lake.
+## Monitoramento e Observabilidade
+- AWS X-Ray: Rastreamento distribuído.
+- Amazon CloudWatch: Logs, métricas e alertas.
 
-📌 Como Executar
-
-Configure o ambiente com Java 17 ou superior.
-
-Execute os serviços via Script Python:
-
-python3 run_servcices.py
+---

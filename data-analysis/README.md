@@ -1,29 +1,19 @@
-📈 README - Análise de Dados (data-analysis/)
+# Análise de Dados Estruturados
 
-📊 Análise de Dados Estruturados
+Este módulo é responsável por processar e analisar grandes volumes de dados estruturados gerados durante as partidas.
 
-Este diretório contém scripts em R para análise estatística dos eventos registrados, utilizando H2O.ai para treinar e melhorar os modelos.
+## Arquitetura
 
-🔧 Tecnologias Utilizadas
+1. **Amazon Keyspaces**: Armazena eventos analisados de forma persistente.
+2. **AWS Glue**: Realiza ETL automatizado entre o Amazon Keyspaces e o Amazon EMR.
+3. **Amazon EMR (Hadoop)**: Executa análises batch para gerar insights aprofundados.
+4. **Amazon QuickSight**: Visualização dos resultados em dashboards interativos.
 
-Linguagem: R
+## Principais Análises
+- Padrões táticos.
+- Desempenho de jogadores.
+- Estatísticas detalhadas de eventos.
 
-Frameworks: H2O.ai, SparkR
+Processos de ETL são otimizados via Glue Jobs, garantindo integração rápida e eficaz entre as fontes de dados.
 
-Big Data: Hadoop para processamento em batch
-
-📊 Fluxo de Trabalho
-
-Carregar dados do Data Lake (Cassandra).
-
-Treinar e ajustar modelos para identificar padrões táticos.
-
-Gerar insights para otimizar estratégias de jogo.
-
-📌 Como Executar
-
-Certifique-se de ter R e o H2O.ai instalados.
-
-Execute os scripts de análise:
-
-Rscript analysis.R
+---
