@@ -1,5 +1,0 @@
-package soccervs.statics.core.entities.enums;
-
-public enum EContribuicao {
-	ORGANIZACAO, ORGANIZACAO_DEFENSIVA, ORGANIZACAO_OFENSIVA, MURALHA, XERIFE, ARMACAO, MARCADOR, GOLEADOR, PASSE, CRIACAO
-}
