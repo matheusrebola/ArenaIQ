@@ -16,4 +16,7 @@ Bem-vindo à plataforma de análise tática de futebol com Inteligência Artific
 - **Segurança**: AWS WAF, Secrets Manager, AWS Cognito
 - **Observabilidade**: Amazon CloudWatch, AWS X-Ray
 
+## Arquitetura
+![ArenaIQ](https://github.com/user-attachments/assets/b9d4c45e-681e-48ad-a6a4-3cbbeb70412d)
+
 ---
