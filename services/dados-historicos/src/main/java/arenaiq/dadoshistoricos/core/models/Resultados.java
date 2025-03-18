@@ -1,0 +1,25 @@
+package arenaiq.dadoshistoricos.core.models;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.cassandra.core.mapping.Table;
+
+import lombok.Data;
+
+@Table
+@Data
+public class Resultados {
+  @Id
+  private String id;
+  private Byte jogosDisputados;
+  private Byte vitorias;
+  private Byte derrotas;
+  private Byte empates;
+  private Float aproveitamento;
+  private Byte golsMarcados;
+  private Byte golsSofridos;
+  private Float desempenho;
+  private String competicoesId;
+  private String timeId;
+  private String temporadaId;
+  private String tituloId;
+}

@@ -1,0 +1,5 @@
+package arenaiq.dadoshistoricos.core.models.enums;
+
+public enum EFunPosicao {
+  DEFENDER, LATERAL, CABECA_AREA, FINALIZAR, SEGURAR_BOLA, CRIAR_JOGADA
+}
