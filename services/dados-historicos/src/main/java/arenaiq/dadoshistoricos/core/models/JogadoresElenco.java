@@ -1,6 +1,6 @@
 package arenaiq.dadoshistoricos.core.models;
 
-import org.springframework.data.annotation.Id;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
 import arenaiq.dadoshistoricos.core.models.enums.EContribuicao;
@@ -12,7 +12,7 @@ import lombok.Data;
 @Table
 @Data
 public class JogadoresElenco {
-  @Id
+  @PrimaryKey
   private String id;
   private EFuncao funcao;
   private EContribuicao contribuicao;

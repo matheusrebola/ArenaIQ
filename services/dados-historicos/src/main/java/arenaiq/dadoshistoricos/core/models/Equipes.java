@@ -1,6 +1,6 @@
 package arenaiq.dadoshistoricos.core.models;
 
-import org.springframework.data.annotation.Id;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
 import lombok.Data;
@@ -8,7 +8,7 @@ import lombok.Data;
 @Table
 @Data
 public class Equipes {
-  @Id
+  @PrimaryKey
   private String id;
   private String nome;
   private String cidade;

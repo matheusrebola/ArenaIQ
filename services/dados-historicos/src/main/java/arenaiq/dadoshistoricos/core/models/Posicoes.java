@@ -1,6 +1,6 @@
 package arenaiq.dadoshistoricos.core.models;
 
-import org.springframework.data.annotation.Id;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
 import arenaiq.dadoshistoricos.core.models.enums.EFunPosicao;
@@ -10,7 +10,7 @@ import lombok.Data;
 @Table
 @Data
 public class Posicoes {
-  @Id
+  @PrimaryKey
   private String id;
   private EPosicao posicao;
   private EFunPosicao funcao;
