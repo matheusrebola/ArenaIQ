@@ -1,0 +1,10 @@
+server:
+  port: ${SERVER_PORT:60000}
+
+spring:
+  data:
+    cassandra:
+      keyspaceName: quangkeyspace
+      contactPoints: localhost
+      port: 9042
+      schemaAction: CREATE_IF_NOT_EXISTS
