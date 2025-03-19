@@ -1,109 +1,72 @@
-version: "3.8"
+version: '3.8'
 
 services:
-  mariadb-persistence:
-    image: mariadb:latest
-    container_name: soccervs-persistence
+  arenaiq-partida:
+    image: mongo:6.0
+    container_name: arenaiq-partida
     restart: always
-    environment:
-      MARIADB_ROOT_PASSWORD: persistence
-      MARIADB_DATABASE: soccervs_persistence
-      MARIADB_USER: soccervs
-      MARIADB_PASSWORD: soccervs
     ports:
-      - "55000:3306"  # Só precisa expor se for acessado fora do Docker
-    volumes:
-      - mariadb_data:/var/lib/mysql
+      - "61001:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: partida
+      MONGO_INITDB_ROOT_PASSWORD: partida
     networks:
-      - soccervs
+      - arenaiq-network
 
-  mongodb-reciever:
-    image: mongo:latest
-    container_name: soccervs-reciever
+  arenaiq-treino:
+    image: mongo:6.0
+    container_name: arenaiq-treino
     restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: soccervs
-      MONGO_INITDB_ROOT_PASSWORD: soccervs
     ports:
-      - "55100:27017"
-    volumes:
-      - mongodb_reciever_data:/data/db
+      - "61000:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: treino
+      MONGO_INITDB_ROOT_PASSWORD: treino
     networks:
-      - soccervs
+      - arenaiq-network
 
-  mongodb-pitches:
-    image: mongo:latest
-    container_name: soccervs-pitches 
+  arenaiq-encaminhador:
+    image: mongo:6.0
+    container_name: arenaiq-encaminhador
     restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: soccervs
-      MONGO_INITDB_ROOT_PASSWORD: soccervs
     ports:
-      - "55110:27017"
-    volumes:
-      - mongodb_pitches_data:/data/db
+      - "61002:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: encaminhador
+      MONGO_INITDB_ROOT_PASSWORD: encaminhador
     networks:
-      - soccervs
+      - arenaiq-network
 
-  mongodb-analitics:
-    image: mongo:latest
-    container_name: soccervs-analitics
+  arenaiq-recebidor:
+    image: mongo:6.0
+    container_name: arenaiq-recebidor
     restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: soccervs
-      MONGO_INITDB_ROOT_PASSWORD: soccervs
     ports:
-      - "55120:27017"
-    volumes:
-      - mongodb_analitics_data:/data/db
-    networks:
-      - soccervs
-  
-  kafka:
-    container_name: soccervs-kafka
-    image: obsidiandynamics/kafka
-    restart: "no"
-    ports:
-      - "2181:2181"
-      - "9092:9092"
-    networks:
-      - soccervs
+      - "61003:27017"
     environment:
-      KAFKA_LISTENERS: "INTERNAL://:29092,EXTERNAL://:9092"
-      KAFKA_ADVERTISED_LISTENERS: "INTERNAL://kafka:29092,EXTERNAL://localhost:9092"
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: "INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT"
-      KAFKA_INTER_BROKER_LISTENER_NAME: "INTERNAL"
-      KAFKA_ZOOKEEPER_SESSION_TIMEOUT: "6000"
-      KAFKA_RESTART_ATTEMPTS: "10"
-      KAFKA_RESTART_DELAY: "5"
-      ZOOKEEPER_AUTOPURGE_PURGE_INTERVAL: "0"
-    volumes:
-      - ./data/kafka/data:/var/lib/kafka/data
+      MONGO_INITDB_ROOT_USERNAME: recebidor
+      MONGO_INITDB_ROOT_PASSWORD: recebidor
+    networks:
+      - arenaiq-network
 
-  redpanda-console:
-    container_name: soccervs-redpanda
-    image: docker.redpanda.com/vectorized/console:latest
-    restart: on-failure
-    entrypoint: /bin/sh
-    command: -c "echo \"$$CONSOLE_CONFIG_FILE\" > /tmp/config.yml; /app/console"
+  cassandra:
+    image: cassandra:4.1
+    container_name: cassandra
+    restart: always
     ports:
-      - "8081:8080"
-    networks:
-      - soccervs
+      - "60000:9042"
     environment:
-      CONFIG_FILEPATH: /tmp/config.yml
-      CONSOLE_CONFIG_FILE: |
-        kafka:
-          brokers: ["kafka:29092"]
-    depends_on:
-      - "kafka"
+      - CASSANDRA_KEYSPACE=arenaiq-datalake
+    networks:
+      - arenaiq-network
 
 volumes:
-  mariadb_data:
-  mongodb_reciever_data:
-  mongodb_pitches_data:
-  mongodb_analitics_data:
+  cassandra:
+  arenaiq-recebidor:
+  arenaiq-encaminhador:
+  arenaiq-treino:
+  arenaiq-partida:
 
 networks:
-  soccervs:
+  arenaiq-network:
     driver: bridge
