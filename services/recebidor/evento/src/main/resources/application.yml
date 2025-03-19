@@ -1,0 +1,7 @@
+server:
+  port: 63101
+ 
+spring:
+  data:
+    mongodb:
+      uri: mongodb://recebidor:recebidor@arenaiq-recebidor:61003/recebidor-db

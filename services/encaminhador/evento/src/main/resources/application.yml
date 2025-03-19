@@ -1,0 +1,7 @@
+server:
+  port: 63001
+ 
+spring:
+  data:
+    mongodb:
+      uri: mongodb://encaminhador:encaminhador@arenaiq-encaminhador:61002/encaminhador-db
