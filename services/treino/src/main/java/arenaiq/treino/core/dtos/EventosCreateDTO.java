@@ -6,8 +6,7 @@ import arenaiq.treino.core.models.enums.EMotivo;
 import lombok.Data;
 
 @Data
-public class EventosDTO {
-  private String id;
+public class EventosCreateDTO {
   private EEvento evento;
   private EMotivo motivo;
   private EAtor ator;

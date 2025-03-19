@@ -1,5 +1,7 @@
 package arenaiq.treino.core.services;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import arenaiq.treino.core.models.Eventos;
@@ -29,4 +31,15 @@ public class TreinoService {
     return linhaR.save(l);
   }
 
+  public List<Eventos> encontrarEventos(){
+    return eventoR.findAll();
+  }
+
+  public List<Formacoes> encontrarFormacoes(){
+    return formacoesR.findAll();
+  }
+
+  public List<LinhaDefensiva> encontrarLinhas(){
+    return linhaR.findAll();
+  }
 }

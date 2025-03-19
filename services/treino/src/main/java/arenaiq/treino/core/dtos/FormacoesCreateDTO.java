@@ -6,8 +6,7 @@ import arenaiq.treino.core.models.enums.EModoJogo;
 import lombok.Data;
 
 @Data
-public class FormacoesDTO {
-  private String id;
+public class FormacoesCreateDTO {
   private EFormacao formacao;
   private EModoJogo modo;
   private ECompacatacao compacatacao;
