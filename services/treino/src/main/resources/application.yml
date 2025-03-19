@@ -1,0 +1,7 @@
+server:
+  port: 62001
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://treino:treino@arenaiq-treino:61000/treino-db
