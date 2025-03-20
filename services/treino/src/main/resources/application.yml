@@ -4,4 +4,4 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://treino:treino@arenaiq-treino:61000/treino-db
+      uri: mongodb://treino:treino@localhost:61000/treino-db

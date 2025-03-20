@@ -4,4 +4,4 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://partida:partida@arenaiq-partida:61001/partida-db
+      uri: mongodb://partida:partida@localhost:61000/partida-db

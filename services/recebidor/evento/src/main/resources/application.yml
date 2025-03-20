@@ -4,4 +4,4 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://recebidor:recebidor@arenaiq-recebidor:61003/recebidor-db
+      uri: mongodb://recebidor:recebidor@localhost:61000/recebidor-db
