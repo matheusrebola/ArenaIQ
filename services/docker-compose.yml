@@ -1,53 +1,22 @@
 version: '3.8'
 
 services:
-  arenaiq-partida:
+  arenaiq-mongo:
     image: mongo:6.0
-    container_name: arenaiq-partida
-    restart: always
-    ports:
-      - "61001:27017"
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: partida
-      MONGO_INITDB_ROOT_PASSWORD: partida
-    networks:
-      - arenaiq-network
-
-  arenaiq-treino:
-    image: mongo:6.0
-    container_name: arenaiq-treino
+    container_name: arenaiq-mongo
     restart: always
     ports:
       - "61000:27017"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: treino
-      MONGO_INITDB_ROOT_PASSWORD: treino
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: admin
+    command: ["mongod", "--bind_ip", "0.0.0.0"]
     networks:
       - arenaiq-network
-
-  arenaiq-encaminhador:
-    image: mongo:6.0
-    container_name: arenaiq-encaminhador
-    restart: always
-    ports:
-      - "61002:27017"
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: encaminhador
-      MONGO_INITDB_ROOT_PASSWORD: encaminhador
-    networks:
-      - arenaiq-network
-
-  arenaiq-recebidor:
-    image: mongo:6.0
-    container_name: arenaiq-recebidor
-    restart: always
-    ports:
-      - "61003:27017"
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: recebidor
-      MONGO_INITDB_ROOT_PASSWORD: recebidor
-    networks:
-      - arenaiq-network
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - mongo_data:/data/db
 
   cassandra:
     image: cassandra:4.1
@@ -61,11 +30,8 @@ services:
       - arenaiq-network
 
 volumes:
+  mongo_data:
   cassandra:
-  arenaiq-recebidor:
-  arenaiq-encaminhador:
-  arenaiq-treino:
-  arenaiq-partida:
 
 networks:
   arenaiq-network:
