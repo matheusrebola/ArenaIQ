@@ -4,4 +4,4 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://encaminhador:encaminhador@localhost:61002/encaminhador-db
+      uri: mongodb://encaminhador:encaminhador@localhost:61000/encaminhador-db
