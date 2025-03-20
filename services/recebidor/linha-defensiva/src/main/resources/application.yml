@@ -1,7 +1,0 @@
-server:
-  port: 63103
- 
-spring:
-  data:
-    mongodb:
-      uri: mongodb://recebidor:recebidor@localhost:61000/recebidor-db

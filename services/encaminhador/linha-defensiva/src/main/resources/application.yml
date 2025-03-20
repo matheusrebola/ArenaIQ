@@ -1,7 +1,0 @@
-server:
-  port: 63003
- 
-spring:
-  data:
-    mongodb:
-      uri: mongodb://encaminhador:encaminhador@localhost:61002/encaminhador-db
