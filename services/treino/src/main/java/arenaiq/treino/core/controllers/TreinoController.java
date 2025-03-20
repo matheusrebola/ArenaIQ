@@ -15,12 +15,12 @@ import arenaiq.treino.core.dtos.EventosCreateDTO;
 import arenaiq.treino.core.dtos.EventosDTO;
 import arenaiq.treino.core.dtos.FormacoesCreateDTO;
 import arenaiq.treino.core.dtos.FormacoesDTO;
-import arenaiq.treino.core.dtos.LinhaDefensivaCreateDTO;
-import arenaiq.treino.core.dtos.LinhaDefensivaDTO;
+import arenaiq.treino.core.dtos.LinhaCreateDTO;
+import arenaiq.treino.core.dtos.LinhaDTO;
 import arenaiq.treino.core.mappers.TreinoMapper;
 import arenaiq.treino.core.models.Eventos;
 import arenaiq.treino.core.models.Formacoes;
-import arenaiq.treino.core.models.LinhaDefensiva;
+import arenaiq.treino.core.models.Linhas;
 import arenaiq.treino.core.services.TreinoService;
 import lombok.RequiredArgsConstructor;
 
@@ -45,10 +45,10 @@ public class TreinoController {
     return new ResponseEntity<>(s, HttpStatus.CREATED);
   }
 
-  @PostMapping("/linha-defensiva")
-  public ResponseEntity<LinhaDefensiva> criar(@RequestBody LinhaDefensivaCreateDTO requestDTO){
-    LinhaDefensiva m = mapper.map(requestDTO);
-    LinhaDefensiva s = service.salvar(m);
+  @PostMapping("/linha")
+  public ResponseEntity<Linhas> criar(@RequestBody LinhaCreateDTO requestDTO){
+    Linhas m = mapper.map(requestDTO);
+    Linhas s = service.salvar(m);
     return new ResponseEntity<>(s, HttpStatus.CREATED);
   }
 
@@ -64,8 +64,8 @@ public class TreinoController {
   }
 
   @GetMapping("/linha-defensiva")
-  public ResponseEntity<List<LinhaDefensivaDTO>> encontrarLinhas(){
-    List<LinhaDefensivaDTO> l = service.encontrarLinhas().stream().map(mapper::map).collect(Collectors.toList());
+  public ResponseEntity<List<LinhaDTO>> encontrarLinhas(){
+    List<LinhaDTO> l = service.encontrarLinhas().stream().map(mapper::map).collect(Collectors.toList());
     return ResponseEntity.ok(l);
   }
 }

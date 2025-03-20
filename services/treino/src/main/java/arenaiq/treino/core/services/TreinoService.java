@@ -6,10 +6,10 @@ import org.springframework.stereotype.Service;
 
 import arenaiq.treino.core.models.Eventos;
 import arenaiq.treino.core.models.Formacoes;
-import arenaiq.treino.core.models.LinhaDefensiva;
+import arenaiq.treino.core.models.Linhas;
 import arenaiq.treino.core.repositories.EventosRepository;
 import arenaiq.treino.core.repositories.FormacoesRepository;
-import arenaiq.treino.core.repositories.LinhaDefensivaRepository;
+import arenaiq.treino.core.repositories.LinhaRepository;
 import lombok.RequiredArgsConstructor;
 
 @Service
@@ -17,7 +17,7 @@ import lombok.RequiredArgsConstructor;
 public class TreinoService {
   private final EventosRepository eventoR;
   private final FormacoesRepository formacoesR;
-  private final LinhaDefensivaRepository linhaR;
+  private final LinhaRepository linhaR;
 
   public Eventos salvar(Eventos e){
     return eventoR.save(e);
@@ -27,7 +27,7 @@ public class TreinoService {
     return formacoesR.save(f);
   }
 
-  public LinhaDefensiva salvar(LinhaDefensiva l){
+  public Linhas salvar(Linhas l){
     return linhaR.save(l);
   }
 
@@ -39,7 +39,7 @@ public class TreinoService {
     return formacoesR.findAll();
   }
 
-  public List<LinhaDefensiva> encontrarLinhas(){
+  public List<Linhas> encontrarLinhas(){
     return linhaR.findAll();
   }
 }
