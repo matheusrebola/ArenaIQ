@@ -51,7 +51,7 @@ services:
 
   cassandra:
     image: cassandra:4.1
-    container_name: cassandra
+    container_name: arenaiq-datalake
     restart: always
     ports:
       - "60000:9042"
