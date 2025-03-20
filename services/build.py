@@ -8,19 +8,19 @@ services = [
     "encaminhador/detalhe-evento",
     "encaminhador/evento",
     "encaminhador/formacao",
-    "encaminhador/linha-defensiva",
+    "encaminhador/linha",
     "encaminhador/movimentacao",
     "partida",
     "recebidor/detalhe-evento",
     "recebidor/evento",
     "recebidor/formacao",
-    "recebidor/linha-defensiva",
+    "recebidor/linha",
     "recebidor/movimentacao",
     "treino",
     "persistencia/detalhe-evento",
     "persistencia/evento",
     "persistencia/formacao",
-    "persistencia/linha-defensiva",
+    "persistencia/linha",
     "persistencia/movimentacao"
 ]
 
