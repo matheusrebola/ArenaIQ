@@ -1,18 +1,12 @@
-package arenaiq.partida.core.models;
+package arenaiq.partida.core.dtos;
 
 import java.time.LocalDateTime;
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import arenaiq.partida.core.models.enums.EPartida;
 import lombok.Data;
 
-@Document
 @Data
-public class Partida {
-  @Id
-  private String id;
+public class PartidaCreateDTO {
   private EPartida partida;
   private String casa;
   private String visitante;

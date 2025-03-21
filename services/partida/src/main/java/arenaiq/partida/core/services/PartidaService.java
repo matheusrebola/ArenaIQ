@@ -15,4 +15,8 @@ public class PartidaService {
     return repository.save(p);
   }
 
+  public void deletarTodos(){
+    repository.deleteAll();
+  }
+
 }
