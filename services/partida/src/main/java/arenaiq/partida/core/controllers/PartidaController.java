@@ -32,7 +32,7 @@ public class PartidaController {
     return repository.findJogadorByElencoAndTemporada(elenco, temporada);
   }
 
-  @PostMapping
+  @PostMapping("/historica")
   public ResponseEntity<PartidaDTO> criar(@RequestBody PartidaCreateDTO request){
     Partida p = pMapper.map(request);
     Partida s = pService.salvar(p);
