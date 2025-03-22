@@ -29,10 +29,10 @@ public class JogadorService {
 
   public void criarElencos(Partida p){
     List<JogadorDTO> casa = encontrarJogadores(p.getCasa(), p.getTemporada());
-    List<JogadorDTO> visitante = encontrarJogadores(p.getVisitante(), p.getTemporada());
-    List<Jogador> jCasa = jMapper.map(casa, "casa");
-    List<Jogador> jVisitante = jMapper.map(visitante, "visitante");
+    List<Jogador> jCasa = jMapper.map(casa, "casa", p.getId());
     salvar(jCasa);
+    List<JogadorDTO> visitante = encontrarJogadores(p.getVisitante(), p.getTemporada());
+    List<Jogador> jVisitante = jMapper.map(visitante, "visitante", p.getId());
     salvar(jVisitante);
   }
   

@@ -11,4 +11,5 @@ public class Jogador {
   @Id
   private String nome;
   private String lado;
+  private String partidaId;
 }
