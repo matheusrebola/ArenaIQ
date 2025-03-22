@@ -1,14 +1,9 @@
-package arenaiq.dadoshistoricos.core.models;
-
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
-import org.springframework.data.cassandra.core.mapping.Table;
+package arenaiq.dadoshistoricos.core.dtos;
 
 import lombok.Data;
 
-@Table
 @Data
-public class Resultados {
-  @PrimaryKey
+public class ResultadosDTO {
   private String id;
   private Byte jogosDisputados;
   private Byte vitorias;

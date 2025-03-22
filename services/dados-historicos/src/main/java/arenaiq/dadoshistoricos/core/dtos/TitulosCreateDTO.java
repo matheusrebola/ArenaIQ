@@ -1,17 +1,11 @@
-package arenaiq.dadoshistoricos.core.models;
-
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
-import org.springframework.data.cassandra.core.mapping.Table;
+package arenaiq.dadoshistoricos.core.dtos;
 
 import arenaiq.dadoshistoricos.core.models.enums.ECompeticao;
 import arenaiq.dadoshistoricos.core.models.enums.EParticipante;
 import lombok.Data;
 
-@Table
 @Data
-public class Titulos {
-  @PrimaryKey
-  private String id;
+public class TitulosCreateDTO {
   private String nome;
   private EParticipante participante;
   private String temporada;

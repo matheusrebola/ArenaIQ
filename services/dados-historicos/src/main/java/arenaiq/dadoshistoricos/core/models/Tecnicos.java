@@ -1,5 +1,7 @@
 package arenaiq.dadoshistoricos.core.models;
 
+import java.time.LocalDate;
+
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
@@ -13,7 +15,7 @@ public class Tecnicos {
   private String id;
   private String nome;
   private String nacionalidade;
-  private String dataNascimento;
+  private LocalDate dataNascimento;
   private Byte anosExperiencia;
   private EFilosofia filosofia;
 }

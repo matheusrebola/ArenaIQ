@@ -1,5 +1,7 @@
 package arenaiq.dadoshistoricos.core.models;
 
+import java.time.LocalDateTime;
+
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
@@ -10,11 +12,11 @@ import lombok.Data;
 public class Partidas {
   @PrimaryKey
   private String id;
-  private String data;
+  private LocalDateTime dataHora;
   private String local;
-  private String casaId;
-  private String visitanteId;
-  private Byte placarCasa;
-  private Byte placarVisitante;
+  private String casa;
+  private String visitante;
+  private Byte placarC;
+  private Byte placarV;
   private String competicao;
 }
