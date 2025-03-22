@@ -1,16 +1,11 @@
-package arenaiq.consulta.core.models;
-
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
-import org.springframework.data.cassandra.core.mapping.Table;
+package arenaiq.consulta.core.dtos;
 
 import arenaiq.consulta.core.models.enums.ECompeticao;
 import arenaiq.consulta.core.models.enums.EParticipante;
 import lombok.Data;
 
-@Table
 @Data
-public class Titulos {
-  @PrimaryKey
+public class TitulosDTO {
   private String id;
   private String nome;
   private EParticipante participante;

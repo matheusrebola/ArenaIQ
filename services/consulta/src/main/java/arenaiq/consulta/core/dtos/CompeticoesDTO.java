@@ -1,16 +1,11 @@
-package arenaiq.consulta.core.models;
-
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
-import org.springframework.data.cassandra.core.mapping.Table;
+package arenaiq.consulta.core.dtos;
 
 import arenaiq.consulta.core.models.enums.ECompeticao;
 import arenaiq.consulta.core.models.enums.EDisputa;
 import lombok.Data;
 
-@Table
 @Data
-public class Competicoes {
-  @PrimaryKey
+public class CompeticoesDTO {
   private String id;
   private String nome;
   private String temporada;
