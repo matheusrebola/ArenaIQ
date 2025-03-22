@@ -15,5 +15,4 @@ public class DetalhesEvento {
   private Float nivelPressao;
   private String jOrigemId;
   private String jDestinoId;
-  private String eventoId;
 }

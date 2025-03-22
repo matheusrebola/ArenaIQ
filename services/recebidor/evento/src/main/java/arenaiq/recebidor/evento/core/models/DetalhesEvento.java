@@ -1,14 +1,14 @@
-package arenaiq.persistencia.detalheevento.models;
+package arenaiq.recebidor.evento.core.models;
 
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
-import org.springframework.data.cassandra.core.mapping.Table;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
 
-@Table
+@Document
 @Data
 public class DetalhesEvento {
-  @PrimaryKey
+  @Id
   private String id;
   private String rPrimario;
   private String rSecundario;
@@ -17,5 +17,4 @@ public class DetalhesEvento {
   private Float nivelPressao;
   private String jOrigemId;
   private String jDestinoId;
-  private String eventoId;
 }

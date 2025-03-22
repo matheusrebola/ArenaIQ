@@ -18,4 +18,5 @@ public class Eventos {
   private Float posicaoY;
   private String jogadorId;
   private String partidaId;
+  private String detalheId;
 }
