@@ -4,7 +4,6 @@ services:
   arenaiq-mongo:
     image: mongo:6.0
     container_name: arenaiq-mongo
-    restart: always
     ports:
       - "61000:27017"
     environment:
@@ -21,7 +20,6 @@ services:
   cassandra:
     image: cassandra:4.1
     container_name: arenaiq-datalake
-    restart: always
     ports:
       - "60000:9042"
     environment:
