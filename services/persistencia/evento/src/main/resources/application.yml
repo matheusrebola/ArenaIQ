@@ -8,3 +8,11 @@ spring:
       contactPoints: localhost
       port: 60000
       schemaAction: CREATE_IF_NOT_EXISTS
+  kafka:
+    bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
+    topic:
+      eventos-start: eventos-start
+      notify-ending: notify-ending
+    consumer:
+      group-id: persistencia-group
+      auto-offset-reset: latest

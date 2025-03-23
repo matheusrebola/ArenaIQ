@@ -5,3 +5,11 @@ spring:
   data:
     mongodb:
       uri: mongodb://recebidor:recebidor@localhost:61000/recebidor-db
+  kafka:
+    bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
+    topic:
+      eventos-start: eventos-start
+      notify-ending: notify-ending
+    consumer:
+      group-id: recebidor-group
+      auto-offset-reset: latest

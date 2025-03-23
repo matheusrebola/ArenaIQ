@@ -11,5 +11,5 @@ spring:
       eventos-start: eventos-start
       notify-ending: notify-ending
     consumer:
-      group-id: order-group
+      group-id: encaminhador-group
       auto-offset-reset: latest

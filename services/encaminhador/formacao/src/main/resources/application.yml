@@ -5,3 +5,11 @@ spring:
   data:
     mongodb:
       uri: mongodb://encaminhador:encaminhador@localhost:61000/encaminhador-db
+  kafka:
+    bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
+    topic:
+      eventos-start: eventos-start
+      notify-ending: notify-ending
+    consumer:
+      group-id: encaminhador-group
+      auto-offset-reset: latest
