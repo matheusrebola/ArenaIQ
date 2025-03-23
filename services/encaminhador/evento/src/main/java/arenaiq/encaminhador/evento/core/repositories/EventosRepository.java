@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import arenaiq.encaminhador.evento.core.models.Eventos;
 
 @Repository
-public interface EventosRepositories extends MongoRepository<Eventos, String> {
+public interface EventosRepository extends MongoRepository<Eventos, String> {
 
 }

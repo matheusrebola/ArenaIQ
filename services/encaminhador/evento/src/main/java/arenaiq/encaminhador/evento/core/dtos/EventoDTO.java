@@ -1,18 +1,11 @@
-package arenaiq.encaminhador.evento.core.models;
+package arenaiq.encaminhador.evento.core.dtos;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-import lombok.AllArgsConstructor;
+import arenaiq.encaminhador.evento.core.models.EEvento;
+import arenaiq.encaminhador.evento.core.models.EMotivo;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Document(collection = "eventos")
-public class Eventos {
-  @Id
+public class EventoDTO {
   private String id;
   private EEvento evento;
   private EMotivo motivo;
