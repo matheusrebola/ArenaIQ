@@ -22,3 +22,13 @@ drv <- JDBC(driverClass = "com.dse.driver.api.core.CqlSession",
 conn <- dbConnect(drv, "jdbc:cassandra://host:porta/keyspace")
 
 ```
+
+Dados a cruzar:
+
+    Elencos + JogadoresElenco + Jogadores
+
+    Tecnicos.id + Elencos.tecnico
+
+    Eventos, Formacoes, Resultados
+
+📌 Insight: Correlacionar estilo/tática do técnico com o desempenho do elenco.
