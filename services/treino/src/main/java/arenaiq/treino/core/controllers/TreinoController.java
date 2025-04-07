@@ -63,7 +63,7 @@ public class TreinoController {
     return ResponseEntity.ok(f);
   }
 
-  @GetMapping("/linha-defensiva")
+  @GetMapping("/linha")
   public ResponseEntity<List<LinhaDTO>> encontrarLinhas(){
     List<LinhaDTO> l = service.encontrarLinhas().stream().map(mapper::map).collect(Collectors.toList());
     return ResponseEntity.ok(l);
