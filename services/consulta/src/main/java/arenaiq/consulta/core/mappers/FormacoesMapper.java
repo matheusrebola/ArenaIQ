@@ -6,19 +6,19 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
-import arenaiq.consulta.core.dtos.ResultadosDTO;
-import arenaiq.consulta.core.models.Resultados;
+import arenaiq.consulta.core.dtos.FormacoesDTO;
+import arenaiq.consulta.core.models.Formacoes;
 import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class ResultadoMapper {
+public class FormacoesMapper {
   private final ModelMapper m;
 
-  public List<ResultadosDTO> map(List<Resultados> r){
-    return r.stream()
-            .map(res -> {
-              ResultadosDTO dto = m.map(res, ResultadosDTO.class);
+  public List<FormacoesDTO> map(List<Formacoes> f){
+    return f.stream()
+            .map(form -> {
+              FormacoesDTO dto = m.map(form, FormacoesDTO.class);
               return dto;
             })
             .collect(Collectors.toList());

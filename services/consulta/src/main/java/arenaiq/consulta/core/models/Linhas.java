@@ -18,6 +18,6 @@ public class Linhas {
   private ELargura largura;
   private Byte minuto;
   private Byte segundo;
-  private String timeId;
+  private String equipeId;
   private String partidaId;
 }

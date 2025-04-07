@@ -11,6 +11,6 @@ public class LinhasDTO {
   private ELinha linha;
   private Byte minuto;
   private Byte segundo;
-  private String timeId;
+  private String equipeId;
   private String partidaId;
 }

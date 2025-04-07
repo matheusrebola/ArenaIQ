@@ -3,6 +3,7 @@ package arenaiq.consulta.core.models;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
+import arenaiq.consulta.core.models.enums.EClima;
 import lombok.Data;
 
 @Table
@@ -11,6 +12,9 @@ public class Partidas {
   @PrimaryKey
   private String id;
   private String dataHora;
+  private EClima clima;
+  private Float temperatura;
+  private Float umidade;
   private String local;
   private String casa;
   private String visitante;
