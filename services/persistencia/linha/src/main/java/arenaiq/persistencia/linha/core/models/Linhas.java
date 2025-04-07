@@ -1,19 +1,21 @@
 package arenaiq.persistencia.linha.core.models;
 
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.cassandra.core.mapping.Table;
 
+import arenaiq.persistencia.linha.core.models.enums.ELargura;
 import arenaiq.persistencia.linha.core.models.enums.ELinha;
+import arenaiq.persistencia.linha.core.models.enums.EModoJogo;
 import lombok.Data;
 
 @Table
 @Data
 public class Linhas {
-  @PrimaryKey
+  @Id
   private String id;
-  private Float altura;
-  private Float largura;
   private ELinha linha;
+  private EModoJogo altura;
+  private ELargura largura;
   private Byte minuto;
   private Byte segundo;
   private String timeId;
