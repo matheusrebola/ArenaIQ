@@ -1,0 +1,24 @@
+---
+title: "Influência Tática"
+---
+
+Objetivo: Análise estatística e influência tática nos resultados
+Perguntas:
+
+    O que mais impacta o aproveitamento de uma equipe: formação, pressão ou clima?
+
+    Qual é a combinação de fatores táticos que mais leva a vitórias?
+
+    Quais métricas de evento (passe, desarme, chute) estão ligadas ao desempenho?
+
+```{r}
+library(RJDBC)
+
+# Caminho para o driver
+drv <- JDBC(driverClass = "com.dse.driver.api.core.CqlSession", 
+            classPath = "/caminho/do/driver/cassandra-driver.jar")
+
+# Conectando
+conn <- dbConnect(drv, "jdbc:cassandra://host:porta/keyspace")
+
+```

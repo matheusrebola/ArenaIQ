@@ -1,0 +1,36 @@
+---
+title: "Mandante Vs Visitante"
+---
+Objetivo: Análise de desempenho como mandante vs visitante por tipo de disputa
+Perguntas:
+
+    Quais jogadores e técnicos mantêm alto desempenho como visitantes?
+
+    O tipo de disputa (mata-mata vs pontos corridos) altera a escolha de formação?
+
+    Existe correlação entre jogar fora de casa e aplicar um estilo mais defensivo?
+
+```{r}
+library(RJDBC)
+
+# Caminho para o driver
+drv <- JDBC(driverClass = "com.dse.driver.api.core.CqlSession", 
+            classPath = "/caminho/do/driver/cassandra-driver.jar")
+
+# Conectando
+conn <- dbConnect(drv, "jdbc:cassandra://host:porta/keyspace")
+
+```
+
+Dados a cruzar:
+
+    Partidas.casa, Partidas.visitante
+
+    Eventos.jogadorId, Partidas.id, Partidas.competicaoId
+
+    Competicoes.disputa
+
+    Jogadores, Tecnicos, Elencos
+
+📌 Insight: Identificar quem lida melhor com a pressão da torcida e se o tipo de disputa afeta performance.
+

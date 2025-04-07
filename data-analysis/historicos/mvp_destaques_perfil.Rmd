@@ -1,0 +1,34 @@
+---
+title: "Perfil e contexto dos MVPs"
+---
+
+Objetivo: Perfil e contexto dos MVPs
+Perguntas:
+
+    Que atributos físicos, táticos ou de personalidade são comuns entre MVPs?
+
+    Em que tipo de partidas (clima, competição, localidade) os MVPs se destacam?
+
+    O que separa estatisticamente um jogador comum de um MVP?
+
+```{r}
+library(RJDBC)
+
+# Caminho para o driver
+drv <- JDBC(driverClass = "com.dse.driver.api.core.CqlSession", 
+            classPath = "/caminho/do/driver/cassandra-driver.jar")
+
+# Conectando
+conn <- dbConnect(drv, "jdbc:cassandra://host:porta/keyspace")
+
+```
+
+Dados a cruzar:
+
+    Titulos.mvp
+
+    Eventos + DetalhesEvento (para desempenho)
+
+    Resultados, Formacoes, Clima, etc.
+
+📌 Insight: Encontrar o que separa os MVPs dos demais em termos de estilo, desempenho e condições da partida.

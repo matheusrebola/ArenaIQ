@@ -1,0 +1,35 @@
+---
+title: "Encadeamento de Ações"
+---
+
+Objetivo: Encadeamento de ações, erros e geração de gols
+Perguntas:
+
+    Quais sequências de eventos mais comumente resultam em gols?
+
+    Quais eventos precedem perdas de posse em zonas perigosas?
+
+    Que tipo de evento (ou jogador) sofre mais com pressão adversária?
+
+```{r}
+library(RJDBC)
+
+# Caminho para o driver
+drv <- JDBC(driverClass = "com.dse.driver.api.core.CqlSession", 
+            classPath = "/caminho/do/driver/cassandra-driver.jar")
+
+# Conectando
+conn <- dbConnect(drv, "jdbc:cassandra://host:porta/keyspace")
+
+```
+
+Dados a cruzar:
+
+    Eventos + DetalhesEvento
+
+    Partidas: contexto geral
+
+    Movimentacoes, Formacoes, Linhas
+
+📌 Insight: Analisar causa-consequência de ações em campo, entender zonas críticas de erro ou sucesso.
+

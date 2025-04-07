@@ -1,0 +1,43 @@
+---
+title: "Desempenho por Temporada"
+---
+
+Objetivo: Desempenho em competições por temporada
+Perguntas:
+
+    Quais técnicos e jogadores se saem melhor em cada competição?
+
+    Algum técnico tem desempenho acima da média em torneios eliminatórios?
+
+    Existem jogadores que rendem mais em temporadas específicas?
+
+```{r}
+library(RJDBC)
+
+# Caminho para o driver
+drv <- JDBC(driverClass = "com.dse.driver.api.core.CqlSession", 
+            classPath = "/caminho/do/driver/cassandra-driver.jar")
+
+# Conectando
+conn <- dbConnect(drv, "jdbc:cassandra://host:porta/keyspace")
+
+```
+
+Dados a cruzar:
+
+    Competicoes.temporada
+
+    Partidas.competicaoId
+
+    Partidas.id
+
+    Eventos.jogadorId
+
+    Jogadores.id
+
+    Elencos.tecnico + Elencos.time + Elencos.temporadaId
+
+    Resultados (para cruzar performance geral)
+
+📌 Insight: Avaliar quais jogadores/técnicos se saem melhor em tipos específicos de competição.
+

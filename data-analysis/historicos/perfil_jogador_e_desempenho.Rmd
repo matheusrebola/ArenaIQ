@@ -1,0 +1,37 @@
+---
+title: "Jogador como Indivíduo"
+---
+
+Objetivo: Análise do jogador como indivíduo e em grupo
+Perguntas:
+
+    Jogadores com quais características físicas e psicológicas têm maior impacto?
+
+    Qual é a função tática ideal para cada tipo de jogador?
+
+    Certos perfis rendem mais sob clima adverso ou jogos fora de casa?
+
+```{r}
+library(RJDBC)
+
+# Caminho para o driver
+drv <- JDBC(driverClass = "com.dse.driver.api.core.CqlSession", 
+            classPath = "/caminho/do/driver/cassandra-driver.jar")
+
+# Conectando
+conn <- dbConnect(drv, "jdbc:cassandra://host:porta/keyspace")
+
+```
+
+Dados a cruzar:
+
+    Jogadores: altura, peso, personalidade, pé, posição, função
+
+    Eventos: participação e tipo de ação
+
+    Partidas: contexto climático
+
+    Resultados, Formacoes, Movimentacoes
+
+📌 Insight: Mapear o perfil de jogador ideal para determinadas funções/táticas/climas.
+

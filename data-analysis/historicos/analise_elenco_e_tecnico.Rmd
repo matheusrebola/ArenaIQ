@@ -1,0 +1,35 @@
+---
+title: "Técnico e Elenco"
+---
+
+Objetivo: Relação entre o perfil do técnico e o elenco que ele lidera
+Perguntas:
+
+    Técnicos com determinada filosofia preferem elencos com que tipo de perfil?
+
+    Como o técnico influencia o aproveitamento de jogadores específicos?
+
+    Qual a variação de performance de um mesmo elenco sob técnicos diferentes?
+
+```{r}
+library(RJDBC)
+
+# Caminho para o driver
+drv <- JDBC(driverClass = "com.dse.driver.api.core.CqlSession", 
+            classPath = "/caminho/do/driver/cassandra-driver.jar")
+
+# Conectando
+conn <- dbConnect(drv, "jdbc:cassandra://host:porta/keyspace")
+
+```
+
+Dados a cruzar:
+
+    Elencos + JogadoresElenco + Jogadores
+
+    Tecnicos.id + Elencos.tecnico
+
+    Eventos, Formacoes, Resultados
+
+📌 Insight: Correlacionar estilo/tática do técnico com o desempenho do elenco.
+

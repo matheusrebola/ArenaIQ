@@ -1,0 +1,35 @@
+---
+title: "Dinâmica em Campo"
+---
+
+Objetivo: Dinâmica tática em campo
+Perguntas:
+
+    Como a equipe se movimenta em diferentes formações ao longo da partida?
+
+    Há padrões de compactação específicos por minuto ou situação do jogo?
+
+    Como as movimentações individuais refletem o plano tático coletivo?
+
+```{r}
+library(RJDBC)
+
+# Caminho para o driver
+drv <- JDBC(driverClass = "com.dse.driver.api.core.CqlSession", 
+            classPath = "/caminho/do/driver/cassandra-driver.jar")
+
+# Conectando
+conn <- dbConnect(drv, "jdbc:cassandra://host:porta/keyspace")
+
+```
+
+Dados a cruzar:
+
+    Formacoes + Linhas + Movimentacoes
+
+    Eventos (conectado por minuto, segundo, partidaId, jogadorId)
+
+    Partidas: clima, local, mandante/visitante
+
+📌 Insight: Personalização de treino, prevenção de lesões e otimização tática com base em contexto real de jogo.
+
