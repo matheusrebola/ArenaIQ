@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class ResultadoMapper {
+public class ResultadosMapper {
   private final ModelMapper m;
 
   public List<ResultadosDTO> map(List<Resultados> r){

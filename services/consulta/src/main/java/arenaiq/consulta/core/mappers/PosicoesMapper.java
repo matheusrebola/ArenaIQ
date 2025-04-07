@@ -6,20 +6,21 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
-import arenaiq.consulta.core.dtos.EquipesDTO;
-import arenaiq.consulta.core.models.Equipes;
+import arenaiq.consulta.core.dtos.PosicoesDTO;
+import arenaiq.consulta.core.models.Posicoes;
 import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class EquipeMapper {
+public class PosicoesMapper {
   private final ModelMapper m;
 
-  public List<EquipesDTO> map(List<Equipes> e){
-    return e.stream()
-            .map(eq -> {
-              EquipesDTO dto = m.map(eq, EquipesDTO.class);
-              return dto;})
+  public List<PosicoesDTO> map(List<Posicoes> p){
+    return p.stream()
+            .map(pos -> {
+              PosicoesDTO dto = m.map(pos, PosicoesDTO.class);
+              return dto;
+            })
             .collect(Collectors.toList());
   }
 }

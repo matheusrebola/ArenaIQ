@@ -18,27 +18,27 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping(path = "/elencos")
 @RequiredArgsConstructor
-public class ElencoController {
+public class ElencosController {
   private final ElencosService s;
   private final ElencosMapper m;
 
   @GetMapping("{equipe}")
-  public ResponseEntity<List<ElencosDTO>> findByEquipe(@PathVariable String equipe){
-    List<Elencos> find = s.findByEquipe(equipe);
+  public ResponseEntity<List<ElencosDTO>> findByEquipe(@PathVariable String e){
+    List<Elencos> find = s.findByEquipe(e);
     List<ElencosDTO> mapped = m.map(find);
     return new ResponseEntity<>(mapped, HttpStatus.OK);
   }
 
-  @GetMapping("{apelido}")
-  public ResponseEntity<List<ElencosDTO>> findByApelido(@PathVariable String apelido){
-    List<Elencos> find = s.findByApelido(apelido);
+  @GetMapping("/apelido/{apelido}")
+  public ResponseEntity<List<ElencosDTO>> findByApelido(@PathVariable String a){
+    List<Elencos> find = s.findByApelido(a);
     List<ElencosDTO> mapped = m.map(find);
     return new ResponseEntity<>(mapped, HttpStatus.OK);
   }
 
-  @GetMapping("{tecnico}")
-  public ResponseEntity<List<ElencosDTO>> findByTecnico(@PathVariable String tecnico){
-    List<Elencos> find = s.findByTecnico(tecnico);
+  @GetMapping("/tecnico/{tecnico}")
+  public ResponseEntity<List<ElencosDTO>> findByTecnico(@PathVariable String t){
+    List<Elencos> find = s.findByTecnico(t);
     List<ElencosDTO> mapped = m.map(find);
     return new ResponseEntity<>(mapped, HttpStatus.OK);
   }

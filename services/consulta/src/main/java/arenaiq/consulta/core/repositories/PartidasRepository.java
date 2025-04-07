@@ -1,6 +1,5 @@
 package arenaiq.consulta.core.repositories;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.data.cassandra.repository.CassandraRepository;
@@ -10,7 +9,7 @@ import arenaiq.consulta.core.models.Partidas;
 
 @Repository
 public interface PartidasRepository extends CassandraRepository<Partidas, String>{
-  List<Partidas> findByDataHora(LocalDateTime d);
+  List<Partidas> findByDataHora(String d);
   List<Partidas> findByLocal(String l);
   List<Partidas> findByCasa(String c);
   List<Partidas> findByVisitante(String v);

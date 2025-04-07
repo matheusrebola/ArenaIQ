@@ -20,41 +20,41 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping(path = "/competicoes")
 @RequiredArgsConstructor
-public class CompeticaoController {
+public class CompeticoesController {
   private final CompeticoesService s;
   private final CompeticoesMapper m;
 
-  @GetMapping("{nome}")
-  public ResponseEntity<List<CompeticoesDTO>> findByNome(@PathVariable String nome){
-    List<Competicoes> find = s.findByNome(nome);
+  @GetMapping("/nome/{nome}")
+  public ResponseEntity<List<CompeticoesDTO>> findByNome(@PathVariable String n){
+    List<Competicoes> find = s.findByNome(n);
     List<CompeticoesDTO> mapped = m.map(find);
     return new ResponseEntity<>(mapped, HttpStatus.OK);
   }
 
-  @GetMapping("{temporada}")
-  public ResponseEntity<List<CompeticoesDTO>> findByTemporada(@PathVariable String temporada){
-    List<Competicoes> find = s.findByTemporada(temporada);
+  @GetMapping("/temporada/{temporada}")
+  public ResponseEntity<List<CompeticoesDTO>> findByTemporada(@PathVariable String t){
+    List<Competicoes> find = s.findByTemporada(t);
     List<CompeticoesDTO> mapped = m.map(find);
     return new ResponseEntity<>(mapped, HttpStatus.OK);
   }
 
   @GetMapping("{competicao}")
-  public ResponseEntity<List<CompeticoesDTO>> findByCompeticao(@PathVariable ECompeticao competicao){
-    List<Competicoes> find = s.findByCompeticao(competicao);
+  public ResponseEntity<List<CompeticoesDTO>> findByCompeticao(@PathVariable ECompeticao c){
+    List<Competicoes> find = s.findByCompeticao(c);
     List<CompeticoesDTO> mapped = m.map(find);
     return new ResponseEntity<>(mapped, HttpStatus.OK);
   }
 
-  @GetMapping("{disputa}")
-  public ResponseEntity<List<CompeticoesDTO>> findByDisputa(@PathVariable EDisputa disputa){
-    List<Competicoes> find = s.findByDisputa(disputa);
+  @GetMapping("/disputa/{disputa}")
+  public ResponseEntity<List<CompeticoesDTO>> findByDisputa(@PathVariable EDisputa d){
+    List<Competicoes> find = s.findByDisputa(d);
     List<CompeticoesDTO> mapped = m.map(find);
     return new ResponseEntity<>(mapped, HttpStatus.OK);
   }
 
-  @GetMapping("{localidade}")
-  public ResponseEntity<List<CompeticoesDTO>> findByLocalidade(@PathVariable String localidade){
-    List<Competicoes> find = s.findByLocalidade(localidade);
+  @GetMapping("/localidade/{localidade}")
+  public ResponseEntity<List<CompeticoesDTO>> findByLocalidade(@PathVariable String l){
+    List<Competicoes> find = s.findByLocalidade(l);
     List<CompeticoesDTO> mapped = m.map(find);
     return new ResponseEntity<>(mapped, HttpStatus.OK);
   }

@@ -1,6 +1,5 @@
 package arenaiq.consulta.core.repositories;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.cassandra.repository.CassandraRepository;
@@ -13,5 +12,5 @@ public interface EquipesRepository extends CassandraRepository<Equipes, String>{
   List<Equipes> findByNome(String n);
   List<Equipes> findByCidade(String c);
   List<Equipes> findByPais(String p);
-  List<Equipes> findByAnoFundacao(LocalDate a);
+  List<Equipes> findByAnoFundacao(String a);
 }

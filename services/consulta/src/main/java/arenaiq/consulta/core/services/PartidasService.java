@@ -1,6 +1,5 @@
 package arenaiq.consulta.core.services;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -14,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 public class PartidasService {
   private final PartidasRepository r;
 
-  public List<Partidas> findByDataHora(LocalDateTime d){
+  public List<Partidas> findByDataHora(String d){
     return r.findByDataHora(d);
   }
 

@@ -1,6 +1,5 @@
 package arenaiq.consulta.core.services;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -23,7 +22,7 @@ public class JogadoresService {
     return r.findByNome(n);
   }
 
-  public List<Jogadores> findByDataNascimento(LocalDate d){
+  public List<Jogadores> findByDataNascimento(String d){
     return r.findByDataNascimento(d);
   }
 
@@ -47,8 +46,8 @@ public class JogadoresService {
     return r.findByPersonalidade(p);
   }
 
-  public List<Jogadores> findByEPe(EPe p){
-    return r.findByEPe(p);
+  public List<Jogadores> findByPe(EPe p){
+    return r.findByPe(p);
   }
 
   public List<Jogadores> findByAltura(Float a){

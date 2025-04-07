@@ -25,7 +25,7 @@ public class ResultadosService {
     return r.findByDerrotas(d);
   }
 
-  List<Resultados> findByEmpates(Byte e){
+  public List<Resultados> findByEmpates(Byte e){
     return r.findByEmpates(e);
   }
 
@@ -41,7 +41,7 @@ public class ResultadosService {
     return r.findByGolsSofridos(s);
   }
 
-  public List<Resultados> findyDesempenho(Float d){
+  public List<Resultados> findByDesempenho(Float d){
     return r.findByDesempenho(d);
   }
 
@@ -49,7 +49,7 @@ public class ResultadosService {
     return r.findByCompeticao(c);
   }
 
-  public List<Resultados> findByTime(String t){
+  public List<Resultados> findByEquipe(String t){
     return r.findByEquipe(t);
   }
 

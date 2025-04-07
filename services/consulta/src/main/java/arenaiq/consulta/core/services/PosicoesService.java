@@ -15,6 +15,10 @@ import lombok.RequiredArgsConstructor;
 public class PosicoesService {
   private final PosicoesRepository r;
 
+  public List<Posicoes> findAll(){
+    return r.findAll();
+  }
+
   public List<Posicoes> findByPosicao(EPosicao p){
     return r.findByPosicao(p);
   }

@@ -6,21 +6,25 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
-import arenaiq.consulta.core.dtos.JogadoresElencoDTO;
-import arenaiq.consulta.core.models.JogadoresElenco;
+import arenaiq.consulta.core.dtos.JogadoresDTO;
+import arenaiq.consulta.core.models.Jogadores;
 import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class JogadorElencoMapper {
+public class JogadoresMapper {
   private final ModelMapper m;
 
-  public List<JogadoresElencoDTO> map(List<JogadoresElenco> j){
+  public List<JogadoresDTO> map(List<Jogadores> j){
     return j.stream()
-            .map(je -> {
-              JogadoresElencoDTO dto = m.map(je, JogadoresElencoDTO.class);
+            .map(jog -> {
+              JogadoresDTO dto = m.map(jog, JogadoresDTO.class);
               return dto;
             })
             .collect(Collectors.toList());
+  }
+
+  public JogadoresDTO map(Jogadores j){
+    return m.map(j, JogadoresDTO.class);
   }
 }

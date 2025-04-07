@@ -16,6 +16,4 @@ public interface MovimentacaoRepository extends CassandraRepository<Movimentacoe
   List<Movimentacoes> findByMinuto(Byte m);
   List<Movimentacoes> findBySegundo(Byte s);
   List<Movimentacoes> findByPressao(Boolean p);
-  List<Movimentacoes> findByPartidaId(String p);
-  List<Movimentacoes> findByJogadorId(String j);
 }

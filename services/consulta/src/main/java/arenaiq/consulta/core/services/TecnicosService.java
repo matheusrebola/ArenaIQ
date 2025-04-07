@@ -1,6 +1,5 @@
 package arenaiq.consulta.core.services;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -23,7 +22,7 @@ public class TecnicosService {
     return r.findByNacionalidade(n);
   }
 
-  public List<Tecnicos> findByDataNascimento(LocalDate d){
+  public List<Tecnicos> findByDataNascimento(String d){
     return r.findByDataNascimento(d);
   }
 

@@ -1,6 +1,5 @@
 package arenaiq.consulta.core.services;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -26,7 +25,7 @@ public class EquipesService {
     return r.findByPais(p);
   }
 
-  public List<Equipes> findByAnoFundacao(LocalDate a){
+  public List<Equipes> findByAnoFundacao(String a){
     return r.findByAnoFundacao(a);
   }
 }
