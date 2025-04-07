@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class EquipeMapper {
+public class EquipesMapper {
   private final ModelMapper mapper;
 
   public Equipes map(EquipesCreateDTO dto) {

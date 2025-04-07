@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import arenaiq.dadoshistoricos.core.dtos.ElencosCreateDTO;
 import arenaiq.dadoshistoricos.core.dtos.ElencosDTO;
-import arenaiq.dadoshistoricos.core.mappers.ElencoMapper;
+import arenaiq.dadoshistoricos.core.mappers.ElencosMapper;
 import arenaiq.dadoshistoricos.core.models.Elencos;
 import arenaiq.dadoshistoricos.core.services.ElencosService;
 import lombok.RequiredArgsConstructor;
@@ -17,8 +17,8 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping(path = "/elencos")
 @RequiredArgsConstructor
-public class ElencoController {
-  private final ElencoMapper mapper;
+public class ElencosController {
+  private final ElencosMapper mapper;
   private final ElencosService service;
   
   @PostMapping

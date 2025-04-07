@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class TecnicoMapper {
+public class TecnicosMapper {
   private final ModelMapper mapper;
 
   public Tecnicos map(TecnicosCreateDTO dto) {

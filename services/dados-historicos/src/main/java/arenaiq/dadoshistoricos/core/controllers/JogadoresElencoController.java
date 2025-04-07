@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import arenaiq.dadoshistoricos.core.dtos.JogadoresElencoCreateDTO;
 import arenaiq.dadoshistoricos.core.dtos.JogadoresElencoDTO;
-import arenaiq.dadoshistoricos.core.mappers.JogadorElencoMapper;
+import arenaiq.dadoshistoricos.core.mappers.JogadoresElencoMapper;
 import arenaiq.dadoshistoricos.core.models.JogadoresElenco;
 import arenaiq.dadoshistoricos.core.services.JogadoresElencoService;
 import lombok.RequiredArgsConstructor;
@@ -17,8 +17,8 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping(path = "/jogador-elenco")
 @RequiredArgsConstructor
-public class JogadorElencoController {
-  private final JogadorElencoMapper mapper;
+public class JogadoresElencoController {
+  private final JogadoresElencoMapper mapper;
   private final JogadoresElencoService service;
 
   @PostMapping

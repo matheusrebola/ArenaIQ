@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import arenaiq.dadoshistoricos.core.dtos.TecnicosCreateDTO;
 import arenaiq.dadoshistoricos.core.dtos.TecnicosDTO;
-import arenaiq.dadoshistoricos.core.mappers.TecnicoMapper;
+import arenaiq.dadoshistoricos.core.mappers.TecnicosMapper;
 import arenaiq.dadoshistoricos.core.models.Tecnicos;
 import arenaiq.dadoshistoricos.core.services.TecnicosService;
 import lombok.RequiredArgsConstructor;
@@ -17,8 +17,8 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping(path = "/tecnicos")
 @RequiredArgsConstructor
-public class TecnicoController {
-  private final TecnicoMapper mapper;
+public class TecnicosController {
+  private final TecnicosMapper mapper;
   private final TecnicosService service;
 
   @PostMapping

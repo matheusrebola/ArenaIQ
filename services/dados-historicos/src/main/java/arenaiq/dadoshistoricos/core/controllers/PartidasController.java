@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import arenaiq.dadoshistoricos.core.dtos.PartidasCreateDTO;
 import arenaiq.dadoshistoricos.core.dtos.PartidasDTO;
-import arenaiq.dadoshistoricos.core.mappers.PartidaMapper;
+import arenaiq.dadoshistoricos.core.mappers.PartidasMapper;
 import arenaiq.dadoshistoricos.core.models.Partidas;
 import arenaiq.dadoshistoricos.core.services.PartidasService;
 import lombok.RequiredArgsConstructor;
@@ -17,8 +17,8 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping(path = "/partidas")
 @RequiredArgsConstructor
-public class PartidaController {
-  private final PartidaMapper mapper;
+public class PartidasController {
+  private final PartidasMapper mapper;
   private final PartidasService service;
 
   @PostMapping

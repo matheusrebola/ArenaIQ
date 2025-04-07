@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import arenaiq.dadoshistoricos.core.dtos.ResultadosCreateDTO;
 import arenaiq.dadoshistoricos.core.dtos.ResultadosDTO;
-import arenaiq.dadoshistoricos.core.mappers.ResultadoMapper;
+import arenaiq.dadoshistoricos.core.mappers.ResultadosMapper;
 import arenaiq.dadoshistoricos.core.models.Resultados;
 import arenaiq.dadoshistoricos.core.services.ResultadosService;
 import lombok.RequiredArgsConstructor;
@@ -17,8 +17,8 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping(path = "/resultados")
 @RequiredArgsConstructor
-public class ResultadoController {
-  private final ResultadoMapper mapper;
+public class ResultadosController {
+  private final ResultadosMapper mapper;
   private final ResultadosService service;
 
   @PostMapping

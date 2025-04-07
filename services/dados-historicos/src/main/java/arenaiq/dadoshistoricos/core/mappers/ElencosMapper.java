@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class ElencoMapper {
+public class ElencosMapper {
   private final ModelMapper mapper;
 
   public Elencos map(ElencosCreateDTO dto) {

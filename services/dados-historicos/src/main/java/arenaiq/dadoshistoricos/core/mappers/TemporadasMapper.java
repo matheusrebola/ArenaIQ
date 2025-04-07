@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class TemporadaMapper {
+public class TemporadasMapper {
   private final ModelMapper mapper;
 
   public Temporadas map(TemporadasCreateDTO dto) {

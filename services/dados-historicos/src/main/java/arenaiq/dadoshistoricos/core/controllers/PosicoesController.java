@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import arenaiq.dadoshistoricos.core.dtos.PosicoesCreateDTO;
 import arenaiq.dadoshistoricos.core.dtos.PosicoesDTO;
-import arenaiq.dadoshistoricos.core.mappers.PosicaoMapper;
+import arenaiq.dadoshistoricos.core.mappers.PosicoesMapper;
 import arenaiq.dadoshistoricos.core.models.Posicoes;
 import arenaiq.dadoshistoricos.core.services.PosicoesService;
 import lombok.RequiredArgsConstructor;
@@ -17,8 +17,8 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping(path = "/posicoes")
 @RequiredArgsConstructor
-public class PosicaoController {
-  private final PosicaoMapper mapper;
+public class PosicoesController {
+  private final PosicoesMapper mapper;
   private final PosicoesService service;
 
   @PostMapping

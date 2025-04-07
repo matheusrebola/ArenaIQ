@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class PartidaMapper {
+public class PartidasMapper {
   private final ModelMapper mapper;
 
   public Partidas map(PartidasCreateDTO dto) {

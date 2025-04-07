@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import arenaiq.dadoshistoricos.core.dtos.CompeticoesCreateDTO;
 import arenaiq.dadoshistoricos.core.dtos.CompeticoesDTO;
-import arenaiq.dadoshistoricos.core.mappers.CompeticaoMapper;
+import arenaiq.dadoshistoricos.core.mappers.CompeticoesMapper;
 import arenaiq.dadoshistoricos.core.models.Competicoes;
 import arenaiq.dadoshistoricos.core.services.CompeticoesService;
 import lombok.RequiredArgsConstructor;
@@ -17,8 +17,8 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping(path = "/competicoes")
 @RequiredArgsConstructor
-public class CompeticaoController {
-  private final CompeticaoMapper mapper;
+public class CompeticoesController {
+  private final CompeticoesMapper mapper;
   private final CompeticoesService service;
 
   @PostMapping

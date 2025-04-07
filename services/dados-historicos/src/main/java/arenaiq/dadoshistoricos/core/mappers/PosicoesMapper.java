@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class PosicaoMapper {
+public class PosicoesMapper {
   private final ModelMapper mapper;
 
   public Posicoes map(PosicoesCreateDTO dto) {
