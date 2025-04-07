@@ -1,7 +1,5 @@
 package arenaiq.consulta.core.models;
 
-import java.time.LocalDate;
-
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
@@ -15,5 +13,5 @@ public class Equipes {
   private String nome;
   private String cidade;
   private String pais;
-  private LocalDate anoFundacao;
+  private String anoFundacao;
 }

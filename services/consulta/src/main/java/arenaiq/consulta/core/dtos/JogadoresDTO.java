@@ -1,5 +1,7 @@
 package arenaiq.consulta.core.dtos;
 
+import java.time.LocalDate;
+
 import arenaiq.consulta.core.models.enums.EContribuicao;
 import arenaiq.consulta.core.models.enums.EEstilo;
 import arenaiq.consulta.core.models.enums.EFuncao;
@@ -12,7 +14,7 @@ import lombok.Data;
 public class JogadoresDTO {
   private String id;
   private String nome;
-  private String dataNascimento;
+  private LocalDate dataNascimento;
   private String nacionalidade;
   private EFuncao funcao;
   private EContribuicao contribuicao;

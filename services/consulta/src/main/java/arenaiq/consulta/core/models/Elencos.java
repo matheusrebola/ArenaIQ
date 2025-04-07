@@ -10,7 +10,9 @@ import lombok.Data;
 public class Elencos {
   @PrimaryKey
   private String id;
-  private String equipe;
-  private String apelido;
+  private String nomeElenco;
+  private String anoFormacao;
   private String tecnico;
+  private String time;
+  private String temporadas;
 }

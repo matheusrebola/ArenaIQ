@@ -19,6 +19,6 @@ public class Resultados {
   private Byte golsSofridos;
   private Float desempenho;
   private String competicao;
-  private String time;
+  private String equipe;
   private String temporada;
 }

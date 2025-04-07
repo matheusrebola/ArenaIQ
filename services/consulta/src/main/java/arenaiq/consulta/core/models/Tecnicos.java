@@ -1,7 +1,5 @@
 package arenaiq.consulta.core.models;
 
-import java.time.LocalDate;
-
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
@@ -15,7 +13,7 @@ public class Tecnicos {
   private String id;
   private String nome;
   private String nacionalidade;
-  private LocalDate dataNascimento;
+  private String dataNascimento;
   private Byte anosExperiencia;
   private EFilosofia filosofia;
 }
