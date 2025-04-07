@@ -13,6 +13,10 @@ import lombok.RequiredArgsConstructor;
 public class JogadoresElencoService {
   private final JogadoresElencoRepository r;
 
+  public List<JogadoresElenco> findAll(){
+    return r.findAll();
+  }
+
   public List<JogadoresElenco> findByElenco(String e){
     return r.findByElenco(e);
   }

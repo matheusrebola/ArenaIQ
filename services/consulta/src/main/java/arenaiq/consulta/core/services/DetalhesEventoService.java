@@ -13,6 +13,10 @@ import lombok.RequiredArgsConstructor;
 public class DetalhesEventoService {
   private final DetalhesEventoRepository r;
 
+  public List<DetalhesEvento> findAll(){
+    return r.findAll();
+  }
+
   public List<DetalhesEvento> findByRPrimario(String p){
     return r.findByRPrimario(p);
   }

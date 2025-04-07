@@ -13,6 +13,10 @@ import lombok.RequiredArgsConstructor;
 public class ElencosService {
   private final ElencosRepository r;
 
+  public List<Elencos> findAll(){
+    return r.findAll();
+  }
+
   public List<Elencos> findByEquipe(String e){
     return r.findByEquipe(e);
   }

@@ -22,6 +22,13 @@ public class JogadoresElencoController {
   private final JogadoresElencoService s;
   private final JogadoresElencoMapper m;
 
+  @GetMapping
+  public ResponseEntity<List<JogadoresElencoDTO>> findByAll(){
+    List<JogadoresElenco> find = s.findAll();
+    List<JogadoresElencoDTO> mapped = m.map(find);
+    return new ResponseEntity<>(mapped, HttpStatus.OK);
+  }
+
   @GetMapping("{elenco}")
   public ResponseEntity<List<JogadoresElencoDTO>> findByElenco(@PathVariable String e){
     List<JogadoresElenco> find = s.findByElenco(e);

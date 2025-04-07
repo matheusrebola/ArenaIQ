@@ -23,6 +23,13 @@ public class TecnicosController {
   private final TecnicosService s;
   private final TecnicosMapper m;
 
+  @GetMapping
+  public ResponseEntity<List<TecnicosDTO>> findByAll(){
+    List<Tecnicos> find = s.findAll();
+    List<TecnicosDTO> mapped = m.map(find);
+    return new ResponseEntity<>(mapped, HttpStatus.OK);
+  }
+
   @GetMapping("/nome/{nome}")
   public ResponseEntity<List<TecnicosDTO>> findByNome(@PathVariable String n){
     List<Tecnicos> find = s.findByNome(n);

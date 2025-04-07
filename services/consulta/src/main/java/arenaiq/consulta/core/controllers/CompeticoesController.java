@@ -24,6 +24,13 @@ public class CompeticoesController {
   private final CompeticoesService s;
   private final CompeticoesMapper m;
 
+  @GetMapping
+  public ResponseEntity<List<CompeticoesDTO>> findByAll(){
+    List<Competicoes> find = s.findAll();
+    List<CompeticoesDTO> mapped = m.map(find);
+    return new ResponseEntity<>(mapped, HttpStatus.OK);
+  }
+
   @GetMapping("/nome/{nome}")
   public ResponseEntity<List<CompeticoesDTO>> findByNome(@PathVariable String n){
     List<Competicoes> find = s.findByNome(n);

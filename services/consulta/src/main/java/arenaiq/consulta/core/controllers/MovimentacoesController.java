@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import arenaiq.consulta.core.dtos.MovimentacaoDTO;
+import arenaiq.consulta.core.dtos.MovimentacoesDTO;
 import arenaiq.consulta.core.mappers.MovimentacaoMapper;
 import arenaiq.consulta.core.models.Movimentacoes;
 import arenaiq.consulta.core.services.MovimentacaoService;
@@ -22,52 +22,59 @@ public class MovimentacoesController {
   private final MovimentacaoService s;
   private final MovimentacaoMapper m;
 
+  @GetMapping
+  public ResponseEntity<List<MovimentacoesDTO>> findByAll(){
+    List<Movimentacoes> find = s.findAll();
+    List<MovimentacoesDTO> mapped = m.map(find);
+    return new ResponseEntity<>(mapped, HttpStatus.OK);
+  }
+
   @GetMapping("/x/{eixo}")
-  public ResponseEntity<List<MovimentacaoDTO>> findByEixoX(@PathVariable Float x){
+  public ResponseEntity<List<MovimentacoesDTO>> findByEixoX(@PathVariable Float x){
     List<Movimentacoes> find = s.findByEixoX(x);
-    List<MovimentacaoDTO> mapped = m.map(find);
+    List<MovimentacoesDTO> mapped = m.map(find);
     return new ResponseEntity<>(mapped, HttpStatus.OK);
   }
 
   @GetMapping("/y/{eixo}")
-  public ResponseEntity<List<MovimentacaoDTO>> findByEixoY(@PathVariable Float y){
+  public ResponseEntity<List<MovimentacoesDTO>> findByEixoY(@PathVariable Float y){
     List<Movimentacoes> find = s.findByEixoY(y);
-    List<MovimentacaoDTO> mapped = m.map(find);
+    List<MovimentacoesDTO> mapped = m.map(find);
     return new ResponseEntity<>(mapped, HttpStatus.OK);
   }
 
   @GetMapping("/velocidade/{velocidade}")
-  public ResponseEntity<List<MovimentacaoDTO>> findByVelocidade(@PathVariable Float v){
+  public ResponseEntity<List<MovimentacoesDTO>> findByVelocidade(@PathVariable Float v){
     List<Movimentacoes> find = s.findByVelocidade(v);
-    List<MovimentacaoDTO> mapped = m.map(find);
+    List<MovimentacoesDTO> mapped = m.map(find);
     return new ResponseEntity<>(mapped, HttpStatus.OK);
   }
 
   @GetMapping("/aceleracao/{aceleracao}")
-  public ResponseEntity<List<MovimentacaoDTO>> findByAceleracao(@PathVariable Float a){
+  public ResponseEntity<List<MovimentacoesDTO>> findByAceleracao(@PathVariable Float a){
     List<Movimentacoes> find = s.findByAceleracao(a);
-    List<MovimentacaoDTO> mapped = m.map(find);
+    List<MovimentacoesDTO> mapped = m.map(find);
     return new ResponseEntity<>(mapped, HttpStatus.OK);
   }
 
   @GetMapping("/minuto/{minuto}")
-  public ResponseEntity<List<MovimentacaoDTO>> findByMinuto(@PathVariable Byte min){
+  public ResponseEntity<List<MovimentacoesDTO>> findByMinuto(@PathVariable Byte min){
     List<Movimentacoes> find = s.findByMinuto(min);
-    List<MovimentacaoDTO> mapped = m.map(find);
+    List<MovimentacoesDTO> mapped = m.map(find);
     return new ResponseEntity<>(mapped, HttpStatus.OK);
   }
 
   @GetMapping("/segundo/{segundo}")
-  public ResponseEntity<List<MovimentacaoDTO>> findBySegundo(@PathVariable Byte seg){
+  public ResponseEntity<List<MovimentacoesDTO>> findBySegundo(@PathVariable Byte seg){
     List<Movimentacoes> find = s.findBySegundo(seg);
-    List<MovimentacaoDTO> mapped = m.map(find);
+    List<MovimentacoesDTO> mapped = m.map(find);
     return new ResponseEntity<>(mapped, HttpStatus.OK);
   }
 
   @GetMapping("/pressao/{pressao}")
-  public ResponseEntity<List<MovimentacaoDTO>> findByPressao(@PathVariable Boolean p){
+  public ResponseEntity<List<MovimentacoesDTO>> findByPressao(@PathVariable Boolean p){
     List<Movimentacoes> find = s.findByPressao(p);
-    List<MovimentacaoDTO> mapped = m.map(find);
+    List<MovimentacoesDTO> mapped = m.map(find);
     return new ResponseEntity<>(mapped, HttpStatus.OK);
   }
 }

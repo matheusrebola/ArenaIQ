@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
-import arenaiq.consulta.core.dtos.MovimentacaoDTO;
+import arenaiq.consulta.core.dtos.MovimentacoesDTO;
 import arenaiq.consulta.core.models.Movimentacoes;
 import lombok.RequiredArgsConstructor;
 
@@ -15,10 +15,10 @@ import lombok.RequiredArgsConstructor;
 public class MovimentacaoMapper {
   private final ModelMapper mapper;
 
-  public List<MovimentacaoDTO> map(List<Movimentacoes> m){
+  public List<MovimentacoesDTO> map(List<Movimentacoes> m){
     return m.stream()
             .map(mov -> {
-              MovimentacaoDTO dto = mapper.map(mov, MovimentacaoDTO.class);
+              MovimentacoesDTO dto = mapper.map(mov, MovimentacoesDTO.class);
               return dto;
             })
             .collect(Collectors.toList());

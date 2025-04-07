@@ -13,6 +13,10 @@ import lombok.RequiredArgsConstructor;
 public class EquipesService {
   private final EquipesRepository r;
 
+  public List<Equipes> findAll(){
+    return r.findAll();
+  }
+
   public List<Equipes> findByNome(String n){
     return r.findByNome(n);
   }

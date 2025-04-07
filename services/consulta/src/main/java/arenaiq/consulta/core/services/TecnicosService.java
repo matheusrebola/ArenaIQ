@@ -14,6 +14,10 @@ import lombok.RequiredArgsConstructor;
 public class TecnicosService {
   private final TecnicosRepository r;
 
+  public List<Tecnicos> findAll(){
+    return r.findAll();
+  }
+
   public List<Tecnicos> findByNome(String n){
     return r.findByNome(n);
   }

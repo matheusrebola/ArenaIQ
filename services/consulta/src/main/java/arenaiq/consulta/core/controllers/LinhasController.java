@@ -24,6 +24,13 @@ public class LinhasController {
   private final LinhasService s;
   private final LinhasMapper m;
 
+  @GetMapping
+  public ResponseEntity<List<LinhasDTO>> findByAll(){
+    List<Linhas> find = s.findAll();
+    List<LinhasDTO> mapped = m.map(find);
+    return new ResponseEntity<>(mapped, HttpStatus.OK);
+  }
+
   @GetMapping("/altura/{altura}")
   public ResponseEntity<List<LinhasDTO>> findByAltura(@PathVariable EModoJogo mj){
     List<Linhas> find = s.findByAltura(mj);

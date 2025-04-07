@@ -24,6 +24,13 @@ public class TitulosController {
   private final TitulosService s;
   private final TitulosMapper m;
 
+  @GetMapping
+  public ResponseEntity<List<TitulosDTO>> findByAll(){
+    List<Titulos> find = s.findAll();
+    List<TitulosDTO> mapped = m.map(find);
+    return new ResponseEntity<>(mapped, HttpStatus.OK);
+  }
+
   @GetMapping("/nome/{nome}")
   public ResponseEntity<List<TitulosDTO>> findByNome(@PathVariable String n){
     List<Titulos> find = s.findByNome(n);

@@ -22,6 +22,13 @@ public class ResultadosController {
   private final ResultadosService s;
   private final ResultadosMapper m;
 
+  @GetMapping
+  public ResponseEntity<List<ResultadosDTO>> findByAll(){
+    List<Resultados> find = s.findAll();
+    List<ResultadosDTO> mapped = m.map(find);
+    return new ResponseEntity<>(mapped, HttpStatus.OK);
+  }
+
   @GetMapping("/jogos-disputados/{jogos}")
   public ResponseEntity<List<ResultadosDTO>> findByJogosDisputados(@PathVariable Byte j){
     List<Resultados> find = s.findByJogosDisputados(j);

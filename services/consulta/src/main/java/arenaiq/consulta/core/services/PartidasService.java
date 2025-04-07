@@ -13,6 +13,10 @@ import lombok.RequiredArgsConstructor;
 public class PartidasService {
   private final PartidasRepository r;
 
+  public List<Partidas> findAll(){
+    return r.findAll();
+  }
+
   public List<Partidas> findByDataHora(String d){
     return r.findByDataHora(d);
   }

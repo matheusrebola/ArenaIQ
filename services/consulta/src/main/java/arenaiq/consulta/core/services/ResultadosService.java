@@ -13,6 +13,10 @@ import lombok.RequiredArgsConstructor;
 public class ResultadosService {
   private final ResultadosRepository r;
 
+  public List<Resultados> findAll(){
+    return r.findAll();
+  }
+
   public List<Resultados> findByJogosDisputados(Byte j){
     return r.findByJogosDisputados(j);
   }

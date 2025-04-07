@@ -22,6 +22,13 @@ public class TemporadasController {
   private final TemporadasService s;
   private final TemporadasMapper m;
 
+  @GetMapping
+  public ResponseEntity<List<TemporadasDTO>> findByAll(){
+    List<Temporadas> find = s.findAll();
+    List<TemporadasDTO> mapped = m.map(find);
+    return new ResponseEntity<>(mapped, HttpStatus.OK);
+  }
+
   @GetMapping("{temporada}")
   public ResponseEntity<List<TemporadasDTO>> findByTemporada(@PathVariable String t){
     List<Temporadas> find = s.findByTemporada(t);

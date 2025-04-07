@@ -13,6 +13,10 @@ import lombok.RequiredArgsConstructor;
 public class TemporadasService {
   private final TemporadasRepository r;
 
+  public List<Temporadas> findAll(){
+    return r.findAll();
+  }
+
   public List<Temporadas> findByTemporada(String t){
     return r.findByTemporada(t);
   }

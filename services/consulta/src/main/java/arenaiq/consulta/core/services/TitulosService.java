@@ -15,6 +15,10 @@ import lombok.RequiredArgsConstructor;
 public class TitulosService {
   private final TitulosRepository r;
 
+  public List<Titulos> findAll(){
+    return r.findAll();
+  }
+
   public List<Titulos> findByNome(String n){
     return r.findByNome(n);
   }

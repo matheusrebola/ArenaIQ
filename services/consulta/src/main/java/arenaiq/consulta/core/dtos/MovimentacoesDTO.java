@@ -3,7 +3,7 @@ package arenaiq.consulta.core.dtos;
 import lombok.Data;
 
 @Data
-public class MovimentacaoDTO {
+public class MovimentacoesDTO {
   private String id;
   private Float eixoX;
   private Float eixoY;

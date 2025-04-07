@@ -22,6 +22,13 @@ public class ElencosController {
   private final ElencosService s;
   private final ElencosMapper m;
 
+  @GetMapping
+  public ResponseEntity<List<ElencosDTO>> findByAll(){
+    List<Elencos> find = s.findAll();
+    List<ElencosDTO> mapped = m.map(find);
+    return new ResponseEntity<>(mapped, HttpStatus.OK);
+  }
+
   @GetMapping("{equipe}")
   public ResponseEntity<List<ElencosDTO>> findByEquipe(@PathVariable String e){
     List<Elencos> find = s.findByEquipe(e);

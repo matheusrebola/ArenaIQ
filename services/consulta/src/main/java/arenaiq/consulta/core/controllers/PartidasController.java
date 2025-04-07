@@ -22,6 +22,13 @@ public class PartidasController {
   private final PartidasService s;
   private final PartidasMapper m;
 
+  @GetMapping
+  public ResponseEntity<List<PartidasDTO>> findByAll(){
+    List<Partidas> find = s.findAll();
+    List<PartidasDTO> mapped = m.map(find);
+    return new ResponseEntity<>(mapped, HttpStatus.OK);
+  }
+
   @GetMapping("/data/{data}")
   public ResponseEntity<List<PartidasDTO>> findByDataHora(@PathVariable String d){
     List<Partidas> find = s.findByDataHora(d);

@@ -13,6 +13,10 @@ import lombok.RequiredArgsConstructor;
 public class MovimentacaoService {
   private final MovimentacaoRepository r;
 
+  public List<Movimentacoes> findAll(){
+    return r.findAll();
+  }
+
   public List<Movimentacoes> findByEixoX(Float x){
     return r.findByEixoX(x);
   }

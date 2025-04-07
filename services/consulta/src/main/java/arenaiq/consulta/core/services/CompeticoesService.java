@@ -15,6 +15,10 @@ import lombok.RequiredArgsConstructor;
 public class CompeticoesService {
   private final CompeticoesRepository r;
 
+  public List<Competicoes> findAll(){
+    return r.findAll();
+  }
+
   public List<Competicoes> findByNome(String n){
     return r.findByNome(n);
   }

@@ -22,6 +22,13 @@ public class EquipesController {
   private final EquipesService s;
   private final EquipesMapper m;
 
+  @GetMapping
+  public ResponseEntity<List<EquipesDTO>> findByAll(){
+    List<Equipes> find = s.findAll();
+    List<EquipesDTO> mapped = m.map(find);
+    return new ResponseEntity<>(mapped, HttpStatus.OK);
+  }
+
   @GetMapping("{nome}")
   public ResponseEntity<List<EquipesDTO>> findByNome(@PathVariable String n){
     List<Equipes> find = s.findByNome(n);

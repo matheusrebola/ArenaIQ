@@ -15,6 +15,10 @@ import lombok.RequiredArgsConstructor;
 public class LinhasService {
   private final LinhasRepository r;
 
+  public List<Linhas> findAll(){
+    return r.findAll();
+  }
+
   public List<Linhas> findByAltura(EModoJogo m){
     return r.findByAltura(m);
   }

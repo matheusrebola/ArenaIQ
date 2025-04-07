@@ -24,6 +24,13 @@ public class PosicoesController {
   private final PosicoesService s;
   private final PosicoesMapper m;
 
+  @GetMapping
+  public ResponseEntity<List<PosicoesDTO>> findByAll(){
+    List<Posicoes> find = s.findAll();
+    List<PosicoesDTO> mapped = m.map(find);
+    return new ResponseEntity<>(mapped, HttpStatus.OK);
+  }
+
   @GetMapping("/{posicao}")
   public ResponseEntity<List<PosicoesDTO>> findByPosicao(@PathVariable EPosicao p){
     List<Posicoes> find = s.findByPosicao(p);
