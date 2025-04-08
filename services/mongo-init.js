@@ -3,7 +3,8 @@ const databases = [
   { name: "partida-db", user: "partida", password: "partida" },
   { name: "treino-db", user: "treino", password: "treino" },
   { name: "encaminhador-db", user: "encaminhador", password: "encaminhador" },
-  { name: "recebidor-db", user: "recebidor", password: "recebidor" }
+  { name: "recebidor-db", user: "recebidor", password: "recebidor" },
+  { name: "datalake", user: "datalake", password: "datalake" }
 ];
 
 databases.forEach(({ name, user, password }) => {

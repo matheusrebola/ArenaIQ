@@ -1,10 +1,13 @@
 server:
-  port: 63204
+  port: 63203
  
 spring:
   data:
-    mongodb:
-      uri: mongodb://datalake:datalake@localhost:61000/datalake
+    cassandra:
+      keyspaceName: arenaiq-datalake
+      contactPoints: localhost
+      port: 60000
+      schemaAction: CREATE_IF_NOT_EXISTS
   kafka:
     bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
     topic:
