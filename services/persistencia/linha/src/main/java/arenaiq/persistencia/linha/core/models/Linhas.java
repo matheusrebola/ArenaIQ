@@ -1,14 +1,14 @@
 package arenaiq.persistencia.linha.core.models;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.cassandra.core.mapping.Table;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import arenaiq.persistencia.linha.core.models.enums.ELargura;
 import arenaiq.persistencia.linha.core.models.enums.ELinha;
 import arenaiq.persistencia.linha.core.models.enums.EModoJogo;
 import lombok.Data;
 
-@Table
+@Document
 @Data
 public class Linhas {
   @Id

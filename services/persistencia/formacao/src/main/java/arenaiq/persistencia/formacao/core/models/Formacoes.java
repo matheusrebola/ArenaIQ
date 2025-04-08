@@ -1,14 +1,14 @@
 package arenaiq.persistencia.formacao.core.models;
 
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
-import org.springframework.data.cassandra.core.mapping.Table;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
 
-@Table
+@Document
 @Data
 public class Formacoes {
-  @PrimaryKey
+  @Id
   private String id;
   private Byte minuto;
   private Byte segundo;

@@ -1,11 +1,11 @@
 package arenaiq.persistencia.movimentacao.core.repositories;
 
-import org.springframework.data.cassandra.repository.CassandraRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 import arenaiq.persistencia.movimentacao.core.models.Movimentacoes;
 
 @Repository
-public interface MovimentacaoRepository extends CassandraRepository<Movimentacoes, String> {
+public interface MovimentacaoRepository extends MongoRepository<Movimentacoes, String> {
 
 }

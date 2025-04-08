@@ -1,18 +1,18 @@
 package arenaiq.consulta.core.models;
 
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
-import org.springframework.data.cassandra.core.mapping.Table;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
 
-@Table
+@Document
 @Data
 public class Elencos {
-  @PrimaryKey
+  @Id
   private String id;
-  private String nomeElenco;
+  private String apelido;
   private String anoFormacao;
   private String tecnico;
-  private String time;
+  private String equipe;
   private String temporadas;
 }

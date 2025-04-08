@@ -2,16 +2,16 @@ package arenaiq.dadoshistoricos.core.models;
 
 import java.time.LocalDate;
 
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
-import org.springframework.data.cassandra.core.mapping.Table;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import arenaiq.dadoshistoricos.core.models.enums.EFilosofia;
 import lombok.Data;
 
-@Table
+@Document
 @Data
 public class Tecnicos {
-  @PrimaryKey
+  @Id
   private String id;
   private String nome;
   private String nacionalidade;

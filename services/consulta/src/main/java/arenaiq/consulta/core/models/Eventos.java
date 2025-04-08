@@ -1,16 +1,16 @@
 package arenaiq.consulta.core.models;
 
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
-import org.springframework.data.cassandra.core.mapping.Table;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import arenaiq.consulta.core.models.enums.EEvento;
 import arenaiq.consulta.core.models.enums.EMotivo;
 import lombok.Data;
 
-@Table
+@Document
 @Data
 public class Eventos {
-  @PrimaryKey
+  @Id
   private String id;
   private EEvento evento;
   private EMotivo motivo;

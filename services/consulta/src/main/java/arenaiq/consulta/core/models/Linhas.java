@@ -1,17 +1,17 @@
 package arenaiq.consulta.core.models;
 
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
-import org.springframework.data.cassandra.core.mapping.Table;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import arenaiq.consulta.core.models.enums.ELargura;
 import arenaiq.consulta.core.models.enums.ELinha;
 import arenaiq.consulta.core.models.enums.EModoJogo;
 import lombok.Data;
 
-@Table
+@Document
 @Data
 public class Linhas {
-  @PrimaryKey
+  @Id
   private String id;
   private ELinha linha;
   private EModoJogo altura;

@@ -1,11 +1,11 @@
 package arenaiq.persistencia.movimentacao.core.models;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.cassandra.core.mapping.Table;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
 
-@Table
+@Document
 @Data
 public class Movimentacoes {
   @Id

@@ -1,7 +1,7 @@
 package arenaiq.dadoshistoricos.core.models;
 
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
-import org.springframework.data.cassandra.core.mapping.Table;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import arenaiq.dadoshistoricos.core.models.enums.EContribuicao;
 import arenaiq.dadoshistoricos.core.models.enums.EEstilo;
@@ -10,10 +10,10 @@ import arenaiq.dadoshistoricos.core.models.enums.EPe;
 import arenaiq.dadoshistoricos.core.models.enums.EPersonalidade;
 import lombok.Data;
 
-@Table
+@Document
 @Data
 public class Jogadores {
-  @PrimaryKey
+  @Id
   private String id;
   private String nome;
   private String dataNascimento;

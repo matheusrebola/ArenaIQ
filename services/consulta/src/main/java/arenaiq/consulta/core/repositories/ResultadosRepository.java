@@ -2,13 +2,13 @@ package arenaiq.consulta.core.repositories;
 
 import java.util.List;
 
-import org.springframework.data.cassandra.repository.CassandraRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 import arenaiq.consulta.core.models.Resultados;
 
 @Repository
-public interface ResultadosRepository extends CassandraRepository<Resultados, String>{
+public interface ResultadosRepository extends MongoRepository<Resultados, String>{
   List<Resultados> findByJogosDisputados(Byte j);
   List<Resultados> findByVitorias(Byte v);
   List<Resultados> findByDerrotas(Byte d);
