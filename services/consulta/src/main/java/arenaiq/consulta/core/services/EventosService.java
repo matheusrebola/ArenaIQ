@@ -50,8 +50,4 @@ public class EventosService {
   List<Eventos> findByPosicaoY(String y){
     return r.findByPosicaoY(y);
   }
-
-  List<Eventos> findByDistancia(Float d){
-    return r.findByDistancia(d);
-  }
 }

@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import arenaiq.dadoshistoricos.core.models.enums.EFilosofia;
 import lombok.Data;
 
-@Document
+@Document (collection = "tecnicos")
 @Data
 public class Tecnicos {
   @Id

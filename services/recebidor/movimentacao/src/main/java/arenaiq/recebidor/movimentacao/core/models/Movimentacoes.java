@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
 
-@Document
+@Document (collection = "acontecimentos")
 @Data
 public class Movimentacoes {
   @Id

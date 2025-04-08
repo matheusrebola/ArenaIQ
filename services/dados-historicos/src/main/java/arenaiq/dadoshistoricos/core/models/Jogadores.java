@@ -10,7 +10,7 @@ import arenaiq.dadoshistoricos.core.models.enums.EPe;
 import arenaiq.dadoshistoricos.core.models.enums.EPersonalidade;
 import lombok.Data;
 
-@Document
+@Document (collection = "jogadores")
 @Data
 public class Jogadores {
   @Id

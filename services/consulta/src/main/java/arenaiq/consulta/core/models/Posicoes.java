@@ -7,7 +7,7 @@ import arenaiq.consulta.core.models.enums.EFunPosicao;
 import arenaiq.consulta.core.models.enums.EPosicao;
 import lombok.Data;
 
-@Document
+@Document (collection = "posicoes")
 @Data
 public class Posicoes {
   @Id

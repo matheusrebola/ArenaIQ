@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import arenaiq.dadoshistoricos.core.models.enums.EClima;
 import lombok.Data;
 
-@Document
+@Document (collection = "partidas")
 @Data
 public class Partidas {
   @Id

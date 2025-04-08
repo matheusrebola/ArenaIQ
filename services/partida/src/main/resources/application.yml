@@ -4,9 +4,4 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://partida:partida@localhost:61000/partida-db
-    cassandra:
-        keyspaceName: arenaiq-datalake
-        contactPoints: localhost
-        port: 60000
-        schemaAction: CREATE_IF_NOT_EXISTS
+      uri: mongodb://datalake:datalake@localhost:61000/datalake

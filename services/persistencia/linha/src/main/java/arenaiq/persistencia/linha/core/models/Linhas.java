@@ -8,7 +8,7 @@ import arenaiq.persistencia.linha.core.models.enums.ELinha;
 import arenaiq.persistencia.linha.core.models.enums.EModoJogo;
 import lombok.Data;
 
-@Document
+@Document (collection = "linhas")
 @Data
 public class Linhas {
   @Id

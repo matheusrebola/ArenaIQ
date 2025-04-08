@@ -7,7 +7,7 @@ import arenaiq.consulta.core.models.enums.ECompeticao;
 import arenaiq.consulta.core.models.enums.EDisputa;
 import lombok.Data;
 
-@Document
+@Document(collection = "competicoes")
 @Data
 public class Competicoes {
   @Id

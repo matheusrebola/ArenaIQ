@@ -20,5 +20,4 @@ public interface EventosRepository extends MongoRepository<Eventos, String> {
   List<Eventos> findBySegundo(Byte s);
   List<Eventos> findByPosicaoX(String x);
   List<Eventos> findByPosicaoY(String y);
-  List<Eventos> findByDistancia(Float d);
 }

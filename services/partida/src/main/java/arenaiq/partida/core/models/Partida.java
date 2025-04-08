@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import arenaiq.partida.core.models.enums.EPartida;
 import lombok.Data;
 
-@Document
+@Document (collection = "partida")
 @Data
 public class Partida {
   @Id

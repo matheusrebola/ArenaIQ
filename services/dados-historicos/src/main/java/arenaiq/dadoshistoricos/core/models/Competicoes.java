@@ -7,7 +7,7 @@ import arenaiq.dadoshistoricos.core.models.enums.ECompeticao;
 import arenaiq.dadoshistoricos.core.models.enums.EDisputa;
 import lombok.Data;
 
-@Document
+@Document (collection = "competicoes")
 @Data
 public class Competicoes {
   @Id

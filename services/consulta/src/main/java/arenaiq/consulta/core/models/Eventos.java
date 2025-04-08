@@ -8,14 +8,14 @@ import arenaiq.consulta.core.models.enums.EEvento;
 import arenaiq.consulta.core.models.enums.EMotivo;
 import lombok.Data;
 
-@Document
+@Document (collection = "eventos")
 @Data
 public class Eventos {
   @Id
   private String id;
   private EEvento evento;
   private EMotivo motivo;
-  private String partidaId;
+  private String partida;
   private String origem; //jogador de origem
   private String destino; //jogador destino
   private Byte minuto;
