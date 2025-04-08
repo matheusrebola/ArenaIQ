@@ -1,0 +1,22 @@
+---
+title: "Diagnóstico Tático Instantâneo"
+---
+
+Objetivo: Entender o comportamento do time ao vivo.
+
+Campos para cruzar:
+
+    eventos.evento
+
+    eventos.ator, eventos.receptor
+
+    formacoes.formacao, formacoes.modo, formacoes.compactacao
+
+    linhas.linha, linhas.altura, linhas.largura
+
+    tempo (timestamp ou minuto)
+
+```{r}
+
+```
+

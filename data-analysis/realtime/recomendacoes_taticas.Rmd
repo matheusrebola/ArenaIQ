@@ -1,0 +1,20 @@
+---
+title: "Recomendações Táticas em Tempo Real"
+---
+
+Objetivo: Sugerir ajustes conforme o comportamento do adversário e a eficácia do time.
+
+Campos para cruzar:
+
+    formacoes + eventos.motivo
+
+    linhas + eventos.evento
+
+    clima, temperatura, umidade (do data lake)
+
+    placar parcial, momento do jogo
+
+```{r}
+
+```
+

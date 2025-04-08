@@ -1,0 +1,21 @@
+---
+title: "Análise do MVP em Contexto"
+---
+
+Objetivo: Entender o perfil dos MVPs e contexto da performance.
+
+Campos para cruzar:
+
+    eventos individuais
+
+    posição, função, perfil físico
+
+    formacao usada, modo tático
+
+    clima, temperatura, umidade
+
+    resultado do jogo, impacto no jogo
+
+```{r}
+plot(cars)
+```
