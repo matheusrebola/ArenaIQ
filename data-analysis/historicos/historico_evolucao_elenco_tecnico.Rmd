@@ -14,12 +14,16 @@ Perguntas:
 ```{r}
 #library(mongolite)
 
-# Exemplo de conexão local
-con <- mongo(
-  collection = "Eventos",       # ou "Formacoes", "Linhas"
-  db = "nome_do_banco",
-  url = "mongodb://localhost:27017"
-)
+uri <- "mongodb://datalake:datalake@localhost:61000/datalake"
+
+# Selecionar uma collection (por exemplo, "Eventos")
+eventos <- mongo(collection = "Eventos", db = "datalake", url = uri)
+
+# Depois, para "Formacoes"
+formacoes <- mongo(collection = "Formacoes", db = "datalake", url = uri)
+
+# E para "Linhas"
+linhas <- mongo(collection = "Linhas", db = "datalake", url = uri)
 ```
 
 Dados a cruzar:
