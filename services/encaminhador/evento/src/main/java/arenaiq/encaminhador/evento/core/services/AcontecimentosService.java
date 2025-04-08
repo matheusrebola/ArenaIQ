@@ -5,9 +5,9 @@ import java.time.LocalDateTime;
 import org.springframework.stereotype.Service;
 
 import arenaiq.encaminhador.evento.core.models.Acontecimentos;
-import arenaiq.encaminhador.evento.core.models.ESagaStatus;
 import arenaiq.encaminhador.evento.core.models.Eventos;
 import arenaiq.encaminhador.evento.core.models.Historia;
+import arenaiq.encaminhador.evento.core.models.enums.ESagaStatus;
 import arenaiq.encaminhador.evento.core.repositories.AcontecimentosRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

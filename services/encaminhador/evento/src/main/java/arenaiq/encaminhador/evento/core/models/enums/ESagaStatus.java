@@ -1,4 +1,4 @@
-package arenaiq.encaminhador.evento.core.models;
+package arenaiq.encaminhador.evento.core.models.enums;
 
 public enum ESagaStatus {
     SUCCESS,

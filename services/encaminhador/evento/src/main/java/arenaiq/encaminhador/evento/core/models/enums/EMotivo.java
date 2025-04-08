@@ -1,4 +1,4 @@
-package arenaiq.encaminhador.evento.core.models;
+package arenaiq.encaminhador.evento.core.models.enums;
 
 public enum EMotivo {
   MANTER_POSSE, TRABALHAR_JOGADA, VIRAR_JOGO, TABELA_SIMPLES,

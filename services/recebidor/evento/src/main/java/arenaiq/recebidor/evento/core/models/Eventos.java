@@ -21,7 +21,6 @@ public class Eventos {
   private String destino; //jogador destino
   private Byte minuto;
   private Byte segundo;
-  private Float posicaoX;
-  private Float posicaoY;
-  private Float distancia;
+  private EAtor posicaoX;
+  private EAtor posicaoY;
 }
