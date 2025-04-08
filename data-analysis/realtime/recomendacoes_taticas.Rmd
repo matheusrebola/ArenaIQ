@@ -15,6 +15,14 @@ Campos para cruzar:
     placar parcial, momento do jogo
 
 ```{r}
+#library(mongolite)
+
+# Exemplo de conexão local
+con <- mongo(
+  collection = "Eventos",       # ou "Formacoes", "Linhas"
+  db = "nome_do_banco",
+  url = "mongodb://localhost:27017"
+)
 
 ```
 

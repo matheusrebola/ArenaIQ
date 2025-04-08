@@ -12,15 +12,14 @@ Perguntas:
     Quais métricas de evento (passe, desarme, chute) estão ligadas ao desempenho?
 
 ```{r}
-library(RJDBC)
+#library(mongolite)
 
-# Caminho para o driver
-drv <- JDBC(driverClass = "com.dse.driver.api.core.CqlSession", 
-            classPath = "/caminho/do/driver/cassandra-driver.jar")
-
-# Conectando
-conn <- dbConnect(drv, "jdbc:cassandra://host:porta/keyspace")
-
+# Exemplo de conexão local
+con <- mongo(
+  collection = "Eventos",       # ou "Formacoes", "Linhas"
+  db = "nome_do_banco",
+  url = "mongodb://localhost:27017"
+)
 ```
 
 Dados a cruzar:

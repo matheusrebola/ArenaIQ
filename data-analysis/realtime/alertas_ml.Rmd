@@ -18,7 +18,14 @@ Campos para cruzar:
 
 
 ```{r}
-plot(cars)
+#library(mongolite)
+
+# Exemplo de conexão local
+con <- mongo(
+  collection = "Eventos",       # ou "Formacoes", "Linhas"
+  db = "nome_do_banco",
+  url = "mongodb://localhost:27017"
+)
 ```
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.

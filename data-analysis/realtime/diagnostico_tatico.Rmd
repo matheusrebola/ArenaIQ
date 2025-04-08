@@ -17,6 +17,14 @@ Campos para cruzar:
     tempo (timestamp ou minuto)
 
 ```{r}
+#library(mongolite)
+
+# Exemplo de conexão local
+con <- mongo(
+  collection = "Eventos",       # ou "Formacoes", "Linhas"
+  db = "nome_do_banco",
+  url = "mongodb://localhost:27017"
+)
 
 ```
 

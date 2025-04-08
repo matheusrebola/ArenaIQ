@@ -17,5 +17,12 @@ Campos para cruzar:
     resultado do jogo, impacto no jogo
 
 ```{r}
-plot(cars)
+#library(mongolite)
+
+# Exemplo de conexão local
+con <- mongo(
+  collection = "Eventos",       # ou "Formacoes", "Linhas"
+  db = "nome_do_banco",
+  url = "mongodb://localhost:27017"
+)
 ```
