@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import arenaiq.persistencia.movimentacao.core.models.Movimentacoes;
 
 @Repository
-public interface MovimentacaoRepository extends MongoRepository<Movimentacoes, String> {
+public interface MovimentacoesRepository extends MongoRepository<Movimentacoes, String> {
 
 }

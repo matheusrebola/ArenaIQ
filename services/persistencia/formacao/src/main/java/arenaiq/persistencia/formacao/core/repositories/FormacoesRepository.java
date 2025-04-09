@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import arenaiq.persistencia.formacao.core.models.Formacoes;
 
 @Repository
-public interface FormacaoRepository extends MongoRepository<Formacoes, String> {
+public interface FormacoesRepository extends MongoRepository<Formacoes, String> {
 
 }
