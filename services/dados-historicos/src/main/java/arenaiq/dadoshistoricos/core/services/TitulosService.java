@@ -14,4 +14,17 @@ public class TitulosService {
   public Titulos salvar(Titulos t) {
     return repository.save(t);
   }
+
+  public Boolean existsById(String id) {
+    return repository.existsById(id);
+  }
+
+  public void deleteById(String id){
+    repository.deleteById(id);
+  }
+
+  public Titulos atualizar(Titulos t, String id) {
+    deleteById(id);
+    return salvar(t);
+  }
 }

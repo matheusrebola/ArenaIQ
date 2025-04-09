@@ -15,5 +15,17 @@ public class JogadoresElencoService {
     return repository.save(j);
   }
 
+  public Boolean existsById(String id) {
+    return repository.existsById(id);
+  }
+
+  public void deleteById(String id){
+    repository.deleteById(id);
+  }
+
+  public JogadoresElenco atualizar(JogadoresElenco j, String id) {
+    deleteById(id);
+    return salvar(j);
+  }
   
 }

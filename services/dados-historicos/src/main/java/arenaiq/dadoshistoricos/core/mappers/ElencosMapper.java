@@ -20,4 +20,8 @@ public class ElencosMapper {
   public ElencosDTO map(Elencos e) {
     return mapper.map(e, ElencosDTO.class);
   }
+
+  public Elencos map(ElencosDTO e) {
+    return mapper.map(e, Elencos.class);
+  }
 }

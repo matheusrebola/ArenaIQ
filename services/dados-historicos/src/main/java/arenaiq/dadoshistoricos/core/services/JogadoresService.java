@@ -15,4 +15,17 @@ public class JogadoresService {
     return repository.save(j);
   }
 
+  public Boolean existsById(String id) {
+    return repository.existsById(id);
+  }
+
+  public void deleteById(String id){
+    repository.deleteById(id);
+  }
+
+  public Jogadores atualizar(Jogadores j, String id) {
+    deleteById(id);
+    return salvar(j);
+  }
+
 }

@@ -20,4 +20,8 @@ public class TemporadasMapper {
   public TemporadasDTO map(Temporadas t) {
     return mapper.map(t, TemporadasDTO.class);
   }
+
+  public Temporadas map(TemporadasDTO t) {
+    return mapper.map(t, Temporadas.class);
+  }
 }

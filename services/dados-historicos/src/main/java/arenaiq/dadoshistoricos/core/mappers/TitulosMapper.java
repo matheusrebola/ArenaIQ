@@ -20,4 +20,8 @@ public class TitulosMapper {
   public TitulosDTO map(Titulos t) {
     return mapper.map(t, TitulosDTO.class);
   }
+
+  public Titulos map(TitulosDTO t) {
+    return mapper.map(t, Titulos.class);
+  }
 }

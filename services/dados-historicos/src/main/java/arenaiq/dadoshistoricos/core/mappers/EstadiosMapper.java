@@ -20,4 +20,8 @@ public class EstadiosMapper {
   public EstadiosDTO map(Estadios e){
     return m.map(e, EstadiosDTO.class);
   }
+
+  public Estadios map(EstadiosDTO e) {
+    return m.map(e, Estadios.class);
+  }
 }

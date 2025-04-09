@@ -14,4 +14,17 @@ public class TecnicosService {
   public Tecnicos salvar(Tecnicos t) {
     return repository.save(t);
   }
+
+  public Boolean existsById(String id) {
+    return repository.existsById(id);
+  }
+
+  public void deleteById(String id){
+    repository.deleteById(id);
+  }
+
+  public Tecnicos atualizar(Tecnicos t, String id) {
+    deleteById(id);
+    return salvar(t);
+  }
 }

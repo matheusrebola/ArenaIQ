@@ -20,4 +20,8 @@ public class ResultadosMapper {
   public ResultadosDTO map(Resultados r) {
     return mapper.map(r, ResultadosDTO.class);
   }
+
+  public Resultados map(ResultadosDTO r) {
+    return mapper.map(r, Resultados.class);
+  }
 }

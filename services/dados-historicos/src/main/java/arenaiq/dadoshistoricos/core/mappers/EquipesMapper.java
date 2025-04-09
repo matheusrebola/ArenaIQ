@@ -20,4 +20,8 @@ public class EquipesMapper {
   public EquipesDTO map(Equipes e) {
     return mapper.map(e, EquipesDTO.class);
   }
+
+  public Equipes map(EquipesDTO e) {
+    return mapper.map(e, Equipes.class);
+  }
 }

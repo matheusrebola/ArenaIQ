@@ -14,4 +14,17 @@ public class ResultadosService {
   public Resultados salvar(Resultados r) {
     return repository.save(r);
   }
+
+  public Boolean existsById(String id) {
+    return repository.existsById(id);
+  }
+
+  public void deleteById(String id){
+    repository.deleteById(id);
+  }
+
+  public Resultados atualizar(Resultados r, String id) {
+    deleteById(id);
+    return salvar(r);
+  }
 }

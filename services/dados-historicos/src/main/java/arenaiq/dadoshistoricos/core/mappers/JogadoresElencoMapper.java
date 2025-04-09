@@ -20,4 +20,8 @@ public class JogadoresElencoMapper {
   public JogadoresElencoDTO map(JogadoresElenco e) {
     return mapper.map(e, JogadoresElencoDTO.class);
   }
+
+  public JogadoresElenco map(JogadoresElencoDTO j) {
+    return mapper.map(j, JogadoresElenco.class);
+  }
 }

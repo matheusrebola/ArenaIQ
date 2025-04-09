@@ -19,12 +19,16 @@ public class CompeticoesService {
     return repository.findById(id).orElse(null);
   }
 
-  public Boolean exists(String id){
+  public Boolean existsById(String id){
     return repository.existsById(id);
   }
 
-  public Competicoes atualizar(Competicoes c, String id) {
+  public void deleteById(String id){
     repository.deleteById(id);
+  }
+
+  public Competicoes atualizar(Competicoes c, String id) {
+    deleteById(id);
     return salvar(c);
   }
 

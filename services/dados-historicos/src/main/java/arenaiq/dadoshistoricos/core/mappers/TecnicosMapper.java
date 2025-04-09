@@ -20,4 +20,9 @@ public class TecnicosMapper {
   public TecnicosDTO map(Tecnicos t) {
     return mapper.map(t, TecnicosDTO.class);
   }
+
+  public Tecnicos map(TecnicosDTO r) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'map'");
+  }
 }

@@ -14,4 +14,17 @@ public class EstadiosService {
   public Estadios salvar(Estadios e){
     return r.save(e);
   }
+
+  public Boolean existsById(String id) {
+    return r.existsById(id);
+  }
+
+  public void deleteById(String id){
+    r.deleteById(id);
+  }
+
+  public Estadios atualizar(Estadios e, String id) {
+    deleteById(id);
+    return salvar(e);
+  }
 }

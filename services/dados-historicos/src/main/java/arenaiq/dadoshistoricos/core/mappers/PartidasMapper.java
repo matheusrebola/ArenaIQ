@@ -20,4 +20,8 @@ public class PartidasMapper {
   public PartidasDTO map(Partidas p) {
     return mapper.map(p, PartidasDTO.class);
   }
+
+  public Partidas map(PartidasDTO p) {
+    return mapper.map(p, Partidas.class);
+  }
 }

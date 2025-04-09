@@ -33,7 +33,7 @@ public class CompeticoesController {
 
   @PutMapping("/{id}")
   public ResponseEntity<CompeticoesDTO> atualizar(@RequestBody CompeticoesDTO r, @PathVariable String id){
-    Boolean exist = service.exists(id);
+    Boolean exist = service.existsById(id);
     if (exist == false){
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
