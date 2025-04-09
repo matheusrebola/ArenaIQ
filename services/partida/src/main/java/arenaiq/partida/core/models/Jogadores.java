@@ -1,17 +1,17 @@
-package arenaiq.dadoshistoricos.core.models;
+package arenaiq.partida.core.models;
 
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import arenaiq.dadoshistoricos.core.models.enums.EContribuicao;
-import arenaiq.dadoshistoricos.core.models.enums.EEstilo;
-import arenaiq.dadoshistoricos.core.models.enums.EFunPosicao;
-import arenaiq.dadoshistoricos.core.models.enums.EFuncao;
-import arenaiq.dadoshistoricos.core.models.enums.EPe;
-import arenaiq.dadoshistoricos.core.models.enums.EPersonalidade;
-import arenaiq.dadoshistoricos.core.models.enums.EPosicao;
+import arenaiq.partida.core.models.enums.EContribuicao;
+import arenaiq.partida.core.models.enums.EEstilo;
+import arenaiq.partida.core.models.enums.EFunPosicao;
+import arenaiq.partida.core.models.enums.EFuncao;
+import arenaiq.partida.core.models.enums.EPe;
+import arenaiq.partida.core.models.enums.EPersonalidade;
+import arenaiq.partida.core.models.enums.EPosicao;
 import lombok.Data;
 
 @Document (collection = "jogadores")
@@ -29,4 +29,6 @@ public class Jogadores {
   private Float peso;
   private List<EPosicao> posicao;
   private List<EFunPosicao> funcaoPosicao;
+  private String lado;
+  private String partida;
 }

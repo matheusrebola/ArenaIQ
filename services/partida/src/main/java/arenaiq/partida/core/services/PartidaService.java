@@ -1,5 +1,7 @@
 package arenaiq.partida.core.services;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import arenaiq.partida.core.models.Partida;
@@ -15,8 +17,16 @@ public class PartidaService {
     return repository.save(p);
   }
 
+  public List<Partida> encontrarTodos(){
+    return repository.findAll();
+  }
+
   public void deletarPorId(String id){
     repository.deleteById(id);
+  }
+
+  public void deletarTodos() {
+    repository.deleteAll();
   }
 
 }

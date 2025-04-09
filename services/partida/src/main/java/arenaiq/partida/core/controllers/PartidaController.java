@@ -1,8 +1,11 @@
 package arenaiq.partida.core.controllers;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,14 +32,27 @@ public class PartidaController {
   public ResponseEntity<PartidaDTO> criar(@RequestBody PartidaCreateDTO request){
     Partida p = pMapper.map(request);
     Partida s = pService.salvar(p);
-    jService.criarElencos(p);
-    PartidaDTO dto = pMapper.map(s);
+    var j = jService.criarElencos(p);
+    PartidaDTO dto = pMapper.map(s,j);
     return new ResponseEntity<>(dto, HttpStatus.CREATED);
+  }
+
+  @GetMapping
+  public ResponseEntity<List<PartidaDTO>> encontrarTodos(){
+    List<Partida> p = pService.encontrarTodos();
+    List<PartidaDTO> dto = pMapper.map(p);
+    return new ResponseEntity<>(dto, HttpStatus.OK);
   }
 
   @DeleteMapping("/{id}")
   public ResponseEntity<String> deletar(@PathVariable String id){
     pService.deletarPorId(id);
-    return new ResponseEntity<>("deletado com sucesso", HttpStatus.OK);
+    return new ResponseEntity<>("deletado com sucesso", HttpStatus.GONE);
+  }
+
+  @DeleteMapping
+  public ResponseEntity<String> deletarTodos(){
+    pService.deletarTodos();
+    return new ResponseEntity<>("banco limpo", HttpStatus.GONE);
   }
 }

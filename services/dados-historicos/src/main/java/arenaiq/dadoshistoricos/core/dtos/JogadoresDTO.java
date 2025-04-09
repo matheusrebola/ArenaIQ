@@ -1,10 +1,14 @@
 package arenaiq.dadoshistoricos.core.dtos;
 
+import java.util.List;
+
 import arenaiq.dadoshistoricos.core.models.enums.EContribuicao;
 import arenaiq.dadoshistoricos.core.models.enums.EEstilo;
+import arenaiq.dadoshistoricos.core.models.enums.EFunPosicao;
 import arenaiq.dadoshistoricos.core.models.enums.EFuncao;
 import arenaiq.dadoshistoricos.core.models.enums.EPe;
 import arenaiq.dadoshistoricos.core.models.enums.EPersonalidade;
+import arenaiq.dadoshistoricos.core.models.enums.EPosicao;
 import lombok.Data;
 
 
@@ -12,14 +16,13 @@ import lombok.Data;
 public class JogadoresDTO {
   private String id;
   private String nome;
-  private String dataNascimento;
-  private String nacionalidade;
-  private EFuncao funcao;
-  private EContribuicao contribuicao;
-  private EEstilo estilo;
-  private EPersonalidade personalidade;
+  private List<EFuncao> funcao;
+  private List<EContribuicao> contribuicao;
+  private List<EEstilo> estilo;
+  private List<EPersonalidade> personalidade;
   private EPe pe;
   private Float altura;
   private Float peso;
-  private String posicao;
+  private List<EPosicao> posicao;
+  private List<EFunPosicao> funcaoPosicao;
 }

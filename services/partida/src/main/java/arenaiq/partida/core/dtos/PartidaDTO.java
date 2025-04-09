@@ -1,6 +1,7 @@
 package arenaiq.partida.core.dtos;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import arenaiq.partida.core.models.enums.EPartida;
 import lombok.Data;
@@ -14,4 +15,5 @@ public class PartidaDTO {
   private String temporada;
   private LocalDateTime data;
   private String url;
+  private List<JogadoresDTO> jogadores;
 }
