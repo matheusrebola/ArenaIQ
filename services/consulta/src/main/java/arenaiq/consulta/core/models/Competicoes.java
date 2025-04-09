@@ -1,5 +1,7 @@
 package arenaiq.consulta.core.models;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -13,8 +15,8 @@ public class Competicoes {
   @Id
   private String id;
   private String nome;
-  private String temporada;
   private ECompeticao competicao;
   private EDisputa disputa;
   private String localidade;
+  private List<String> temporada;
 }

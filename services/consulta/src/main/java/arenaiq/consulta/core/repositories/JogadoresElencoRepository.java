@@ -11,5 +11,5 @@ import arenaiq.consulta.core.models.JogadoresElenco;
 public interface JogadoresElencoRepository extends MongoRepository<JogadoresElenco, String>{
   List<JogadoresElenco> findByElenco(String e);
   List<JogadoresElenco> findByTemporada(String t);
-  List<JogadoresElenco> findByJogador(String j);
+  List<JogadoresElenco> findByJogadores(String j);
 }

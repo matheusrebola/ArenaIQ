@@ -1,5 +1,7 @@
 package arenaiq.dadoshistoricos.core.models;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -16,4 +18,5 @@ public class Competicoes {
   private ECompeticao competicao;
   private EDisputa disputa;
   private String localidade;
+  private List<String> temporada;
 }

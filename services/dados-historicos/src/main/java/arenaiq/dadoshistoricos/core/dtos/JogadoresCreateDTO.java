@@ -14,6 +14,8 @@ import lombok.Data;
 @Data
 public class JogadoresCreateDTO {
   private String nome;
+  private String dataNascimento;
+  private String nacionalidade;
   private List<EFuncao> funcao;
   private List<EContribuicao> contribuicao;
   private List<EEstilo> estilo;

@@ -11,8 +11,6 @@ public class Elencos {
   @Id
   private String id;
   private String apelido;
-  private String anoFormacao;
-  private String tecnico;
   private String equipe;
-  private String temporadas;
+  private String tecnico;
 }

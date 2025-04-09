@@ -26,6 +26,6 @@ public class JogadoresElencoService {
   }
 
   public List<JogadoresElenco> findByJogador(String j){
-    return r.findByJogador(j);
+    return r.findByJogadores(j);
   }
 }

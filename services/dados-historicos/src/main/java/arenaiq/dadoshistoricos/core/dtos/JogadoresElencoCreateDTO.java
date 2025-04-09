@@ -7,6 +7,6 @@ import lombok.Data;
 @Data
 public class JogadoresElencoCreateDTO {
   private String elenco;
-  private String temporada;
-  private List<JogadoresDTO> jogadores;
+  private List<String> temporada;
+  private List<String> jogadores;
 }

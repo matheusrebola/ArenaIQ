@@ -11,7 +11,7 @@ public class ResultadosCreateDTO {
   private Float aproveitamento;
   private Byte golsMarcados;
   private Byte golsSofridos;
-  private Float desempenho;
+  private Byte desempenho;
   private String competicao;
   private String time;
   private String temporada;

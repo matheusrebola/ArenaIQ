@@ -20,4 +20,8 @@ public class CompeticoesMapper {
   public CompeticoesDTO map(Competicoes c) {
     return mapper.map(c, CompeticoesDTO.class);
   }
+
+  public Competicoes map(CompeticoesDTO dto) {
+    return mapper.map(dto, Competicoes.class);
+  }
 }

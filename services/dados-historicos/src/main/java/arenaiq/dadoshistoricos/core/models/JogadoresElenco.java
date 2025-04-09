@@ -13,6 +13,6 @@ public class JogadoresElenco {
   @Id
   private String id;
   private String elenco;
-  private String temporada;
-  private List<Jogadores> jogadores;
+  private List<String> temporada;
+  private List<String> jogadores;
 }

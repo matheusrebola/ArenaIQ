@@ -8,6 +8,6 @@ import lombok.Data;
 public class JogadoresElencoDTO {
   private String id;
   private String elenco;
-  private String temporada;
-  private List<JogadoresDTO> jogadores;
+  private List<String> temporada;
+  private List<String> jogadores;
 }

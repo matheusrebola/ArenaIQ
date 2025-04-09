@@ -1,11 +1,13 @@
 package arenaiq.consulta.core.dtos;
 
+import java.util.List;
+
 import lombok.Data;
 
 @Data
 public class JogadoresElencoDTO {
   private String id;
   private String elenco;
-  private String temporada;
-  private String jogador;
+  private List<String> temporada;
+  private List<String> jogadores;
 }

@@ -10,7 +10,7 @@ import lombok.Data;
 public class Elencos {
   @Id
   private String id;
-  private String equipe;
   private String apelido;
+  private String equipe;
   private String tecnico;
 }

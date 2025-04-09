@@ -12,8 +12,8 @@ import arenaiq.consulta.core.models.enums.EDisputa;
 @Repository
 public interface CompeticoesRepository extends MongoRepository<Competicoes, String>{
   List<Competicoes> findByNome(String n);
-  List<Competicoes> findByTemporada(String t);
   List<Competicoes> findByCompeticao(ECompeticao c);
+  List<Competicoes> findByTemporada(String t);
   List<Competicoes> findByDisputa(EDisputa d);
   List<Competicoes> findByLocalidade(String l);
 }

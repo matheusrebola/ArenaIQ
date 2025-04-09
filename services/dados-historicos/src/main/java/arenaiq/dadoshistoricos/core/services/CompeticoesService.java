@@ -12,7 +12,20 @@ public class CompeticoesService {
   private final CompeticoesRepository repository;
   
   public Competicoes salvar(Competicoes c) {
-    return repository.save(c);
+    return repository.insert(c);
+  }
+
+  public Competicoes findById(String id) {
+    return repository.findById(id).orElse(null);
+  }
+
+  public Boolean exists(String id){
+    return repository.existsById(id);
+  }
+
+  public Competicoes atualizar(Competicoes c, String id) {
+    repository.deleteById(id);
+    return salvar(c);
   }
 
 }

@@ -1,11 +1,12 @@
 package arenaiq.dadoshistoricos.core.models;
 
-import java.time.LocalDate;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import arenaiq.dadoshistoricos.core.models.enums.EFilosofia;
+import arenaiq.dadoshistoricos.core.models.enums.EPosicao;
 import lombok.Data;
 
 @Document (collection = "tecnicos")
@@ -15,7 +16,8 @@ public class Tecnicos {
   private String id;
   private String nome;
   private String nacionalidade;
-  private LocalDate dataNascimento;
+  private String dataNascimento;
   private Byte anosExperiencia;
   private EFilosofia filosofia;
+  private List<EPosicao> posicoes;
 }
