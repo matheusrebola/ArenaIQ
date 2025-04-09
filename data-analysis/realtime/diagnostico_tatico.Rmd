@@ -21,13 +21,12 @@ Campos para cruzar:
 
 uri <- "mongodb://datalake:datalake@localhost:61000/datalake"
 
-# Selecionar uma collection (por exemplo, "Eventos")
 eventos <- mongo(collection = "Eventos", db = "datalake", url = uri)
-
-# Depois, para "Formacoes"
 formacoes <- mongo(collection = "Formacoes", db = "datalake", url = uri)
-
-# E para "Linhas"
 linhas <- mongo(collection = "Linhas", db = "datalake", url = uri)
+partidas <- mongo(collection = "partidas", db = "datalake", url = uri)
+elencos <- mongo(collection = "elencos", db = "datalake", url = uri)
+jogadoreselenco <- mongo(collection = "jogadoreselenco", db = "datalake", url = uri)
+jogadores <- mongo(collection = "jogadores", db = "datalake", url = uri)
 ```
 

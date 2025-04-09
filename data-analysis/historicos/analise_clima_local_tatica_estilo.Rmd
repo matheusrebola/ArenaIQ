@@ -10,29 +10,23 @@ Perguntas:
     A umidade influencia o ritmo de jogo e a compactação das linhas?
 
     Há diferenças de estilo entre jogos realizados em locais diferentes?
+    
+📌 Insight: Identificar se climas específicos favorecem certas táticas ou jogadores (ex: clima quente → menor pressão, menos velocidade).
+    
 
 ```{r}
 #library(mongolite)
 
 uri <- "mongodb://datalake:datalake@localhost:61000/datalake"
 
-# Selecionar uma collection (por exemplo, "Eventos")
+#Partidas.local, dataHora, clima, temperatura, umidade
+partidas <- mongo(collection = "partidas", db = "datalake", url = uri)
+formacoes <- mongo(collection = "formacoes", db = "datalake", url = uri)
+linhas <- mongo(collection = "linhas", db = "datalake", url = uri)
 eventos <- mongo(collection = "Eventos", db = "datalake", url = uri)
-
-# Depois, para "Formacoes"
-formacoes <- mongo(collection = "Formacoes", db = "datalake", url = uri)
-
-# E para "Linhas"
-linhas <- mongo(collection = "Linhas", db = "datalake", url = uri)
+movimentacoes <- mongo(collection = "movimentacoes", db = "datalake", url = uri)
+elencos <- mongo(collection = "elencos", db = "datalake", url = uri)
+jogadoreselenco <- mongo(collection = "jogadoreselenco", db = "datalake", url = uri)
+jogadores <- mongo(collection = "jogadores", db = "datalake", url = uri)
 
 ```
-
-Dados a cruzar:
-
-    Partidas.local, dataHora, clima, temperatura, umidade
-
-    Formacoes, Linhas, Eventos, Movimentacoes (para estilo/tática)
-
-    Elencos, JogadoresElenco, Jogadores
-
-📌 Insight: Identificar se climas específicos favorecem certas táticas ou jogadores (ex: clima quente → menor pressão, menos velocidade).

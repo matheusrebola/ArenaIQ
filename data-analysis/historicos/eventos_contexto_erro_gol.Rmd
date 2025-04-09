@@ -11,28 +11,17 @@ Perguntas:
 
     Que tipo de evento (ou jogador) sofre mais com pressão adversária?
 
+📌 Insight: Analisar causa-consequência de ações em campo, entender zonas críticas de erro ou sucesso.
+
 ```{r}
 #library(mongolite)
 
 uri <- "mongodb://datalake:datalake@localhost:61000/datalake"
 
-# Selecionar uma collection (por exemplo, "Eventos")
 eventos <- mongo(collection = "Eventos", db = "datalake", url = uri)
-
-# Depois, para "Formacoes"
-formacoes <- mongo(collection = "Formacoes", db = "datalake", url = uri)
-
-# E para "Linhas"
-linhas <- mongo(collection = "Linhas", db = "datalake", url = uri)
+partidas <- mongo(collection = "partidas", db = "datalake", url = uri)
+movimentacoes <- mongo(collection = "movimentacoes", db = "datalake", url = uri)
+formacoes <- mongo(collection = "formacoes", db = "datalake", url = uri)
+linhas <- mongo(collection = "linhas", db = "datalake", url = uri)
 ```
-
-Dados a cruzar:
-
-    Eventos + DetalhesEvento
-
-    Partidas: contexto geral
-
-    Movimentacoes, Formacoes, Linhas
-
-📌 Insight: Analisar causa-consequência de ações em campo, entender zonas críticas de erro ou sucesso.
 

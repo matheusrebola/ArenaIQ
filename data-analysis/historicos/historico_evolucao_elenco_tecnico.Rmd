@@ -11,27 +11,20 @@ Perguntas:
 
     Existe herança tática entre elencos em diferentes temporadas?
 
+📌 Insight: Rastrear evolução de jogadores e técnicos, herança tática e impacto de mudanças de elenco ao longo do tempo.
+
 ```{r}
 #library(mongolite)
 
 uri <- "mongodb://datalake:datalake@localhost:61000/datalake"
 
-# Selecionar uma collection (por exemplo, "Eventos")
+elencos <- mongo(collection = "elencos", db = "datalake", url = uri)
+jogadoreselenco <- mongo(collection = "jogadoreselenco", db = "datalake", url = uri)
+jogadores <- mongo(collection = "jogadores", db = "datalake", url = uri)
+tecnicos <- mongo(collection = "tecnicos", db = "datalake", url = uri)
+temporadas <- mongo(collection = "temporadas", db = "datalake", url = uri)
 eventos <- mongo(collection = "Eventos", db = "datalake", url = uri)
-
-# Depois, para "Formacoes"
 formacoes <- mongo(collection = "Formacoes", db = "datalake", url = uri)
-
-# E para "Linhas"
-linhas <- mongo(collection = "Linhas", db = "datalake", url = uri)
+resultados <- mongo(collection = "resultados", db = "datalake", url = uri)
 ```
 
-Dados a cruzar:
-
-    Elencos, JogadoresElenco, Jogadores
-
-    Tecnicos, Temporadas
-
-    Eventos, Formacoes, Resultados
-
-📌 Insight: Rastrear evolução de jogadores e técnicos, herança tática e impacto de mudanças de elenco ao longo do tempo.

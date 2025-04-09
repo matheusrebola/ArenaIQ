@@ -11,30 +11,18 @@ Perguntas:
 
     Certos perfis rendem mais sob clima adverso ou jogos fora de casa?
 
+📌 Insight: Mapear o perfil de jogador ideal para determinadas funções/táticas/climas.
+
 ```{r}
 #library(mongolite)
 
 uri <- "mongodb://datalake:datalake@localhost:61000/datalake"
 
-# Selecionar uma collection (por exemplo, "Eventos")
+jogadores <- mongo(collection = "jogadores", db = "datalake", url = uri)
 eventos <- mongo(collection = "Eventos", db = "datalake", url = uri)
-
-# Depois, para "Formacoes"
+resultados <- mongo(collection = "resultados", db = "datalake", url = uri)
 formacoes <- mongo(collection = "Formacoes", db = "datalake", url = uri)
+partidas <- mongo(collection = "partidas", db = "datalake", url = uri)
+movimentacoes <- mongo(collection = "movimentacoes", db = "datalake", url = uri)
 
-# E para "Linhas"
-linhas <- mongo(collection = "Linhas", db = "datalake", url = uri)
 ```
-
-Dados a cruzar:
-
-    Jogadores: altura, peso, personalidade, pé, posição, função
-
-    Eventos: participação e tipo de ação
-
-    Partidas: contexto climático
-
-    Resultados, Formacoes, Movimentacoes
-
-📌 Insight: Mapear o perfil de jogador ideal para determinadas funções/táticas/climas.
-

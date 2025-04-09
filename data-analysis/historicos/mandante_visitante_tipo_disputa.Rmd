@@ -10,30 +10,18 @@ Perguntas:
 
     Existe correlação entre jogar fora de casa e aplicar um estilo mais defensivo?
 
+📌 Insight: Identificar quem lida melhor com a pressão da torcida e se o tipo de disputa afeta performance.
+
 ```{r}
 #library(mongolite)
 
 uri <- "mongodb://datalake:datalake@localhost:61000/datalake"
 
-# Selecionar uma collection (por exemplo, "Eventos")
+partidas <- mongo(collection = "partidas", db = "datalake", url = uri)
 eventos <- mongo(collection = "Eventos", db = "datalake", url = uri)
-
-# Depois, para "Formacoes"
-formacoes <- mongo(collection = "Formacoes", db = "datalake", url = uri)
-
-# E para "Linhas"
-linhas <- mongo(collection = "Linhas", db = "datalake", url = uri)
+competicoes <- mongo(collection = "competicoes", db = "datalake", url = uri)
+jogadores <- mongo(collection = "jogadores", db = "datalake", url = uri)
+elencos <- mongo(collection = "elencos", db = "datalake", url = uri)
+tecnicos <- mongo(collection = "tecnicos", db = "datalake", url = uri)
 ```
-
-Dados a cruzar:
-
-    Partidas.casa, Partidas.visitante
-
-    Eventos.jogadorId, Partidas.id, Partidas.competicaoId
-
-    Competicoes.disputa
-
-    Jogadores, Tecnicos, Elencos
-
-📌 Insight: Identificar quem lida melhor com a pressão da torcida e se o tipo de disputa afeta performance.
 

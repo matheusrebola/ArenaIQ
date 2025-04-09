@@ -10,37 +10,18 @@ Perguntas:
     Algum técnico tem desempenho acima da média em torneios eliminatórios?
 
     Existem jogadores que rendem mais em temporadas específicas?
+    
+📌 Insight: Avaliar quais jogadores/técnicos se saem melhor em tipos específicos de competição.
 
 ```{r}
 #library(mongolite)
 
 uri <- "mongodb://datalake:datalake@localhost:61000/datalake"
 
-# Selecionar uma collection (por exemplo, "Eventos")
+competicoes <- mongo(collection = "competicoes", db = "datalake", url = uri)
+partidas <- mongo(collection = "partidas", db = "datalake", url = uri)
 eventos <- mongo(collection = "Eventos", db = "datalake", url = uri)
-
-# Depois, para "Formacoes"
-formacoes <- mongo(collection = "Formacoes", db = "datalake", url = uri)
-
-# E para "Linhas"
-linhas <- mongo(collection = "Linhas", db = "datalake", url = uri)
+jogadores <- mongo(collection = "jogadores", db = "datalake", url = uri)
+elencos <- mongo(collection = "elencos", db = "datalake", url = uri)
+resultados <- mongo(collection = "resultados", db = "datalake", url = uri)
 ```
-
-Dados a cruzar:
-
-    Competicoes.temporada
-
-    Partidas.competicaoId
-
-    Partidas.id
-
-    Eventos.jogadorId
-
-    Jogadores.id
-
-    Elencos.tecnico + Elencos.time + Elencos.temporadaId
-
-    Resultados (para cruzar performance geral)
-
-📌 Insight: Avaliar quais jogadores/técnicos se saem melhor em tipos específicos de competição.
-

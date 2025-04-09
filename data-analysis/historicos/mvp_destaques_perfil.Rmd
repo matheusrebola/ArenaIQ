@@ -10,28 +10,17 @@ Perguntas:
     Em que tipo de partidas (clima, competição, localidade) os MVPs se destacam?
 
     O que separa estatisticamente um jogador comum de um MVP?
+    
+📌 Insight: Encontrar o que separa os MVPs dos demais em termos de estilo, desempenho e condições da partida.
 
 ```{r}
 #library(mongolite)
 
 uri <- "mongodb://datalake:datalake@localhost:61000/datalake"
 
-# Selecionar uma collection (por exemplo, "Eventos")
 eventos <- mongo(collection = "Eventos", db = "datalake", url = uri)
-
-# Depois, para "Formacoes"
+resultados <- mongo(collection = "resultados", db = "datalake", url = uri)
 formacoes <- mongo(collection = "Formacoes", db = "datalake", url = uri)
-
-# E para "Linhas"
-linhas <- mongo(collection = "Linhas", db = "datalake", url = uri)
+partidas <- mongo(collection = "partidas", db = "datalake", url = uri)
 ```
 
-Dados a cruzar:
-
-    Titulos.mvp
-
-    Eventos + DetalhesEvento (para desempenho)
-
-    Resultados, Formacoes, Clima, etc.
-
-📌 Insight: Encontrar o que separa os MVPs dos demais em termos de estilo, desempenho e condições da partida.
