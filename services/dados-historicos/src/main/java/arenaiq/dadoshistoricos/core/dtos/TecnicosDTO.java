@@ -13,6 +13,6 @@ public class TecnicosDTO {
   private String nacionalidade;
   private String dataNascimento;
   private Byte anosExperiencia;
-  private EFilosofia filosofia;
+  private List<EFilosofia> filosofia;
   private List<EPosicao> posicoes;
 }

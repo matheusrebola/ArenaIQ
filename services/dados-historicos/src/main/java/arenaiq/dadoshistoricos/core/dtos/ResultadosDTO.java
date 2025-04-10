@@ -14,6 +14,6 @@ public class ResultadosDTO {
   private Byte golsSofridos;
   private Byte desempenho;
   private String competicao;
-  private String time;
+  private String equipe;
   private String temporada;
 }
