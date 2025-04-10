@@ -3,6 +3,7 @@ package arenaiq.consulta.core.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import arenaiq.consulta.core.models.enums.EPosicao;
 import lombok.Data;
 
 @Document (collection = "movimentacoes")
@@ -10,13 +11,10 @@ import lombok.Data;
 public class Movimentacoes {
   @Id
   private String id;
-  private Float eixoX;
-  private Float eixoY;
-  private Float velocidade;
-  private Float aceleracao;
+  private EPosicao inicial;
+  private EPosicao atual;
   private Byte minuto;
   private Byte segundo;
-  private Boolean pressao;
   private String partidaId;
   private String jogadorId;
 }
