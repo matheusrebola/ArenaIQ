@@ -3,6 +3,7 @@ package arenaiq.treino.core.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import arenaiq.treino.core.models.enums.EFormacao;
 import arenaiq.treino.core.models.enums.EPosicao;
 import lombok.Data;
 
@@ -13,8 +14,6 @@ public class Movimentacoes {
   private String id;
   private EPosicao inicial;
   private EPosicao atual;
-  private Byte minuto;
-  private Byte segundo;
-  private String partidaId;
-  private String jogadorId;
+  private EFormacao formacao;
+  private String url;
 }
