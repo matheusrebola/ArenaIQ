@@ -70,26 +70,25 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: localhost:63211/competicoes/67f569df50d1d76f707d5479
+  - url: localhost:63211/competicoes
     name: Dados Históricos - Competições
     meta:
       id: req_ff589c6038264e4a9dc090819dbc33e6
       created: 1742578681194
-      modified: 1744228990329
+      modified: 1744296878301
       isPrivate: false
       sortKey: -1742675174815
-    method: PUT
+    method: POST
     body:
       mimeType: application/json
       text: |-
         {
-        		"id": "67f569df50d1d76f707d5479",
-        		"nome": "Brasileirão",
+        		"nome": "La Liga",
         		"competicao": "NACIONAL",
         		"disputa": "PONTOS_CORRIDOS",
-        		"localidade": "Brasil",
-        		"temporada": ["67f569df50d1d76f707d5479"]
-        	}
+        		"localidade": "Espanha",
+        		"temporada": ["2015-2016", "2016-2017"]
+        }
     headers:
       - name: Content-Type
         value: application/json
@@ -168,7 +167,7 @@ collection:
     meta:
       id: req_24f27a934d5c4c09b6b08b657abdd433
       created: 1744212414686
-      modified: 1744215325357
+      modified: 1744297053745
       isPrivate: false
       sortKey: -1742675174765
     method: POST
@@ -177,8 +176,8 @@ collection:
       text: |-
         {
         	"apelido": "MSN",
-        	"equipe": "id_equipe",
-        	"tecnico": "id_tecnico"
+        	"equipe": "Nome da Equipe",
+        	"tecnico": "Nome do Tecnico"
         }
     headers:
       - name: Content-Type
@@ -198,7 +197,7 @@ collection:
     meta:
       id: req_8bb284f689d1468ea3516b97f3810372
       created: 1744212422949
-      modified: 1744213259643
+      modified: 1744293580277
       isPrivate: false
       sortKey: -1742675174740
     method: POST
@@ -268,7 +267,7 @@ collection:
     meta:
       id: req_5f15841a90e441fe957ec06e44de0dee
       created: 1744212447396
-      modified: 1744215109346
+      modified: 1744297142176
       isPrivate: false
       sortKey: -1742570456855.8438
     method: POST
@@ -276,9 +275,9 @@ collection:
       mimeType: application/json
       text: |-
         {
-        	"elenco": "id_elenco",
-        	"temporada": ["id_temporada", "id_temporada", "id_temporada"],
-        	"jogadores": ["id_jogador", "id_jogador", "id_jogador"]
+        	"elenco": "apelido elenco",
+        	"temporada": ["2015-2016", "2016-2017", "2017-2018"],
+        	"jogadores": ["nome jogador", "nome jogador", "nome jogador"]
         }
     headers:
       - name: Content-Type
@@ -298,7 +297,7 @@ collection:
     meta:
       id: req_3fa2bfc7c34b441997a1877158eec911
       created: 1744212462077
-      modified: 1744215564265
+      modified: 1744297181390
       isPrivate: false
       sortKey: -1742566932139.0625
     method: POST
@@ -310,12 +309,12 @@ collection:
         	"clima": "ENSOLARADO",
         	"temperatura": 17.7,
         	"umidade": 52.1,
-        	"local": "id_estadio",
-        	"casa": "id_casa",
-        	"visitante": "id_visitante",
+        	"local": "Nome do Estádio",
+        	"casa": "Nome do Clube",
+        	"visitante": "Nome do Clube",
         	"placarC": 2,
         	"placarV": 1,
-        	"competicao": "id_competicao"
+        	"competicao": "Nome Competição"
         }
     headers:
       - name: Content-Type
@@ -335,7 +334,7 @@ collection:
     meta:
       id: req_281a21224cb646dab2f95ee4b243626e
       created: 1744212493899
-      modified: 1744215915158
+      modified: 1744297218533
       isPrivate: false
       sortKey: -1742566711844.2637
     method: POST
@@ -351,9 +350,9 @@ collection:
         	"golsMarcados": 62,
         	"golsSofridos": 41,
         	"desempenho": 8.1,
-        	"competicao": "id_competicao",
-        	"equipe": "id_equipe",
-        	"temporada": "id_temporada"
+        	"competicao": "Nome Competicao",
+        	"equipe": "Nome Equipe",
+        	"temporada": "2015-2016"
         }
     headers:
       - name: Content-Type
@@ -373,19 +372,19 @@ collection:
     meta:
       id: req_aa4841a2cc4c4ed998be9198d23ea611
       created: 1744212508047
-      modified: 1744216348367
+      modified: 1744293811661
       isPrivate: false
       sortKey: -1742566675128.4639
     method: POST
     body:
       mimeType: application/json
-      text: |-
+      text: >-
         {
         	"nome": "Carlo Ancelotti",
         	"nacionalidade": "Italiano",
         	"dataNascimento": "10-06-1959",
         	"anosExperiencia": 30,
-        	"filosofia": "América do Sul",
+        	"filosofia": ["PRESSAO", "TRIANGULACAO", "CONTRA_ATAQUE", "PELAS_PONTAS"],
         	"posicoes": ["VOL", "VLE", "VLD", "MC", "MCE", "MCD"]
         }
     headers:
@@ -406,7 +405,7 @@ collection:
     meta:
       id: req_ee3cc49f88fa468b802e80ced9d3a509
       created: 1744212515426
-      modified: 1744216440078
+      modified: 1744296814623
       isPrivate: false
       sortKey: -1742566638412.664
     method: POST
@@ -414,7 +413,7 @@ collection:
       mimeType: application/json
       text: |-
         {
-        	"temporada": "2015-2016",
+        	"temporada": "2016-2017",
         	"dataInicio": "10-07-2015",
         	"dataFim": "30-06-2016"
         }
@@ -436,23 +435,23 @@ collection:
     meta:
       id: req_453822d87f674eb1a6282904549ea600
       created: 1744212527510
-      modified: 1744216880738
+      modified: 1744297329421
       isPrivate: false
       sortKey: -1742566491549.4648
     method: POST
     body:
       mimeType: application/json
-      text: |-
+      text: >-
         {
         	"nome": "Libertadores",
         	"participante": "INTERNACIONAL",
-        	"temporada": "id_temporada",
+        	"temporada": "2015-2016",
         	"posicao": 1,
-        	"mvp": ["id_jogador", "id_jogador", "id_jogador", "id_jogador"],
-        	"mvc": ["id_tecnico", "id_tecnico", "id_tecnico", "id_tecnico"],
+        	"mvp": ["Nome do Jogador", "Nome do Jogador", "Nome do Jogador", "Nome do Jogador"],
+        	"mvc": ["Nome do Técnico", "Nome do Técnico", "Nome do Técnico", "Nome do Técnico"],
         	"tipoTitulo": "CONTINENTAL",
-        	"equipe": "id_equipe",
-        	"competicao": "id_competicao"
+        	"equipe": "Nome Equipe",
+        	"competicao": "Nome Competicao"
         }
     headers:
       - name: Content-Type
@@ -539,12 +538,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: localhost:63210/jogadores-elenco
+  - url: localhost:63210/jogador-elenco
     name: Consulta - Jogadores do Elenco
     meta:
       id: req_17687c7eb9a94b26b52f62e4571ae518
       created: 1744212665088
-      modified: 1744229303349
+      modified: 1744293667433
       isPrivate: false
       sortKey: -1742505837048.1875
     method: GET
@@ -592,7 +591,7 @@ collection:
     meta:
       id: req_3d1355e656164ee3a041835f938303f8
       created: 1744212758938
-      modified: 1744229315207
+      modified: 1744294735526
       isPrivate: false
       sortKey: -1742504074689.7969
     method: GET
@@ -619,30 +618,6 @@ collection:
       modified: 1744229321359
       isPrivate: false
       sortKey: -1742503780963.3984
-    method: GET
-    body:
-      mimeType: application/json
-    headers:
-      - name: Content-Type
-        value: application/json
-      - name: User-Agent
-        value: insomnia/11.0.0
-    settings:
-      renderRequestBody: true
-      encodeUrl: true
-      followRedirects: global
-      cookies:
-        send: true
-        store: true
-      rebuildPath: true
-  - url: localhost:63210/posicoes
-    name: Consulta - Posições
-    meta:
-      id: req_7dcb085c39a2497ba820892894470a95
-      created: 1744212782006
-      modified: 1744229325340
-      isPrivate: false
-      sortKey: -1742503634100.1992
     method: GET
     body:
       mimeType: application/json
