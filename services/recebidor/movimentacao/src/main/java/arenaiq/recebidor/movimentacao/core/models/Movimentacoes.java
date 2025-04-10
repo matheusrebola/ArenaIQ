@@ -5,15 +5,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
 
-@Document (collection = "acontecimentos")
+@Document (collection = "movimentacoes")
 @Data
 public class Movimentacoes {
   @Id
   private String id;
-  private Float eixoX;
-  private Float eixoY;
-  private Float velocidadeX;
-  private Float velocidadeY;
+  private EPosicao inicial;
+  private EPosicao atual;
   private Byte minuto;
   private Byte segundo;
   private String partidaId;
