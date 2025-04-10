@@ -1,7 +1,6 @@
 package arenaiq.treino.core.controllers;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,12 +14,15 @@ import arenaiq.treino.core.dtos.EventosCreateDTO;
 import arenaiq.treino.core.dtos.EventosDTO;
 import arenaiq.treino.core.dtos.FormacoesCreateDTO;
 import arenaiq.treino.core.dtos.FormacoesDTO;
-import arenaiq.treino.core.dtos.LinhaCreateDTO;
-import arenaiq.treino.core.dtos.LinhaDTO;
+import arenaiq.treino.core.dtos.LinhasCreateDTO;
+import arenaiq.treino.core.dtos.LinhasDTO;
+import arenaiq.treino.core.dtos.MovimentacoesCreateDTO;
+import arenaiq.treino.core.dtos.MovimentacoesDTO;
 import arenaiq.treino.core.mappers.TreinoMapper;
 import arenaiq.treino.core.models.Eventos;
 import arenaiq.treino.core.models.Formacoes;
 import arenaiq.treino.core.models.Linhas;
+import arenaiq.treino.core.models.Movimentacoes;
 import arenaiq.treino.core.services.TreinoService;
 import lombok.RequiredArgsConstructor;
 
@@ -32,40 +34,61 @@ public class TreinoController {
   private final TreinoService service;
 
   @PostMapping("/eventos")
-  public ResponseEntity<Eventos> criar(@RequestBody EventosCreateDTO dto){
+  public ResponseEntity<EventosDTO> criar(@RequestBody EventosCreateDTO dto){
     Eventos m = mapper.map(dto);
     Eventos s = service.salvar(m);
-    return new ResponseEntity<>(s, HttpStatus.CREATED);
+    EventosDTO r = mapper.map(s);
+    return new ResponseEntity<>(r, HttpStatus.CREATED);
   }
 
   @PostMapping("/formacoes")
-  public ResponseEntity<Formacoes> criar(@RequestBody FormacoesCreateDTO requestDTO){
-    Formacoes m = mapper.map(requestDTO);
+  public ResponseEntity<FormacoesDTO> criar(@RequestBody FormacoesCreateDTO dto){
+    Formacoes m = mapper.map(dto);
     Formacoes s = service.salvar(m);
-    return new ResponseEntity<>(s, HttpStatus.CREATED);
+    FormacoesDTO r = mapper.map(s);
+    return new ResponseEntity<>(r, HttpStatus.CREATED);
   }
 
-  @PostMapping("/linha")
-  public ResponseEntity<Linhas> criar(@RequestBody LinhaCreateDTO requestDTO){
-    Linhas m = mapper.map(requestDTO);
+  @PostMapping("/linhas")
+  public ResponseEntity<LinhasDTO> criar(@RequestBody LinhasCreateDTO dto){
+    Linhas m = mapper.map(dto);
     Linhas s = service.salvar(m);
-    return new ResponseEntity<>(s, HttpStatus.CREATED);
+    LinhasDTO r = mapper.map(s);
+    return new ResponseEntity<>(r, HttpStatus.CREATED);
+  }
+
+  @PostMapping("/movimentacoes")
+  public ResponseEntity<MovimentacoesDTO> criar(@RequestBody MovimentacoesCreateDTO dto){
+    Movimentacoes m = mapper.map(dto);
+    Movimentacoes s = service.salvar(m);
+    MovimentacoesDTO r = mapper.map(s);
+    return new ResponseEntity<>(r, HttpStatus.CREATED);
   }
 
   @GetMapping("/eventos")
   public ResponseEntity<List<EventosDTO>> encontrarEventos() {
-    List<EventosDTO> eventos = service.encontrarEventos().stream().map(mapper::map).collect(Collectors.toList());
-    return ResponseEntity.ok(eventos);
+    List<Eventos> eventos = service.encontrarEventos();
+    List<EventosDTO> r = mapper.mapEventos(eventos);
+    return ResponseEntity.ok(r);
 }
   @GetMapping("/formacoes")
   public ResponseEntity<List<FormacoesDTO>> encontrarFormacoes(){
-    List<FormacoesDTO> f = service.encontrarFormacoes().stream().map(mapper::map).collect(Collectors.toList());
-    return ResponseEntity.ok(f);
+    List<Formacoes> f = service.encontrarFormacoes();
+    List<FormacoesDTO> r = mapper.mapFormacoes(f);
+    return ResponseEntity.ok(r);
   }
 
-  @GetMapping("/linha")
-  public ResponseEntity<List<LinhaDTO>> encontrarLinhas(){
-    List<LinhaDTO> l = service.encontrarLinhas().stream().map(mapper::map).collect(Collectors.toList());
-    return ResponseEntity.ok(l);
+  @GetMapping("/linhas")
+  public ResponseEntity<List<LinhasDTO>> encontrarLinhas(){
+    List<Linhas> l = service.encontrarLinhas();
+    List<LinhasDTO> r = mapper.mapLinhas(l);
+    return ResponseEntity.ok(r);
+  }
+
+  @GetMapping("/movimentacoes")
+  public ResponseEntity<List<MovimentacoesDTO>> encontrarMovimentacoes(){
+    List<Movimentacoes> m = service.encontrarMovimentacoes();
+    List<MovimentacoesDTO> dto = mapper.mapMoimentacoes(m);
+    return ResponseEntity.ok(dto);
   }
 }
