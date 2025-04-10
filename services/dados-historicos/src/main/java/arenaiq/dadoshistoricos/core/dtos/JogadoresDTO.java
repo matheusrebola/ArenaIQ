@@ -2,6 +2,7 @@ package arenaiq.dadoshistoricos.core.dtos;
 
 import java.util.List;
 
+import arenaiq.dadoshistoricos.core.models.Elencos;
 import arenaiq.dadoshistoricos.core.models.enums.EContribuicao;
 import arenaiq.dadoshistoricos.core.models.enums.EEstilo;
 import arenaiq.dadoshistoricos.core.models.enums.EFunPosicao;
@@ -27,4 +28,6 @@ public class JogadoresDTO {
   private Float peso;
   private List<EPosicao> posicao;
   private List<EFunPosicao> funcaoPosicao;
+  private List<Elencos> elenco;
+  private String clube;
 }
