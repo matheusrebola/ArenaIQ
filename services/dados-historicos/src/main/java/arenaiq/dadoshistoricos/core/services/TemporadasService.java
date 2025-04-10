@@ -25,6 +25,7 @@ public class TemporadasService {
 
   public Temporadas atualizar(Temporadas t, String id) {
     deleteById(id);
+    t.setId(id);
     return salvar(t);
   }
 }

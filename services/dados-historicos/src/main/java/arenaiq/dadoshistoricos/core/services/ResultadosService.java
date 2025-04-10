@@ -25,6 +25,7 @@ public class ResultadosService {
 
   public Resultados atualizar(Resultados r, String id) {
     deleteById(id);
+    r.setId(id);
     return salvar(r);
   }
 }

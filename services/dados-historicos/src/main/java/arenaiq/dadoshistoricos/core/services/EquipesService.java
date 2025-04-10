@@ -25,6 +25,7 @@ public class EquipesService {
 
   public Equipes atualizar(Equipes e, String id) {
     deleteById(id);
+    e.setId(id);
     return salvar(e);
   }
 

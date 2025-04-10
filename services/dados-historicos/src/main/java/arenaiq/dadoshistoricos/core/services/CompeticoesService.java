@@ -29,6 +29,7 @@ public class CompeticoesService {
 
   public Competicoes atualizar(Competicoes c, String id) {
     deleteById(id);
+    c.setId(id);
     return salvar(c);
   }
 

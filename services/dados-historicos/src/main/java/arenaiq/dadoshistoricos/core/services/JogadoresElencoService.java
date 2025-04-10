@@ -25,6 +25,7 @@ public class JogadoresElencoService {
 
   public JogadoresElenco atualizar(JogadoresElenco j, String id) {
     deleteById(id);
+    j.setId(id);
     return salvar(j);
   }
   

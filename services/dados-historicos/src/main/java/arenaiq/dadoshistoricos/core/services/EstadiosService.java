@@ -25,6 +25,7 @@ public class EstadiosService {
 
   public Estadios atualizar(Estadios e, String id) {
     deleteById(id);
+    e.setId(id);
     return salvar(e);
   }
 }

@@ -25,6 +25,7 @@ public class PartidasService {
 
   public Partidas atualizar(Partidas p, String id) {
     deleteById(id);
+    p.setId(id);
     return salvar(p);
   }
 }

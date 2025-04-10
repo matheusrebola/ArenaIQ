@@ -25,6 +25,7 @@ public class ElencosService {
 
   public Elencos atualizar(Elencos e, String id) {
     deleteById(id);
+    e.setId(id);
     return salvar(e);
   }
 

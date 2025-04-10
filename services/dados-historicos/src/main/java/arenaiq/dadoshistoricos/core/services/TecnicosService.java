@@ -25,6 +25,7 @@ public class TecnicosService {
 
   public Tecnicos atualizar(Tecnicos t, String id) {
     deleteById(id);
+    t.setId(id);
     return salvar(t);
   }
 }

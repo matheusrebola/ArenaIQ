@@ -25,6 +25,7 @@ public class TitulosService {
 
   public Titulos atualizar(Titulos t, String id) {
     deleteById(id);
+    t.setId(id);
     return salvar(t);
   }
 }
