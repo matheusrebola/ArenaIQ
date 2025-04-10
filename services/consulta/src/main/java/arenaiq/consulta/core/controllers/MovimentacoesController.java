@@ -16,7 +16,7 @@ import arenaiq.consulta.core.services.MovimentacaoService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping(path = "/movimentacao")
+@RequestMapping(path = "/movimentacoes")
 @RequiredArgsConstructor
 public class MovimentacoesController {
   private final MovimentacaoService s;
