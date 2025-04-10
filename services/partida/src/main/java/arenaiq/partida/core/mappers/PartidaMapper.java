@@ -7,9 +7,10 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 import arenaiq.partida.core.dtos.JogadoresDTO;
-import arenaiq.partida.core.dtos.PartidaCreateDTO;
+import arenaiq.partida.core.dtos.PartidasCreateDTO;
+import arenaiq.partida.core.dtos.PartidasDTO;
 import arenaiq.partida.core.dtos.PartidaDTO;
-import arenaiq.partida.core.models.Partida;
+import arenaiq.partida.core.models.Partidas;
 import lombok.RequiredArgsConstructor;
 
 @Component
@@ -17,20 +18,20 @@ import lombok.RequiredArgsConstructor;
 public class PartidaMapper {
   private final ModelMapper mapper;
 
-  public Partida map(PartidaCreateDTO p) {
-    return mapper.map(p, Partida.class);
+  public Partidas map(PartidasCreateDTO p) {
+    return mapper.map(p, Partidas.class);
   }
 
-  public PartidaDTO map(Partida p, List<JogadoresDTO> j) {
+  public PartidaDTO map(Partidas p, List<JogadoresDTO> j) {
     PartidaDTO dto = mapper.map(p, PartidaDTO.class);
     dto.setJogadores(j);
     return dto;
   }
 
-  public List<PartidaDTO> map(List<Partida> p){
+  public List<PartidasDTO> map(List<Partidas> p){
     return p.stream()
             .map(dto -> {
-              PartidaDTO partida = mapper.map(dto, PartidaDTO.class);
+              PartidasDTO partida = mapper.map(dto, PartidasDTO.class);
               return partida;
             })
             .collect(Collectors.toList());
