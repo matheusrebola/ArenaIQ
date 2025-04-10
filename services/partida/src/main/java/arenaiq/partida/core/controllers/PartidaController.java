@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import arenaiq.partida.core.dtos.ElencosDTO;
-import arenaiq.partida.core.dtos.JogadoresDTO;
 import arenaiq.partida.core.dtos.PartidasCreateDTO;
 import arenaiq.partida.core.dtos.PartidasDTO;
 import arenaiq.partida.core.dtos.PartidaDTO;
 import arenaiq.partida.core.mappers.PartidaMapper;
+import arenaiq.partida.core.models.Jogadores;
 import arenaiq.partida.core.models.Partidas;
 import arenaiq.partida.core.services.JogadorService;
 import arenaiq.partida.core.services.PartidaService;
@@ -33,10 +33,13 @@ public class PartidaController {
 
   @PostMapping
   public ResponseEntity<PartidaDTO> criar(@RequestBody PartidasCreateDTO r){
+    //criar partida
     Partidas p = pMapper.map(r);
     Partidas s = pService.salvar(p);
+    //settar dto
     ElencosDTO e = new ElencosDTO(s.getTemporada(), s.getCasa(), s.getVisitante(), s.getId());
-    List<JogadoresDTO> j = jService.criarElencos(e);
+    //buscar lista de jogadores
+    List<Jogadores> j = jService.criarElencosPorClube(e);
     PartidaDTO dto = pMapper.map(s,j);
     return new ResponseEntity<>(dto, HttpStatus.CREATED);
   }
@@ -46,6 +49,11 @@ public class PartidaController {
     List<Partidas> p = pService.encontrarTodos();
     List<PartidasDTO> dto = pMapper.map(p);
     return new ResponseEntity<>(dto, HttpStatus.OK);
+  }
+  
+  @GetMapping("/jogadores")
+  public ResponseEntity<List<Jogadores>> encontrarJogadores(){
+    return new ResponseEntity<>(jService.findAll(), HttpStatus.OK);
   }
 
   @DeleteMapping("/{id}")
