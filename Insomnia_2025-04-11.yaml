@@ -1,0 +1,738 @@
+type: collection.insomnia.rest/5.0
+name: ArenaIQ
+meta:
+  id: wrk_7ff2aff6ee6c4be8b1c6ad3ac022ade6
+  created: 1738755765720
+  modified: 1744137903416
+collection:
+  - url: localhost:62001/treino/eventos
+    name: Treino - Eventos
+    meta:
+      id: req_7d74844656754bf1a2eae5b789e5d1c8
+      created: 1742485662898
+      modified: 1744323028838
+      isPrivate: false
+      sortKey: -1742485662898
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"evento": "PASSE_CURTO_RASTEIRO",
+        	"motivo": "MANTER_POSSE",
+        	"ator": "EDEFENSOR_DIREITO",
+        	"receptor": "EDEFENSOR_CENTRAL",
+        	"url": "/videos/jogos"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:62000/partidas
+    name: Partidas
+    meta:
+      id: req_db07390e4f2642639948c7ddef8162a1
+      created: 1742503487237
+      modified: 1744321771967
+      isPrivate: false
+      sortKey: -1742503487237
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"partida": "LIVE",
+        	"dataHora": "2007-12-03T10:15:30",
+        	"clima": ["ENSOLARADO"],
+        	"temperatura": [19.2],
+        	"umidade": [42],
+        	"local": "Arena Corinthians",
+        	"casa": "Corinthians",
+        	"visitante": "Palmeiras",
+        	"temporada": "22-23",
+        	"placarC": [0],
+        	"placarV": [0],
+        	"competicao": "Paulistão",
+        	"url": "/videos/live"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63211/competicoes
+    name: Dados Históricos - Competições
+    meta:
+      id: req_ff589c6038264e4a9dc090819dbc33e6
+      created: 1742578681194
+      modified: 1744296878301
+      isPrivate: false
+      sortKey: -1742675174815
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        		"nome": "La Liga",
+        		"competicao": "NACIONAL",
+        		"disputa": "PONTOS_CORRIDOS",
+        		"localidade": "Espanha",
+        		"temporada": ["2015-2016", "2016-2017"]
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63001/eventos
+    name: Encaminhador - Eventos
+    meta:
+      id: req_015a765b1b57468c8a0eadea21a3bd28
+      created: 1742675174715
+      modified: 1744212927748
+      isPrivate: false
+      sortKey: -1742503491826.475
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"evento": "PASSE_CURTO_RASTEIRO",
+        	"motivo": "MANTER_POSSE",
+        	"partidaId": "67df41ce7af1857dce71609a",
+        	"origem": "67df41ce7af1857dce71609a",
+        	"destino": "67df41ce7af1857dce71609a",
+        	"minuto": 2,
+        	"segundo": 34,
+        	"posicaoX": "EVOL_DIREITO",
+        	"posicaoY": "EVOL_ESQUERDO"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63210/competicoes
+    name: Consulta - Competições
+    meta:
+      id: req_0bd5e466993349549a340c709901e338
+      created: 1744136711802
+      modified: 1744212615821
+      isPrivate: false
+      sortKey: -1742541084216
+    method: GET
+    body:
+      mimeType: application/json
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63211/elencos
+    name: Dados Históricos - Elencos
+    meta:
+      id: req_24f27a934d5c4c09b6b08b657abdd433
+      created: 1744212414686
+      modified: 1744297053745
+      isPrivate: false
+      sortKey: -1742675174765
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"apelido": "MSN",
+        	"equipe": "Nome da Equipe",
+        	"tecnico": "Nome do Tecnico"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63211/equipes
+    name: Dados Históricos - Equipes
+    meta:
+      id: req_8bb284f689d1468ea3516b97f3810372
+      created: 1744212422949
+      modified: 1744293580277
+      isPrivate: false
+      sortKey: -1742675174740
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Corinthians",
+        	"cidade": "São Paulo",
+        	"pais": "Brasil",
+        	"anoFundacao": "10/09/1910"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63211/jogadores
+    name: Dados Históricos - Jogadores
+    meta:
+      id: req_ef694e9018f14b96b272d9dcdf297850
+      created: 1744212435352
+      modified: 1744319895061
+      isPrivate: false
+      sortKey: -1742573981572.625
+    method: POST
+    body:
+      mimeType: application/json
+      text: >
+        {
+          "nome": "Neymar",
+          "dataNascimento": "05/02/1992",
+          "nacionalidade": "Brasil",
+          "funcao": ["BOLA_PARADA", "RABISCANTE", "CHUTA_LONGE"],
+          "contribuicao": ["VISAO_JOGO", "DRIBLES", "GOLS"],
+          "estilo": ["CALCULISTA", "FRIEZA", "FINALIZADOR"],
+          "personalidade": ["REBELDE", "MAGO", "HEROI", "COMEDIANTE", "CRIADOR"],
+          "pe": "AMBIDESTRO",
+          "altura": 1.75,
+          "peso": 68.0,
+          "posicao": ["MD", "PD", "ME", "PE", "MEI", "MED", "MEE", "SA", "ATA", "ATD", "ATE"],
+          "funcaoPosicao": ["FINALIZAR", "SEGURAR_BOLA", "CRIAR_JOGADA"],
+          "elenco": [
+            {
+              "clube": "Santos",
+              "entrada": "10/02/2007",
+        			"saida": "20/07/2013"
+            }
+          ],
+          "clube": "Santos"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63211/resultados
+    name: Dados Históricos - Resultados
+    meta:
+      id: req_281a21224cb646dab2f95ee4b243626e
+      created: 1744212493899
+      modified: 1744297218533
+      isPrivate: false
+      sortKey: -1742566711844.2637
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"jogosDisputados": 50,
+        	"vitorias": 20,
+        	"derrotas": 10,
+        	"empates": 20,
+        	"aproveitamento": 61.2,
+        	"golsMarcados": 62,
+        	"golsSofridos": 41,
+        	"desempenho": 8.1,
+        	"competicao": "Nome Competicao",
+        	"equipe": "Nome Equipe",
+        	"temporada": "2015-2016"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63211/tecnicos
+    name: Dados Históricos - Técnicos
+    meta:
+      id: req_aa4841a2cc4c4ed998be9198d23ea611
+      created: 1744212508047
+      modified: 1744293811661
+      isPrivate: false
+      sortKey: -1742566675128.4639
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"nome": "Carlo Ancelotti",
+        	"nacionalidade": "Italiano",
+        	"dataNascimento": "10-06-1959",
+        	"anosExperiencia": 30,
+        	"filosofia": ["PRESSAO", "TRIANGULACAO", "CONTRA_ATAQUE", "PELAS_PONTAS"],
+        	"posicoes": ["VOL", "VLE", "VLD", "MC", "MCE", "MCD"]
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63211/temporadas
+    name: Dados Históricos - Temporadas
+    meta:
+      id: req_ee3cc49f88fa468b802e80ced9d3a509
+      created: 1744212515426
+      modified: 1744296814623
+      isPrivate: false
+      sortKey: -1742566638412.664
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"temporada": "2016-2017",
+        	"dataInicio": "10-07-2015",
+        	"dataFim": "30-06-2016"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63211/titulos
+    name: Dados Históricos - Títulos
+    meta:
+      id: req_453822d87f674eb1a6282904549ea600
+      created: 1744212527510
+      modified: 1744297329421
+      isPrivate: false
+      sortKey: -1742566491549.4648
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"nome": "Libertadores",
+        	"participante": "INTERNACIONAL",
+        	"temporada": "2015-2016",
+        	"posicao": 1,
+        	"mvp": ["Nome do Jogador", "Nome do Jogador", "Nome do Jogador", "Nome do Jogador"],
+        	"mvc": ["Nome do Técnico", "Nome do Técnico", "Nome do Técnico", "Nome do Técnico"],
+        	"tipoTitulo": "CONTINENTAL",
+        	"equipe": "Nome Equipe",
+        	"competicao": "Nome Competicao"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63210/elencos
+    name: Consulta - Elencos
+    meta:
+      id: req_ad1ac9eb77fe4727a07cd118c09e0d1d
+      created: 1744212633818
+      modified: 1744228054928
+      isPrivate: false
+      sortKey: -1742522285726.5
+    method: GET
+    body:
+      mimeType: application/json
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63210/equipes
+    name: Consulta - Equipes
+    meta:
+      id: req_603ef6a827594b5399a722e32aca125a
+      created: 1744212644813
+      modified: 1744229295842
+      isPrivate: false
+      sortKey: -1742512886481.75
+    method: GET
+    body:
+      mimeType: application/json
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63210/jogadores
+    name: Consulta - Jogadores
+    meta:
+      id: req_ac29f47582e74521a6da3ccfac099277
+      created: 1744212652829
+      modified: 1744229203312
+      isPrivate: false
+      sortKey: -1742508186859.375
+    method: GET
+    body:
+      mimeType: application/json
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63210/linhas
+    name: Consulta - Linhas
+    meta:
+      id: req_23911b20e33b429ea4f09551f6a76f40
+      created: 1744212745191
+      modified: 1744229309042
+      isPrivate: false
+      sortKey: -1742504662142.5938
+    method: GET
+    body:
+      mimeType: application/json
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63210/movimentacoes
+    name: Consulta - Movimentações
+    meta:
+      id: req_3d1355e656164ee3a041835f938303f8
+      created: 1744212758938
+      modified: 1744294735526
+      isPrivate: false
+      sortKey: -1742504074689.7969
+    method: GET
+    body:
+      mimeType: application/json
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63210/resultados
+    name: Consulta - Resultados
+    meta:
+      id: req_a37ad413c4144e35b33b27b604b52d1f
+      created: 1744212790686
+      modified: 1744229329997
+      isPrivate: false
+      sortKey: -1742503560668.5996
+    method: GET
+    body:
+      mimeType: application/json
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63210/tecnicos
+    name: Consulta - Técnicos
+    meta:
+      id: req_d72c6a51ee5e478ab52f852126018da1
+      created: 1744212800479
+      modified: 1744229334178
+      isPrivate: false
+      sortKey: -1742503523952.7998
+    method: GET
+    body:
+      mimeType: application/json
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63210/temporadas
+    name: Consulta - Temporadas
+    meta:
+      id: req_1eb04139d1b64305b73c30eb1c762955
+      created: 1744212816410
+      modified: 1744229338317
+      isPrivate: false
+      sortKey: -1742503505594.9
+    method: GET
+    body:
+      mimeType: application/json
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:63210/titulos
+    name: Consulta - Títulos
+    meta:
+      id: req_bab7de138af34813a6463f7d718df939
+      created: 1744212825939
+      modified: 1744229342383
+      isPrivate: false
+      sortKey: -1742503496415.95
+    method: GET
+    body:
+      mimeType: application/json
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:62001/treino/formacoes
+    name: Treino - Formações
+    meta:
+      id: req_669d24ead23d42269615e77d2602a3c1
+      created: 1744212853623
+      modified: 1744323035690
+      isPrivate: false
+      sortKey: -1742485662848
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"formacao": "F3142",
+        	"modo": "ULTRA_OFENSIVO",
+        	"compactacao": "ABERTO",
+        	"url": "/videos/jogos"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:62001/treino/linhas
+    name: Treino - Linhas
+    meta:
+      id: req_79cce46b37564ee0be6ef4f9d95e33d6
+      created: 1744212873262
+      modified: 1744323040266
+      isPrivate: false
+      sortKey: -1742485662798
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"linha": "DEFENSIVA",
+        	"altura": "ULTRA_DEFENSIVO",
+        	"largura": "ULTRA_FECHADA",
+        	"url": "/videos/jogos"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:62001/treino/movimentacoes
+    name: Treino - Movimentações
+    meta:
+      id: req_81a8cdb7a66a41f6901ff59c8de95eef
+      created: 1744322238348
+      modified: 1744323044784
+      isPrivate: false
+      sortKey: -1742485662748
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"inicial": "LD",
+        	"atual": "ADD",
+        	"formacao": "F3421",
+        	"url": "/videos/jogos"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_7b8ada4d5dd19d9fd72392127da295eda2655492
+    created: 1742485656780
+    modified: 1742485656780
+environments:
+  name: Base Environment
+  meta:
+    id: env_7b8ada4d5dd19d9fd72392127da295eda2655492
+    created: 1738755765721
+    modified: 1742485656692
+    isPrivate: false
