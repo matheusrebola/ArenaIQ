@@ -1,4 +1,4 @@
-package arenaiq.recebidor.evento.core.models;
+package arenaiq.persistencia.evento.core.models.enums;
 
 public enum EEvento {
   PASSE_CURTO_RASTEIRO, PASSE_MEDIO_RASTEIRO, PASSE_LONGO_RASTEIRO,

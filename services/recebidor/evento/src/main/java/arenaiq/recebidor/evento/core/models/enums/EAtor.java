@@ -1,4 +1,4 @@
-package arenaiq.persistencia.evento.core.models;
+package arenaiq.recebidor.evento.core.models.enums;
 
 public enum EAtor {
   //EQUIPE

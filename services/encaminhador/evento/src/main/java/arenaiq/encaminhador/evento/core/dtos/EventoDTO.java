@@ -2,6 +2,7 @@ package arenaiq.encaminhador.evento.core.dtos;
 
 import arenaiq.encaminhador.evento.core.models.enums.EEvento;
 import arenaiq.encaminhador.evento.core.models.enums.EMotivo;
+import arenaiq.encaminhador.evento.core.models.enums.EQualidade;
 import arenaiq.encaminhador.evento.core.models.enums.EAtor;
 import lombok.Data;
 
@@ -10,6 +11,7 @@ public class EventoDTO {
   private String id;
   private EEvento evento;
   private EMotivo motivo;
+  private EQualidade qualidade;
   private String partidaId;
   private String origem; //jogador de origem
   private String destino; //jogador destino
