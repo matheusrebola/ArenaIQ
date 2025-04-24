@@ -15,17 +15,17 @@ Campos para cruzar:
     placar parcial, momento do jogo
 
 ```{r}
-#library(mongolite)
+#conectar ao mongo
+library(mongolite)
 
 uri <- "mongodb://datalake:datalake@localhost:61000/datalake"
 
-eventos <- mongo(collection = "Eventos", db = "datalake", url = uri)
-formacoes <- mongo(collection = "Formacoes", db = "datalake", url = uri)
-linhas <- mongo(collection = "Linhas", db = "datalake", url = uri)
+eventos <- mongo(collection = "eventos", db = "datalake", url = uri)
+formacoes <- mongo(collection = "formacoes", db = "datalake", url = uri)
+linhas <- mongo(collection = "linhas", db = "datalake", url = uri)
 partidas <- mongo(collection = "partidas", db = "datalake", url = uri)
 elencos <- mongo(collection = "elencos", db = "datalake", url = uri)
 jogadoreselenco <- mongo(collection = "jogadoreselenco", db = "datalake", url = uri)
 jogadores <- mongo(collection = "jogadores", db = "datalake", url = uri)
-
 ```
 

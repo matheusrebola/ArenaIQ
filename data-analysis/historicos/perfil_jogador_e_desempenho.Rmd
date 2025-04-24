@@ -19,9 +19,9 @@ Perguntas:
 uri <- "mongodb://datalake:datalake@localhost:61000/datalake"
 
 jogadores <- mongo(collection = "jogadores", db = "datalake", url = uri)
-eventos <- mongo(collection = "Eventos", db = "datalake", url = uri)
+eventos <- mongo(collection = "eventos", db = "datalake", url = uri)
 resultados <- mongo(collection = "resultados", db = "datalake", url = uri)
-formacoes <- mongo(collection = "Formacoes", db = "datalake", url = uri)
+formacoes <- mongo(collection = "formacoes", db = "datalake", url = uri)
 partidas <- mongo(collection = "partidas", db = "datalake", url = uri)
 movimentacoes <- mongo(collection = "movimentacoes", db = "datalake", url = uri)
 

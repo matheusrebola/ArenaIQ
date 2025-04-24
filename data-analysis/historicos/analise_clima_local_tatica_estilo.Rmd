@@ -15,7 +15,8 @@ Perguntas:
     
 
 ```{r}
-#library(mongolite)
+install.packages("mongolite")
+library(mongolite)
 
 uri <- "mongodb://datalake:datalake@localhost:61000/datalake"
 
@@ -23,10 +24,11 @@ uri <- "mongodb://datalake:datalake@localhost:61000/datalake"
 partidas <- mongo(collection = "partidas", db = "datalake", url = uri)
 formacoes <- mongo(collection = "formacoes", db = "datalake", url = uri)
 linhas <- mongo(collection = "linhas", db = "datalake", url = uri)
-eventos <- mongo(collection = "Eventos", db = "datalake", url = uri)
+eventos <- mongo(collection = "eventos", db = "datalake", url = uri)
 movimentacoes <- mongo(collection = "movimentacoes", db = "datalake", url = uri)
 elencos <- mongo(collection = "elencos", db = "datalake", url = uri)
 jogadoreselenco <- mongo(collection = "jogadoreselenco", db = "datalake", url = uri)
 jogadores <- mongo(collection = "jogadores", db = "datalake", url = uri)
 
 ```
+

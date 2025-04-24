@@ -23,8 +23,8 @@ jogadoreselenco <- mongo(collection = "jogadoreselenco", db = "datalake", url = 
 jogadores <- mongo(collection = "jogadores", db = "datalake", url = uri)
 tecnicos <- mongo(collection = "tecnicos", db = "datalake", url = uri)
 temporadas <- mongo(collection = "temporadas", db = "datalake", url = uri)
-eventos <- mongo(collection = "Eventos", db = "datalake", url = uri)
-formacoes <- mongo(collection = "Formacoes", db = "datalake", url = uri)
+eventos <- mongo(collection = "eventos", db = "datalake", url = uri)
+formacoes <- mongo(collection = "formacoes", db = "datalake", url = uri)
 resultados <- mongo(collection = "resultados", db = "datalake", url = uri)
 ```
 
