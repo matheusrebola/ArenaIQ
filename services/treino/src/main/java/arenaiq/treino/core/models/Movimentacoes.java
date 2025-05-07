@@ -7,7 +7,7 @@ import arenaiq.treino.core.models.enums.EFormacao;
 import arenaiq.treino.core.models.enums.EPosicao;
 import lombok.Data;
 
-@Document (collection = "movimentacoes")
+@Document(collection = "movimentacoes")
 @Data
 public class Movimentacoes {
   @Id

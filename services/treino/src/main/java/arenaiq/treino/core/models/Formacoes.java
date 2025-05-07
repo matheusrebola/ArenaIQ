@@ -8,7 +8,7 @@ import arenaiq.treino.core.models.enums.EFormacao;
 import arenaiq.treino.core.models.enums.EModoJogo;
 import lombok.Data;
 
-@Document
+@Document(collection = "formacoes")
 @Data
 public class Formacoes {
   @Id

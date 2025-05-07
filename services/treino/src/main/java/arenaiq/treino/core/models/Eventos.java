@@ -9,7 +9,7 @@ import arenaiq.treino.core.models.enums.EMotivo;
 import arenaiq.treino.core.models.enums.EQualidade;
 import lombok.Data;
 
-@Document
+@Document(collection = "eventos")
 @Data
 public class Eventos {
   @Id
