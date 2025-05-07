@@ -1,14 +1,19 @@
 server:
   port: 63101
- 
+
 spring:
   data:
-    mongodb:
-      uri: mongodb://recebidor:recebidor@localhost:61000/recebidor-db
+    neo4j:
+      uri: bolt://localhost:56870
+      username: neo4j
+      password: password
+
   kafka:
     bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
     topic:
-      eventos-start: eventos-start
+      recebidor-sucess: recebidor-sucess
+      recebidor-fail: recebidor-fail
+      persistence-fail: persistence-fail
       notify-ending: notify-ending
     consumer:
       group-id: recebidor-group
