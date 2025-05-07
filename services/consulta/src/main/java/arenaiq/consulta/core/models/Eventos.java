@@ -6,6 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import arenaiq.consulta.core.models.enums.EAtor;
 import arenaiq.consulta.core.models.enums.EEvento;
 import arenaiq.consulta.core.models.enums.EMotivo;
+import arenaiq.consulta.core.models.enums.EQualidade;
 import lombok.Data;
 
 @Document (collection = "eventos")
@@ -15,6 +16,7 @@ public class Eventos {
   private String id;
   private EEvento evento;
   private EMotivo motivo;
+  private EQualidade qualidade;
   private String partida;
   private String origem; //jogador de origem
   private String destino; //jogador destino

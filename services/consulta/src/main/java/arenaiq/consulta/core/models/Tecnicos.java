@@ -6,7 +6,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import arenaiq.consulta.core.models.enums.EFilosofia;
-import arenaiq.consulta.core.models.enums.EPosicao;
 import lombok.Data;
 
 @Document (collection = "tecnicos")
@@ -19,5 +18,5 @@ public class Tecnicos {
   private String dataNascimento;
   private Byte anosExperiencia;
   private List<EFilosofia> filosofia;
-  private List<EPosicao> posicoes;
+  private String jogador;
 }

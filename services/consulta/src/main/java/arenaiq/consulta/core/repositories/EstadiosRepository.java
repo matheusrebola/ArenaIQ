@@ -9,7 +9,7 @@ import arenaiq.consulta.core.models.Estadios;
 import arenaiq.consulta.core.models.enums.EClima;
 import arenaiq.consulta.core.models.enums.ECobertura;
 import arenaiq.consulta.core.models.enums.EDrenagem;
-import arenaiq.consulta.core.models.enums.EGRama;
+import arenaiq.consulta.core.models.enums.EGrama;
 import arenaiq.consulta.core.models.enums.EInclinacao;
 import arenaiq.consulta.core.models.enums.EVento;
 
@@ -20,7 +20,7 @@ public interface EstadiosRepository extends MongoRepository<Estadios, String>{
   List<Estadios> findByPais(String p);
   List<Estadios> findByClubeMandante(String c);
   List<Estadios> findByCapacidade(String c);
-  List<Estadios> findByGrama(EGRama g);
+  List<Estadios> findByGrama(EGrama g);
   List<Estadios> findByComprimento(Byte c);
   List<Estadios> findByLargura(Byte l);
   List<Estadios> findByCobertura(ECobertura c);

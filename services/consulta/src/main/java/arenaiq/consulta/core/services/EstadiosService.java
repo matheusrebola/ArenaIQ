@@ -8,7 +8,7 @@ import arenaiq.consulta.core.models.Estadios;
 import arenaiq.consulta.core.models.enums.EClima;
 import arenaiq.consulta.core.models.enums.ECobertura;
 import arenaiq.consulta.core.models.enums.EDrenagem;
-import arenaiq.consulta.core.models.enums.EGRama;
+import arenaiq.consulta.core.models.enums.EGrama;
 import arenaiq.consulta.core.models.enums.EInclinacao;
 import arenaiq.consulta.core.models.enums.EVento;
 import arenaiq.consulta.core.repositories.EstadiosRepository;
@@ -43,7 +43,7 @@ public class EstadiosService {
     return r.findByCapacidade(c);
   }
 
-  public List<Estadios> findByGrama(EGRama g){
+  public List<Estadios> findByGrama(EGrama g){
     return r.findByGrama(g);
   }
 

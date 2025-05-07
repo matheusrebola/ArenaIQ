@@ -15,7 +15,7 @@ import arenaiq.consulta.core.models.Estadios;
 import arenaiq.consulta.core.models.enums.EClima;
 import arenaiq.consulta.core.models.enums.ECobertura;
 import arenaiq.consulta.core.models.enums.EDrenagem;
-import arenaiq.consulta.core.models.enums.EGRama;
+import arenaiq.consulta.core.models.enums.EGrama;
 import arenaiq.consulta.core.models.enums.EInclinacao;
 import arenaiq.consulta.core.models.enums.EVento;
 import arenaiq.consulta.core.services.EstadiosService;
@@ -71,7 +71,7 @@ public class EstadiosController {
   }
 
   @GetMapping("/grama/{grama}")
-  public ResponseEntity<List<EstadiosDTO>> findByGrama(@PathVariable EGRama g){
+  public ResponseEntity<List<EstadiosDTO>> findByGrama(@PathVariable EGrama g){
     List<Estadios> e = s.findByGrama(g);
     List<EstadiosDTO> dto = m.map(e);
     return new ResponseEntity<>(dto, HttpStatus.OK);

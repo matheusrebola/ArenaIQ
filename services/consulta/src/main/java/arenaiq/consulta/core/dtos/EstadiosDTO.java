@@ -5,7 +5,7 @@ import java.util.List;
 import arenaiq.consulta.core.models.enums.EClima;
 import arenaiq.consulta.core.models.enums.ECobertura;
 import arenaiq.consulta.core.models.enums.EDrenagem;
-import arenaiq.consulta.core.models.enums.EGRama;
+import arenaiq.consulta.core.models.enums.EGrama;
 import arenaiq.consulta.core.models.enums.EInclinacao;
 import arenaiq.consulta.core.models.enums.EVento;
 import lombok.Data;
@@ -18,7 +18,7 @@ public class EstadiosDTO {
   private String pais;
   private List<String> clubeMandante;
   private Integer capacidade;
-  private List<EGRama> grama;
+  private List<EGrama> grama;
   private Byte comprimento;
   private Byte largura;
   private ECobertura cobertura;
