@@ -1,11 +1,11 @@
 package arenaiq.persistencia.movimentacao.core.models;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
+import jakarta.persistence.Table;
 import lombok.Data;
 
-@Document (collection = "movimentacoes")
+@Table
 @Data
 public class Movimentacoes {
   @Id

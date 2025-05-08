@@ -1,14 +1,14 @@
 package arenaiq.persistencia.linha.core.models;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import arenaiq.persistencia.linha.core.models.enums.ELargura;
 import arenaiq.persistencia.linha.core.models.enums.ELinha;
 import arenaiq.persistencia.linha.core.models.enums.EModoJogo;
+import jakarta.persistence.Table;
 import lombok.Data;
 
-@Document (collection = "linhas")
+@Table
 @Data
 public class Linhas {
   @Id
@@ -18,6 +18,6 @@ public class Linhas {
   private ELargura largura;
   private Byte minuto;
   private Byte segundo;
-  private String equipeId;
+  private String equipe;
   private String partidaId;
 }

@@ -1,11 +1,11 @@
 package arenaiq.persistencia.linha.core.repositories;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import arenaiq.persistencia.linha.core.models.Linhas;
 
 @Repository
-public interface LinhasRepository extends MongoRepository<Linhas, String>{
+public interface LinhasRepository extends JpaRepository<Linhas, String>{
 
 }

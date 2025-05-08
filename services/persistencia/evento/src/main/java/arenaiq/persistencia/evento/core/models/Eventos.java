@@ -1,20 +1,20 @@
 package arenaiq.persistencia.evento.core.models;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import arenaiq.persistencia.evento.core.models.enums.EAtor;
 import arenaiq.persistencia.evento.core.models.enums.EEvento;
 import arenaiq.persistencia.evento.core.models.enums.EMotivo;
 import arenaiq.persistencia.evento.core.models.enums.EQualidade;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Table
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "eventos")
 public class Eventos {
   @Id
   private String id;
