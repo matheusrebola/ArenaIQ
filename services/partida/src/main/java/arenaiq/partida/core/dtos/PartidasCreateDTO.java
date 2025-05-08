@@ -17,8 +17,8 @@ public class PartidasCreateDTO {
   private String casa;
   private String visitante;
   private String temporada;
-  private List<Byte> placarC;
-  private List<Byte> placarV;
+  private Byte placarC;
+  private Byte placarV;
   private String competicao;
   private String url;
 }

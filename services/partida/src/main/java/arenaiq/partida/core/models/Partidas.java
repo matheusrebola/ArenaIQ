@@ -23,8 +23,8 @@ public class Partidas {
   private String casa;
   private String visitante;
   private String temporada;
-  private List<Byte> placarC;
-  private List<Byte> placarV;
+  private Integer placarC;
+  private Integer placarV;
   private String competicao;
   private String url;
 }

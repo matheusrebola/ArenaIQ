@@ -1,6 +1,5 @@
 package arenaiq.partida.core.services;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -16,18 +15,15 @@ import lombok.RequiredArgsConstructor;
 public class JogadorService {
   private final JogadorRepository r;
   private final JogadorMapper jMapper;
+  private final List<Jogadores> jogadores;
   
   public List<Jogadores> criarElencosPorClube(ElencosDTO e){
-    List<Jogadores> jogadores = new ArrayList<>();
-
     // Jogadores do time da casa
     List<Jogadores> casa = r.findByClube(e.getCasa());
     jogadores.addAll(jMapper.map(casa, e.getPartida()));
-
     // Jogadores do time visitante
     List<Jogadores> visitante = r.findByClube(e.getVisitante());
     jogadores.addAll(jMapper.map(visitante, e.getPartida()));
-
     return jogadores;
   }
 

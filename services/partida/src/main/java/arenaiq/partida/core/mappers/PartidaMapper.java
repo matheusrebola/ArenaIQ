@@ -36,4 +36,8 @@ public class PartidaMapper {
     dto.setJogadores(j);
     return dto;
   }
+
+  public PartidasDTO map(Partidas p) {
+    return mapper.map(p, PartidasDTO.class);
+  }
 }
