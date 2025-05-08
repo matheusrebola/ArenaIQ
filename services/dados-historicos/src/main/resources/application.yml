@@ -2,14 +2,10 @@ server:
   port: 63211
  
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:54320/arenaiq_db
-    username: postgres
-    password: postgres
-    driver-class-name: org.postgresql.Driver
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  data:
+    mongodb:
+      uri: mongodb://datalake:datalake@localhost:61000/datalake
+    neo4j:
+      uri: bolt://localhost:56870
+      username: neo4j
+      password: password

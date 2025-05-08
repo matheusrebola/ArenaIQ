@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import arenaiq.dadoshistoricos.core.dtos.TemporadasCreateDTO;
 import arenaiq.dadoshistoricos.core.dtos.TemporadasDTO;
-import arenaiq.dadoshistoricos.core.models.Temporadas;
+import arenaiq.dadoshistoricos.core.models.document.Temporadas;
 import lombok.RequiredArgsConstructor;
 
 @Component

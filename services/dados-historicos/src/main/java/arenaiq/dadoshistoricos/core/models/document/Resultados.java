@@ -1,4 +1,4 @@
-package arenaiq.dadoshistoricos.core.models;
+package arenaiq.dadoshistoricos.core.models.document;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

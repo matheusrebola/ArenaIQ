@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import arenaiq.dadoshistoricos.core.dtos.CompeticoesCreateDTO;
 import arenaiq.dadoshistoricos.core.dtos.CompeticoesDTO;
 import arenaiq.dadoshistoricos.core.mappers.CompeticoesMapper;
-import arenaiq.dadoshistoricos.core.models.Competicoes;
+import arenaiq.dadoshistoricos.core.models.document.Competicoes;
 import arenaiq.dadoshistoricos.core.services.CompeticoesService;
 import lombok.RequiredArgsConstructor;
 
