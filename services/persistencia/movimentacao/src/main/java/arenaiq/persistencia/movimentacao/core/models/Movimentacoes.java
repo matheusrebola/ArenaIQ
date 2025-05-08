@@ -1,5 +1,6 @@
 package arenaiq.persistencia.movimentacao.core.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Data;
@@ -8,11 +9,16 @@ import lombok.Data;
 @Data
 public class Movimentacoes {
   @Id  
+  @Column(length = 50)
   private String id;
+  @Column(length = 3)
   private EPosicao inicial;
+  @Column(length = 50)
   private EPosicao atual;
   private Byte minuto;
   private Byte segundo;
-  private String partidaId;
-  private String jogadorId;
+  @Column(length = 50)
+  private String partida;
+  @Column(length = 50)
+  private String jogador;
 }

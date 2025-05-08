@@ -1,16 +1,15 @@
 package arenaiq.persistencia.movimentacao.core.dtos;
 
+import arenaiq.persistencia.movimentacao.core.models.EPosicao;
 import lombok.Data;
 
 @Data
 public class MovimentacoesDTO {
   private String id;
-  private Float eixoX;
-  private Float eixoY;
-  private Float velocidadeX;
-  private Float velocidadeY;
+  private EPosicao inicial;
+  private EPosicao atual;
   private Byte minuto;
   private Byte segundo;
-  private String partidaId;
-  private String jogadorId;
+  private String partida;
+  private String jogador;
 }

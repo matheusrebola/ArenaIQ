@@ -13,6 +13,6 @@ public class LinhasDTO {
   private ELargura largura;
   private Byte minuto;
   private Byte segundo;
-  private String equipeId;
-  private String partidaId;
+  private String equipe;
+  private String partida;
 }
