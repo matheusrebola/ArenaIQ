@@ -15,6 +15,6 @@ public class Movimentacoes {
   private EPosicao atual;
   private Byte minuto;
   private Byte segundo;
-  private String partidaId;
-  private String jogadorId;
+  private String partida;
+  private String jogador;
 }

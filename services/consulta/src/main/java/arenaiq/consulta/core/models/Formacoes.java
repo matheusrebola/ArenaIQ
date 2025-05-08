@@ -18,6 +18,6 @@ public class Formacoes {
   private EFormacao formacao;
   private EModoJogo modo;
   private ECompacatacao compactacao;
-  private String timeId;
-  private String partidaId;
+  private String time;
+  private String partida;
 }

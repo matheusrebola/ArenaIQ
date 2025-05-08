@@ -32,6 +32,6 @@ public class Jogadores {
   private List<EPosicao> posicao;
   private List<EFunPosicao> funcaoPosicao;
   private List<String> clubes;
-  private String clubeAtual;
+  private String clube;
   private String partida;
 }
