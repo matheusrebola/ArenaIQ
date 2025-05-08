@@ -1,11 +1,11 @@
 package arenaiq.recebidor.movimentacao.core.models;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.neo4j.core.schema.Node;
 
 import lombok.Data;
 
-@Document (collection = "movimentacoes")
+@Node
 @Data
 public class Movimentacoes {
   @Id

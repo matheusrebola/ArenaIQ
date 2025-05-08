@@ -1,11 +1,11 @@
 package arenaiq.recebidor.formacao.core.models;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.neo4j.core.schema.Node;
 
 import lombok.Data;
 
-@Document (collection = "formacoes")
+@Node
 @Data
 public class Formacoes {
   @Id

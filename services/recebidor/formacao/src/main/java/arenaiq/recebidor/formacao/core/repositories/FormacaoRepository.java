@@ -1,11 +1,11 @@
 package arenaiq.recebidor.formacao.core.repositories;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.neo4j.repository.Neo4jRepository;
 import org.springframework.stereotype.Repository;
 
 import arenaiq.recebidor.formacao.core.models.Formacoes;
 
 @Repository
-public interface FormacaoRepository extends MongoRepository<Formacoes, String> {
+public interface FormacaoRepository extends Neo4jRepository<Formacoes, String> {
 
 }

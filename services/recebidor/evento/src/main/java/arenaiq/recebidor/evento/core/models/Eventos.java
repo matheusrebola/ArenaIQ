@@ -1,7 +1,7 @@
 package arenaiq.recebidor.evento.core.models;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.neo4j.core.schema.Node;
 
 import arenaiq.recebidor.evento.core.models.enums.EAtor;
 import arenaiq.recebidor.evento.core.models.enums.EEvento;
@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "eventos")
+@Node
 public class Eventos {
   @Id
   private String id;
