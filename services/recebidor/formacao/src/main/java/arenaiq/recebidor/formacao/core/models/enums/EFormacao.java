@@ -1,4 +1,4 @@
-package arenaiq.recebidor.formacao.core.models;
+package arenaiq.recebidor.formacao.core.models.enums;
 
 public enum EFormacao {
   F3142, F3421, F343, F352,

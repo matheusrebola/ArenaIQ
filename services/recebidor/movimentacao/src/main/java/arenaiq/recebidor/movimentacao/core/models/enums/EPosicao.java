@@ -1,4 +1,4 @@
-package arenaiq.recebidor.movimentacao.core.models;
+package arenaiq.recebidor.movimentacao.core.models.enums;
 
 public enum EPosicao {
   GOL,

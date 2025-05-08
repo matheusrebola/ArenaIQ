@@ -1,4 +1,4 @@
-package arenaiq.recebidor.formacao.core.models;
+package arenaiq.recebidor.formacao.core.models.enums;
 
 public enum ECompacatacao {
   ULTRA_COMPACTO, COMPACTO, 
