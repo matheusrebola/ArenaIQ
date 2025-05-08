@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,5 +28,13 @@ public class EventosController {
     List<Eventos> e = s.encontrarTodos();
     List<EventosDTO> dto = m.map(e);
     return new ResponseEntity<>(dto, HttpStatus.OK);
+  }
+
+  @PostMapping
+  public ResponseEntity<EventosDTO> cadastrar(@RequestBody EventosDTO dto){
+    Eventos e = m.map(dto);
+    Eventos ev = s.salvar(e);
+    EventosDTO r = m.map(ev);
+    return new ResponseEntity<>(r, HttpStatus.CREATED);
   }
 }

@@ -16,4 +16,8 @@ public class EventosService {
   public List<Eventos> encontrarTodos(){
     return r.findAll();
   }
+
+  public Eventos salvar(Eventos e) {
+    return r.save(e);
+  }
 }

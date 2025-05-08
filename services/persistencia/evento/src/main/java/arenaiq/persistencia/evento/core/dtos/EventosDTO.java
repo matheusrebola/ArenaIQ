@@ -12,9 +12,9 @@ public class EventosDTO {
   private EEvento evento;
   private EMotivo motivo;
   private EQualidade qualidade;
-  private String partidaId;
-  private String origem; //jogador de origem
-  private String destino; //jogador destino
+  private String partida;
+  private String origem;
+  private String destino;
   private Byte minuto;
   private Byte segundo;
   private EAtor posicaoX;

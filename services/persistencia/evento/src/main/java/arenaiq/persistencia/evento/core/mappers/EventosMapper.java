@@ -24,4 +24,12 @@ public class EventosMapper {
             .collect(Collectors.toList());
   }
 
+  public Eventos map(EventosDTO e) {
+    return m.map(e, Eventos.class);
+  }
+
+  public EventosDTO map(Eventos e) {
+    return m.map(e, EventosDTO.class);
+  }
+
 }
