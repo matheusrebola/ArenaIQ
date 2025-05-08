@@ -1,11 +1,10 @@
 package arenaiq.persistencia.formacao.core.models;
 
-import org.springframework.data.annotation.Id;
-
-import jakarta.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Data;
 
-@Table
+@Entity
 @Data
 public class Formacoes {
   @Id

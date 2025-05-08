@@ -1,14 +1,13 @@
 package arenaiq.persistencia.linha.core.models;
 
-import org.springframework.data.annotation.Id;
-
 import arenaiq.persistencia.linha.core.models.enums.ELargura;
 import arenaiq.persistencia.linha.core.models.enums.ELinha;
 import arenaiq.persistencia.linha.core.models.enums.EModoJogo;
-import jakarta.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Data;
 
-@Table
+@Entity
 @Data
 public class Linhas {
   @Id

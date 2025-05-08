@@ -1,17 +1,16 @@
 package arenaiq.persistencia.evento.core.models;
 
-import org.springframework.data.annotation.Id;
-
 import arenaiq.persistencia.evento.core.models.enums.EAtor;
 import arenaiq.persistencia.evento.core.models.enums.EEvento;
 import arenaiq.persistencia.evento.core.models.enums.EMotivo;
 import arenaiq.persistencia.evento.core.models.enums.EQualidade;
-import jakarta.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Table
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
