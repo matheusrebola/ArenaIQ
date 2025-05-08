@@ -1,4 +1,4 @@
-package arenaiq.dadoshistoricos.core.models.document;
+package arenaiq.dadoshistoricos.core.models;
 
 import lombok.Data;
 

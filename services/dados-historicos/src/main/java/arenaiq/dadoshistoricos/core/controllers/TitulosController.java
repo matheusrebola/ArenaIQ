@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import arenaiq.dadoshistoricos.core.dtos.TitulosCreateDTO;
 import arenaiq.dadoshistoricos.core.dtos.TitulosDTO;
 import arenaiq.dadoshistoricos.core.mappers.TitulosMapper;
-import arenaiq.dadoshistoricos.core.models.document.Titulos;
+import arenaiq.dadoshistoricos.core.models.Titulos;
 import arenaiq.dadoshistoricos.core.services.TitulosService;
 import lombok.RequiredArgsConstructor;
 

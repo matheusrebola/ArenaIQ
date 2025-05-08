@@ -5,7 +5,3 @@ spring:
   data:
     mongodb:
       uri: mongodb://datalake:datalake@localhost:61000/datalake
-    neo4j:
-      uri: bolt://localhost:56870
-      username: neo4j
-      password: password

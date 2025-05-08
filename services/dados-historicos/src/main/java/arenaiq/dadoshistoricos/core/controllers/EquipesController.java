@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import arenaiq.dadoshistoricos.core.dtos.EquipesCreateDTO;
 import arenaiq.dadoshistoricos.core.dtos.EquipesDTO;
 import arenaiq.dadoshistoricos.core.mappers.EquipesMapper;
-import arenaiq.dadoshistoricos.core.models.document.Equipes;
+import arenaiq.dadoshistoricos.core.models.Equipes;
 import arenaiq.dadoshistoricos.core.services.EquipesService;
 import lombok.RequiredArgsConstructor;
 

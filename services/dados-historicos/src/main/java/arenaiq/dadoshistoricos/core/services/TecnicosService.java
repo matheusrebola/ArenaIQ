@@ -2,8 +2,8 @@ package arenaiq.dadoshistoricos.core.services;
 
 import org.springframework.stereotype.Service;
 
-import arenaiq.dadoshistoricos.core.models.document.Tecnicos;
-import arenaiq.dadoshistoricos.core.repositories.mongo.TecnicosRepository;
+import arenaiq.dadoshistoricos.core.models.Tecnicos;
+import arenaiq.dadoshistoricos.core.repositories.TecnicosRepository;
 import lombok.RequiredArgsConstructor;
 
 @Service

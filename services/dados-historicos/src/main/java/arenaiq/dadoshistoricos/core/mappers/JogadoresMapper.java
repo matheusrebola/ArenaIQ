@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import arenaiq.dadoshistoricos.core.dtos.JogadoresCreateDTO;
 import arenaiq.dadoshistoricos.core.dtos.JogadoresDTO;
-import arenaiq.dadoshistoricos.core.models.document.Jogadores;
+import arenaiq.dadoshistoricos.core.models.Jogadores;
 import lombok.RequiredArgsConstructor;
 
 @Component
