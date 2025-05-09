@@ -1,0 +1,20 @@
+server:
+  port: 63106
+
+spring:
+  data:
+    neo4j:
+      uri: bolt://localhost:56870
+      username: neo4j
+      password: password
+
+  kafka:
+    bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
+    topic:
+      recebidor-sucess: recebidor-partida-sucess
+      recebidor-fail: recebidor-partida-fail
+      persistence-fail: persistence-partida-fail
+      notify-ending: notify-ending
+    consumer:
+      group-id: recebidor-partida-group
+      auto-offset-reset: latest
