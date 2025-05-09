@@ -3,25 +3,31 @@ import subprocess
 
 # Lista de diretórios dos microserviços
 services = [
+    "autenticaocao",
+    "cadastro",
     "consulta",
     "dados-historicos",
-    "encaminhador/detalhe-evento",
     "encaminhador/evento",
     "encaminhador/formacao",
+    "encaminhador/jogador",
     "encaminhador/linha",
     "encaminhador/movimentacao",
+    "encaminhador/partida",
+    "gateway",
     "partida",
-    "recebidor/detalhe-evento",
-    "recebidor/evento",
-    "recebidor/formacao",
-    "recebidor/linha",
-    "recebidor/movimentacao",
-    "treino",
-    "persistencia/detalhe-evento",
     "persistencia/evento",
     "persistencia/formacao",
+    "persistencia/jogador",
     "persistencia/linha",
-    "persistencia/movimentacao"
+    "persistencia/movimentacao",
+    "persistencia/partida",
+    "recebidor/evento",
+    "recebidor/formacao",
+    "recebidor/jogador",
+    "recebidor/linha",
+    "recebidor/movimentacao",
+    "recebidor/partida",
+    "treino"
 ]
 
 def build_service(service_path):
