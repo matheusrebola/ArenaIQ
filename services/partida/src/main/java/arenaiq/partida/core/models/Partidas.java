@@ -1,11 +1,8 @@
 package arenaiq.partida.core.models;
 
-import java.util.List;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import arenaiq.partida.core.models.enums.EClima;
 import arenaiq.partida.core.models.enums.EPartida;
 import lombok.Data;
 
@@ -16,15 +13,10 @@ public class Partidas {
   private String id;
   private EPartida partida;
   private String dataHora;
-  private List<EClima> clima;
-  private List<Float> temperatura;
-  private List<Float> umidade;
   private String local;
   private String casa;
   private String visitante;
   private String temporada;
-  private Integer placarC;
-  private Integer placarV;
   private String competicao;
   private String url;
 }

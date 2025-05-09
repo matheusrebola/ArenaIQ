@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import arenaiq.partida.core.dtos.PartidaUpdateDTO;
 import arenaiq.partida.core.models.Partidas;
 import arenaiq.partida.core.repositories.PartidaRepository;
 import lombok.RequiredArgsConstructor;
@@ -34,12 +33,5 @@ public class PartidaService {
     return repository.findById(id).orElse(null);
   }
 
-  public Partidas atualizarPartida(Partidas p, PartidaUpdateDTO dto) {
-    p.getClima().add(dto.getClima());
-    p.getTemperatura().add(dto.getTemperatura());
-    p.getUmidade().add(dto.getUmidade());
-    p.setPlacarC(dto.getPlacarC());
-    p.setPlacarV(dto.getPlacarV());
-    return salvar(p);
-  }
+  
 }
