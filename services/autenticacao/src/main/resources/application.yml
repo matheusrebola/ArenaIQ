@@ -1,0 +1,7 @@
+server:
+  port: 63212
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://usuario:usuario@localhost:61000/usuarios-db
