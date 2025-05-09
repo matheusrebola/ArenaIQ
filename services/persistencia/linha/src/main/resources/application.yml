@@ -1,5 +1,5 @@
 server:
-  port: 63203
+  port: 63204
 
 spring:
   datasource:
@@ -17,8 +17,8 @@ spring:
   kafka:
     bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
     topic:
-      eventos-start: eventos-start
+      persistencia-linha-start: persistencia-linha-start
       notify-ending: notify-ending
     consumer:
-      group-id: persistencia-group
+      group-id: persistencia-linha-group
       auto-offset-reset: latest

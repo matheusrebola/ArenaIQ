@@ -11,8 +11,8 @@ spring:
   kafka:
     bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
     topic:
-      eventos-start: eventos-start
+      eventos-start: recebidor-formacao-start
       notify-ending: notify-ending
     consumer:
-      group-id: recebidor-group
+      group-id: recebidor-formacao-group
       auto-offset-reset: latest

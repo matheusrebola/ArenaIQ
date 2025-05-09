@@ -1,5 +1,5 @@
 server:
-  port: 63004
+  port: 63005
  
 spring:
   data:
@@ -8,8 +8,8 @@ spring:
   kafka:
     bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
     topic:
-      eventos-start: eventos-start
+      encaminhador-movimentacao-start: encaminhador-movimentacao-start
       notify-ending: notify-ending
     consumer:
-      group-id: encaminhador-group
+      group-id: encaminhador-movimentacao-group
       auto-offset-reset: latest

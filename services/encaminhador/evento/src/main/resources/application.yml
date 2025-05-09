@@ -8,8 +8,8 @@ spring:
   kafka:
     bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
     topic:
-      eventos-start: eventos-start
+      encaminhador-eventos-start: encaminhador-evento-start
       notify-ending: notify-ending
     consumer:
-      group-id: encaminhador-group
+      group-id: encaminhador-evento-group
       auto-offset-reset: latest

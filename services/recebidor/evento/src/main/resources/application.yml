@@ -11,10 +11,10 @@ spring:
   kafka:
     bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
     topic:
-      recebidor-sucess: recebidor-sucess
-      recebidor-fail: recebidor-fail
-      persistence-fail: persistence-fail
+      recebidor-sucess: recebidor-evento-sucess
+      recebidor-fail: recebidor-evento-fail
+      persistence-fail: persistence-evento-fail
       notify-ending: notify-ending
     consumer:
-      group-id: recebidor-group
+      group-id: recebidor-evento-group
       auto-offset-reset: latest
