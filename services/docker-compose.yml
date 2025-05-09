@@ -36,12 +36,11 @@ services:
       KAFKA_RESTART_DELAY: "5"
       ZOOKEEPER_AUTOPURGE_PURGE_INTERVAL: "0"
     volumes:
-      - ./data/kafka/data:/var/lib/kafka/data
+      - ../data/kafka/data:/var/lib/kafka/data
 
   redpanda-console:
     container_name: redpanda
     image: docker.redpanda.com/redpandadata/console:v2.3.8
-    restart: on-failure
     entrypoint: /bin/sh
     command: -c "echo \"$$CONSOLE_CONFIG_FILE\" > /tmp/config.yml; /app/console"
     ports:
