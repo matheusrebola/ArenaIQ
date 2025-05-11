@@ -31,13 +31,13 @@ public class PartidaMapper {
             .collect(Collectors.toList());
   }
 
+  public PartidasDTO map(Partidas p) {
+    return mapper.map(p, PartidasDTO.class);
+  }
+
   public PartidaDTO map(Partidas p, List<Jogadores> j) {
     PartidaDTO dto = mapper.map(p, PartidaDTO.class);
     dto.setJogadores(j);
     return dto;
-  }
-
-  public PartidasDTO map(Partidas p) {
-    return mapper.map(p, PartidasDTO.class);
   }
 }

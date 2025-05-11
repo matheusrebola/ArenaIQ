@@ -20,18 +20,13 @@ public class Jogadores {
   @Id
   private String id;
   private String nome;
-  private String dataNascimento;
-  private String nacionalidade;
   private List<EFuncao> funcao;
   private List<EContribuicao> contribuicao;
   private List<EEstilo> estilo;
   private List<EPersonalidade> personalidade;
   private EPe pe;
   private Float altura;
-  private Float peso;
   private List<EPosicao> posicao;
   private List<EFunPosicao> funcaoPosicao;
-  private List<String> clube;
-  private String clubeAtual;
-  private String partida;
+  private String clube;
 }
