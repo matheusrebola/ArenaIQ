@@ -10,6 +10,7 @@ import arenaiq.partida.core.models.Jogadores;
 
 @Repository
 public interface JogadorRepository extends MongoRepository<Jogadores, String>{
-  @Query("{ 'elenco': { $elemMatch: { 'clube': ?0, 'entrada': { $lte: ?1 }, 'saida': { $gte: ?1 } } } }")
+  
+  @Query("{ 'elenco': { $elemMatch: { 'clube': ?0, 'temporada': ?1 } } }")
   List<Jogadores> findByClubeAndTemporada(String clube, String temporada);
 }

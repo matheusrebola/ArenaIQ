@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import arenaiq.partida.core.dtos.PartidaDTO;
 import arenaiq.partida.core.dtos.PartidasCreateDTO;
 import arenaiq.partida.core.dtos.PartidasDTO;
-import arenaiq.partida.core.mappers.JogadorMapper;
 import arenaiq.partida.core.mappers.PartidaMapper;
 import arenaiq.partida.core.models.Jogadores;
 import arenaiq.partida.core.models.Partidas;
@@ -30,14 +29,12 @@ public class PartidaController {
   private final PartidaMapper pMapper;
   private final PartidaService pService;
   private final JogadorService jService;
-  private final JogadorMapper jMapper;
 
   @PostMapping
   public ResponseEntity<PartidaDTO> criar(@RequestBody PartidasCreateDTO dto){
     Partidas p = pMapper.map(dto);
     Partidas s = pService.salvar(p);
-    List<Jogadores> j = jService.criarElencos(s.getCasa(), s.getVisitante(), s.getTemporada());
-    PartidaDTO r = pMapper.map(s,jMapper.map(j));
+    PartidaDTO r = pMapper.map(s,jService.criarElencos(s.getCasa(), s.getVisitante(), s.getTemporada()));
     return new ResponseEntity<>(r, HttpStatus.CREATED);
   }
 

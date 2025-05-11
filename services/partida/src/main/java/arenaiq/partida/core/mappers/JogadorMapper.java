@@ -15,10 +15,11 @@ import lombok.RequiredArgsConstructor;
 public class JogadorMapper {
   private final ModelMapper mapper;
   
-  public List<JogadoresDTO> map(List<Jogadores> j) {
+  public List<JogadoresDTO> map(List<Jogadores> j, String c) {
     return j.stream()
             .map(jog ->{
               JogadoresDTO dto = mapper.map(jog, JogadoresDTO.class);
+              dto.setClube(c);
               return dto;
             })
             .collect(Collectors.toList());
