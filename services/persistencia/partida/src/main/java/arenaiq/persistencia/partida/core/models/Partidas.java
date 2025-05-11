@@ -1,14 +1,14 @@
-package arenaiq.encaminhador.partida.core.models;
+package arenaiq.persistencia.partida.core.models;
 
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-import arenaiq.encaminhador.partida.core.models.enums.EClima;
+import arenaiq.persistencia.partida.core.models.enums.EClima;
+import jakarta.persistence.Entity;
 import lombok.Data;
 
-@Document(collection = "partida")
+@Entity
 @Data
 public class Partidas {
   @Id

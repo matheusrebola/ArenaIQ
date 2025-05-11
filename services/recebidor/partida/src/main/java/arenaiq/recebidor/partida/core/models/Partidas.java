@@ -1,14 +1,14 @@
-package arenaiq.encaminhador.partida.core.models;
+package arenaiq.recebidor.partida.core.models;
 
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.neo4j.core.schema.Node;
 
-import arenaiq.encaminhador.partida.core.models.enums.EClima;
+import arenaiq.recebidor.partida.core.models.enums.EClima;
 import lombok.Data;
 
-@Document(collection = "partida")
+@Node
 @Data
 public class Partidas {
   @Id

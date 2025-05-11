@@ -1,10 +1,10 @@
-package arenaiq.encaminhador.partida.core.services;
+package arenaiq.recebidor.partida.core.services;
 
 import org.springframework.stereotype.Service;
 
-import arenaiq.encaminhador.partida.core.dtos.PartidaUpdateDTO;
-import arenaiq.encaminhador.partida.core.models.Partidas;
-import arenaiq.encaminhador.partida.core.repositories.PartidaRepository;
+import arenaiq.recebidor.partida.core.dtos.PartidaUpdateDTO;
+import arenaiq.recebidor.partida.core.models.Partidas;
+import arenaiq.recebidor.partida.core.repositories.PartidaRepository;
 import lombok.RequiredArgsConstructor;
 
 @Service
