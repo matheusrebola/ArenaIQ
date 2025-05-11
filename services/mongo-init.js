@@ -1,6 +1,5 @@
 // Criar os bancos de dados manualmente e adicionar usuários
 const databases = [
-  { name: "partida-db", user: "partida", password: "partida" },
   { name: "treino-db", user: "treino", password: "treino" },
   { name: "encaminhador-db", user: "encaminhador", password: "encaminhador" },
   { name: "usuarios-db", user: "usuario", password: "usuario" },
