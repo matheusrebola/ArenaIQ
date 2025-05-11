@@ -14,10 +14,14 @@ public class JogadorService {
   private final JogadorRepository r;
   private final List<Jogadores> jogadores;
   
-  public List<Jogadores> criarElencosPorClube(String casa, String visitante){
-    jogadores.addAll(r.findByClube(visitante));
-    jogadores.addAll(r.findByClube(casa));
+  public List<Jogadores> criarElencos(String c, String v, String t){
+    jogadores.addAll(encontrarPorClubeETemporada(c, t));
+    jogadores.addAll(encontrarPorClubeETemporada(v, t));
     return jogadores;
+  }
+
+  private List<Jogadores> encontrarPorClubeETemporada(String c, String t){
+    return r.findByClubeAndTemporada(c, t);
   }
 
   public List<Jogadores> findAll(){
