@@ -31,7 +31,6 @@ public class Jogadores {
   private Float peso;
   private List<EPosicao> posicao;
   private List<EFunPosicao> funcaoPosicao;
-  private List<String> clubes;
+  private List<Elencos> elenco;
   private String clube;
-  private String partida;
 }
