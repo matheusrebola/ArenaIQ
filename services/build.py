@@ -1,34 +1,8 @@
 import os
 import subprocess
 
-# Lista de diretórios dos microserviços
-services = [
-    "autenticaocao",
-    "cadastro",
-    "consulta",
-    "dados-historicos",
-    "encaminhador/evento",
-    "encaminhador/formacao",
-    "encaminhador/jogador",
-    "encaminhador/linha",
-    "encaminhador/movimentacao",
-    "encaminhador/partida",
-    "gateway",
-    "partida",
-    "persistencia/evento",
-    "persistencia/formacao",
-    "persistencia/jogador",
-    "persistencia/linha",
-    "persistencia/movimentacao",
-    "persistencia/partida",
-    "recebidor/evento",
-    "recebidor/formacao",
-    "recebidor/jogador",
-    "recebidor/linha",
-    "recebidor/movimentacao",
-    "recebidor/partida",
-    "treino"
-]
+with open("microservices.txt", "r", encoding="utf-8") as arquivo:
+    services = [line.strip() for line in arquivo if line.strip()]
 
 def build_service(service_path):
     """Executa mvn clean package no diretório do serviço."""
@@ -48,7 +22,7 @@ def restart_docker():
     print("✅ Docker-compose reiniciado!")
 
 def main():
-    restart_docker()
+    #restart_docker()
     print("🎉 Todos os serviços foram buildados e o docker-compose foi reiniciado!")
     """Executa o build de todos os serviços e reinicia o docker-compose."""
     for service in services:
