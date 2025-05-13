@@ -22,7 +22,7 @@ def restart_docker():
     print("✅ Docker-compose reiniciado!")
 
 def main():
-    #restart_docker()
+    restart_docker()
     print("🎉 Todos os serviços foram buildados e o docker-compose foi reiniciado!")
     """Executa o build de todos os serviços e reinicia o docker-compose."""
     for service in services:
