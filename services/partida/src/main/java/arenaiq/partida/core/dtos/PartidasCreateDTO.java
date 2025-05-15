@@ -1,6 +1,7 @@
 package arenaiq.partida.core.dtos;
 
 import arenaiq.partida.core.models.enums.EPartida;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
