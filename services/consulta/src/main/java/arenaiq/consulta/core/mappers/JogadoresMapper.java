@@ -3,28 +3,36 @@ package arenaiq.consulta.core.mappers;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 import arenaiq.consulta.core.dtos.JogadoresDTO;
 import arenaiq.consulta.core.models.Jogadores;
-import lombok.RequiredArgsConstructor;
 
 @Component
-@RequiredArgsConstructor
 public class JogadoresMapper {
-  private final ModelMapper m;
 
   public List<JogadoresDTO> map(List<Jogadores> j){
-    return j.stream()
-            .map(jog -> {
-              JogadoresDTO dto = m.map(jog, JogadoresDTO.class);
-              return dto;
-            })
-            .collect(Collectors.toList());
+    return j.stream().map(jog -> map(jog)).collect(Collectors.toList());
   }
 
   public JogadoresDTO map(Jogadores j){
-    return m.map(j, JogadoresDTO.class);
+    return JogadoresDTO.builder()
+                        .id(j.getId())
+                        .nome(j.getNome())
+                        .dataNascimento(j.getDataNascimento())
+                        .nacionalidade(j.getNacionalidade())
+                        .funcao(j.getFuncao())
+                        .contribuicao(j.getContribuicao())
+                        .estilo(j.getEstilo())
+                        .personalidade(j.getPersonalidade())
+                        .pe(j.getPe())
+                        .altura(j.getAltura())
+                        .peso(j.getPeso())
+                        .posicao(j.getPosicao())
+                        .funcaoPosicao(j.getFuncaoPosicao())
+                        .clubes(j.getClubes())
+                        .clubeAtual(j.getClubeAtual())
+                        .partida(j.getPartida())
+                        .build();
   }
 }

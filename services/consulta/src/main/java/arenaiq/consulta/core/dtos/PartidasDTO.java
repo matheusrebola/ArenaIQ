@@ -1,9 +1,11 @@
 package arenaiq.consulta.core.dtos;
 
 import arenaiq.consulta.core.models.enums.EClima;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class PartidasDTO {
   private String id;
   private String dataHora;

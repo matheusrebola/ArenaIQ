@@ -3,7 +3,6 @@ package arenaiq.consulta.core.mappers;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 import arenaiq.consulta.core.dtos.ResultadosDTO;
@@ -13,14 +12,25 @@ import lombok.RequiredArgsConstructor;
 @Component
 @RequiredArgsConstructor
 public class ResultadosMapper {
-  private final ModelMapper m;
 
   public List<ResultadosDTO> map(List<Resultados> r){
-    return r.stream()
-            .map(res -> {
-              ResultadosDTO dto = m.map(res, ResultadosDTO.class);
-              return dto;
-            })
-            .collect(Collectors.toList());
+    return r.stream().map(res -> map(res)).collect(Collectors.toList());
+  }
+
+  public ResultadosDTO map(Resultados r){
+    return ResultadosDTO.builder()
+                        .id(r.getId())
+                        .jogosDisputados(r.getJogosDisputados())
+                        .vitorias(r.getVitorias())
+                        .derrotas(r.getDerrotas())
+                        .empates(r.getEmpates())
+                        .aproveitamento(r.getAproveitamento())
+                        .golsMarcados(r.getGolsMarcados())
+                        .golsSofridos(r.getGolsSofridos())
+                        .desempenho(r.getDesempenho())
+                        .competicao(r.getCompeticao())
+                        .equipe(r.getEquipe())
+                        .temporada(r.getTemporada())
+                        .build();
   }
 }

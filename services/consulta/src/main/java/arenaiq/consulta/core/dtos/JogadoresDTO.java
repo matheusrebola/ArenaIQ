@@ -9,10 +9,12 @@ import arenaiq.consulta.core.models.enums.EFuncao;
 import arenaiq.consulta.core.models.enums.EPe;
 import arenaiq.consulta.core.models.enums.EPersonalidade;
 import arenaiq.consulta.core.models.enums.EPosicao;
+import lombok.Builder;
 import lombok.Data;
 
 
 @Data
+@Builder
 public class JogadoresDTO {
   private String id;
   private String nome;

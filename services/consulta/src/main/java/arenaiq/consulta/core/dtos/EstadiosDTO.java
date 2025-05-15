@@ -8,9 +8,11 @@ import arenaiq.consulta.core.models.enums.EDrenagem;
 import arenaiq.consulta.core.models.enums.EGrama;
 import arenaiq.consulta.core.models.enums.EInclinacao;
 import arenaiq.consulta.core.models.enums.EVento;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class EstadiosDTO {
   private String id;
   private String nome;
