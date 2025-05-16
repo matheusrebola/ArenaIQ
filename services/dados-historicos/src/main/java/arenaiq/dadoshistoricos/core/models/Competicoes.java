@@ -7,10 +7,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import arenaiq.dadoshistoricos.core.models.enums.ECompeticao;
 import arenaiq.dadoshistoricos.core.models.enums.EDisputa;
+import lombok.Builder;
 import lombok.Data;
 
 @Document (collection = "competicoes")
 @Data
+@Builder
 public class Competicoes {
   @Id
   private String id;

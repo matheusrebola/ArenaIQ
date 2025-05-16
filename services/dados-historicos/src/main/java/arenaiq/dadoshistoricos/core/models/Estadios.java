@@ -11,10 +11,12 @@ import arenaiq.dadoshistoricos.core.models.enums.EDrenagem;
 import arenaiq.dadoshistoricos.core.models.enums.EGrama;
 import arenaiq.dadoshistoricos.core.models.enums.EInclinacao;
 import arenaiq.dadoshistoricos.core.models.enums.EVento;
+import lombok.Builder;
 import lombok.Data;
 
 @Document (collection = "estadios")
 @Data
+@Builder
 public class Estadios {
   @Id
   private String id;

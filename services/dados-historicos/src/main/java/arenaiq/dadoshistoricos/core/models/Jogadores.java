@@ -12,10 +12,12 @@ import arenaiq.dadoshistoricos.core.models.enums.EFuncao;
 import arenaiq.dadoshistoricos.core.models.enums.EPe;
 import arenaiq.dadoshistoricos.core.models.enums.EPersonalidade;
 import arenaiq.dadoshistoricos.core.models.enums.EPosicao;
+import lombok.Builder;
 import lombok.Data;
 
 @Document (collection = "jogadores")
 @Data
+@Builder
 public class Jogadores {
   @Id
   private String id;

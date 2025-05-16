@@ -7,10 +7,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import arenaiq.dadoshistoricos.core.models.enums.EFilosofia;
 import arenaiq.dadoshistoricos.core.models.enums.EPosicao;
+import lombok.Builder;
 import lombok.Data;
 
 @Document (collection = "tecnicos")
 @Data
+@Builder
 public class Tecnicos {
   @Id
   private String id;
