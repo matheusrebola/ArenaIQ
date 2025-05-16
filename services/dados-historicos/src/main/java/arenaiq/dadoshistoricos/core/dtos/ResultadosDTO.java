@@ -4,8 +4,7 @@ import lombok.Data;
 
 @Data
 public class ResultadosDTO {
-  private String id;
-  private Byte jogosDisputados;
+ private Byte jogosDisputados;
   private Byte vitorias;
   private Byte derrotas;
   private Byte empates;

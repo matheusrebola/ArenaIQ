@@ -8,7 +8,6 @@ import lombok.Data;
 
 @Data
 public class TitulosDTO {
-  private String id;
   private String nome;
   private EParticipante participante;
   private String temporada;

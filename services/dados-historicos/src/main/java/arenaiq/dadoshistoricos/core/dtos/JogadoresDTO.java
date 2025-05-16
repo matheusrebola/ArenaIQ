@@ -12,10 +12,8 @@ import arenaiq.dadoshistoricos.core.models.enums.EPersonalidade;
 import arenaiq.dadoshistoricos.core.models.enums.EPosicao;
 import lombok.Data;
 
-
 @Data
 public class JogadoresDTO {
-  private String id;
   private String nome;
   private String dataNascimento;
   private String nacionalidade;
