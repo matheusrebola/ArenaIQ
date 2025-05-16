@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import arenaiq.dadoshistoricos.core.dtos.TitulosCreateDTO;
 import arenaiq.dadoshistoricos.core.dtos.TitulosDTO;
 import arenaiq.dadoshistoricos.core.mappers.TitulosMapper;
 import arenaiq.dadoshistoricos.core.models.Titulos;
@@ -24,22 +23,20 @@ public class TitulosController {
   private final TitulosService service;
 
   @PostMapping
-  public ResponseEntity<TitulosDTO> criar(@RequestBody TitulosCreateDTO request){
-    Titulos m = mapper.map(request);
-    m = service.salvar(m);
-    TitulosDTO dto = mapper.map(m);
-    return new ResponseEntity<>(dto, HttpStatus.CREATED);
+  public ResponseEntity<String> criar(@RequestBody TitulosDTO t){
+    Titulos tit = mapper.map(t);
+    service.salvar(tit);
+    return new ResponseEntity<>(HttpStatus.CREATED);
   }
 
   @PutMapping("/{id}")
-  public ResponseEntity<TitulosDTO> atualizar(@RequestBody TitulosDTO r, @PathVariable String id){
+  public ResponseEntity<String> atualizar(@RequestBody TitulosDTO r, @PathVariable String id){
     Boolean exist = service.existsById(id);
     if (exist == false){
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
     Titulos mapped = mapper.map(r);
-    Titulos atualizado = service.atualizar(mapped, id);
-    TitulosDTO dto = mapper.map(atualizado);
-    return new ResponseEntity<>(dto, HttpStatus.OK);
+    service.atualizar(mapped, id);
+    return new ResponseEntity<>(HttpStatus.OK);
   }
 }

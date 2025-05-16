@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import arenaiq.dadoshistoricos.core.dtos.EstadiosCreateDTO;
 import arenaiq.dadoshistoricos.core.dtos.EstadiosDTO;
 import arenaiq.dadoshistoricos.core.mappers.EstadiosMapper;
 import arenaiq.dadoshistoricos.core.models.Estadios;
@@ -20,26 +19,24 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping(path = "/estadios")
 @RequiredArgsConstructor
 public class EstadiosController {
-  private final EstadiosService s;
-  private final EstadiosMapper m;
+  private final EstadiosService service;
+  private final EstadiosMapper mapper;
 
   @PostMapping
-  public ResponseEntity<EstadiosDTO> criar(@RequestBody EstadiosCreateDTO dto){
-    var e = m.map(dto);
-    e = s.salvar(e);
-    var r = m.map(e);
-    return new ResponseEntity<>(r, HttpStatus.CREATED);
+  public ResponseEntity<String> criar(@RequestBody EstadiosDTO e){
+    Estadios es = mapper.map(e);
+    service.salvar(es);
+    return new ResponseEntity<>(HttpStatus.CREATED);
   }
   
   @PutMapping("/{id}")
-  public ResponseEntity<EstadiosDTO> atualizar(@RequestBody EstadiosDTO r, @PathVariable String id){
-    Boolean exist = s.existsById(id);
+  public ResponseEntity<String> atualizar(@RequestBody EstadiosDTO r, @PathVariable String id){
+    Boolean exist = service.existsById(id);
     if (exist == false){
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
-    Estadios mapped = m.map(r);
-    Estadios atualizado = s.atualizar(mapped, id);
-    EstadiosDTO dto = m.map(atualizado);
-    return new ResponseEntity<>(dto, HttpStatus.OK);
+    Estadios mapped = mapper.map(r);
+    service.atualizar(mapped, id);
+    return new ResponseEntity<>(HttpStatus.OK);
   }
 }

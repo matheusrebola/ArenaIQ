@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import arenaiq.dadoshistoricos.core.dtos.TemporadasCreateDTO;
 import arenaiq.dadoshistoricos.core.dtos.TemporadasDTO;
 import arenaiq.dadoshistoricos.core.mappers.TemporadasMapper;
 import arenaiq.dadoshistoricos.core.models.Temporadas;
@@ -24,22 +23,20 @@ public class TemporadasController {
   private final TemporadasService service;
 
   @PostMapping
-  public ResponseEntity<TemporadasDTO> criar(@RequestBody TemporadasCreateDTO request){
-    Temporadas m = mapper.map(request);
-    m = service.salvar(m);
-    TemporadasDTO dto = mapper.map(m);
-    return new ResponseEntity<>(dto, HttpStatus.CREATED);
+  public ResponseEntity<String> criar(@RequestBody TemporadasDTO t){
+    Temporadas tem = mapper.map(t);
+    service.salvar(tem);
+    return new ResponseEntity<>(HttpStatus.CREATED);
   }
 
   @PutMapping("/{id}")
-  public ResponseEntity<TemporadasDTO> atualizar(@RequestBody TemporadasDTO r, @PathVariable String id){
+  public ResponseEntity<String> atualizar(@RequestBody TemporadasDTO r, @PathVariable String id){
     Boolean exist = service.existsById(id);
     if (exist == false){
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
     Temporadas mapped = mapper.map(r);
-    Temporadas atualizado = service.atualizar(mapped, id);
-    TemporadasDTO dto = mapper.map(atualizado);
-    return new ResponseEntity<>(dto, HttpStatus.OK);
+    service.atualizar(mapped, id);
+    return new ResponseEntity<>(HttpStatus.OK);
   }
 }
