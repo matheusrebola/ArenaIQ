@@ -1,5 +1,6 @@
 package arenaiq.encaminhador.evento.core.controllers;
 
+import arenaiq.encaminhador.evento.core.dtos.ResponseDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import arenaiq.encaminhador.evento.core.dtos.EventoDTO;
 import arenaiq.encaminhador.evento.core.mappers.EventosMapper;
-import arenaiq.encaminhador.evento.core.models.Eventos;
 import arenaiq.encaminhador.evento.core.services.EventosService;
 import lombok.RequiredArgsConstructor;
 
@@ -21,10 +21,13 @@ public class EventosController {
   private final EventosService service;
 
   @PostMapping
-  public ResponseEntity<EventoDTO> criar(@RequestBody EventoDTO evento){
-    Eventos m = mapper.map(evento);
-    Eventos s = service.criarEvento(m);
-    EventoDTO dto = mapper.map(s);
-    return new ResponseEntity<>(dto, HttpStatus.CREATED);
+  public ResponseEntity<ResponseDTO> criar(@RequestBody EventoDTO dto){
+    try {
+      service.criarEvento(dto);
+      return new ResponseEntity<>(mapper.map(), HttpStatus.OK);
+    } catch (RuntimeException e) {
+      service.salvar(mapper.map(dto));
+      throw new RuntimeException(e);
+    }
   }
 }

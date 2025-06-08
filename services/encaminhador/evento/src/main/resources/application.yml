@@ -9,7 +9,6 @@ spring:
     bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
     topic:
       encaminhador-eventos-start: encaminhador-evento-start
-      notify-ending: notify-ending
     consumer:
       group-id: encaminhador-evento-group
       auto-offset-reset: latest
