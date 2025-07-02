@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/autenticacao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/authlib/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cadastro/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consulta/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dados-historicos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/encaminhador/evento/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/encaminhador/formacao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/encaminhador/linha/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/encaminhador/movimentacao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/encaminhador/partida/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/partida/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/persistencia/evento/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/persistencia/formacao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/persistencia/linha/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/persistencia/movimentacao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/persistencia/partida/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/recebidor/evento/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/recebidor/formacao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/recebidor/linha/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/recebidor/movimentacao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/recebidor/partida/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/treino/src/main/java" charset="UTF-8" />
+  </component>
+</project>
