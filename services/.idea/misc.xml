@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/treino/pom.xml" />
+        <option value="$PROJECT_DIR$/authlib/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/partida/pom.xml" />
+        <option value="$PROJECT_DIR$/cadastro/pom.xml" />
+        <option value="$PROJECT_DIR$/consulta/pom.xml" />
+        <option value="$PROJECT_DIR$/recebidor/linha/pom.xml" />
+        <option value="$PROJECT_DIR$/recebidor/evento/pom.xml" />
+        <option value="$PROJECT_DIR$/recebidor/partida/pom.xml" />
+        <option value="$PROJECT_DIR$/recebidor/formacao/pom.xml" />
+        <option value="$PROJECT_DIR$/recebidor/movimentacao/pom.xml" />
+        <option value="$PROJECT_DIR$/autenticacao/pom.xml" />
+        <option value="$PROJECT_DIR$/encaminhador/linha/pom.xml" />
+        <option value="$PROJECT_DIR$/encaminhador/evento/pom.xml" />
+        <option value="$PROJECT_DIR$/encaminhador/partida/pom.xml" />
+        <option value="$PROJECT_DIR$/encaminhador/formacao/pom.xml" />
+        <option value="$PROJECT_DIR$/encaminhador/movimentacao/pom.xml" />
+        <option value="$PROJECT_DIR$/persistencia/linha/pom.xml" />
+        <option value="$PROJECT_DIR$/persistencia/evento/pom.xml" />
+        <option value="$PROJECT_DIR$/persistencia/partida/pom.xml" />
+        <option value="$PROJECT_DIR$/persistencia/formacao/pom.xml" />
+        <option value="$PROJECT_DIR$/persistencia/movimentacao/pom.xml" />
+        <option value="$PROJECT_DIR$/dados-historicos/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/authlib/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-24" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
